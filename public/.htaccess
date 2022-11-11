@@ -1,0 +1,6 @@
+RewriteEngine on
+
+ErrorDocument 404 /404/
+RewriteCond %{HTTP_HOST} ^www\.amanualterapeuta\.hu$ [OR]
+RewriteCond %{HTTP_HOST} ^amanualterapeuta\.hu$
+RewriteRule (.*) "https\:\/\/www\.a\-manualterapeuta\.hu/$1" [R=301,L]

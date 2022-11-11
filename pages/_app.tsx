@@ -1,6 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from "next/app"
+import React from "react"
+import { HeadComponent } from "components/layout/HeadComponent"
+import "styles/global.css"
+import "/assets/fonts/fonts.scss"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }: AppProps){
+    return (
+        <>
+            <HeadComponent />
+            <Component {...pageProps} />
+        </>
+    )
 }
+
+export default App
