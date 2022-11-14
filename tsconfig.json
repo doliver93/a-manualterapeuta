@@ -21,6 +21,7 @@
     "paths": {
       "*": ["./*"],
       "styles/*": ["./assets/styles/*"],
+      "images/*": ["./public/images/*"],
   }
   },
   "include": [

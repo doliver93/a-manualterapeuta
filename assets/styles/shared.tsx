@@ -17,3 +17,36 @@ export const StyledLink = ({ href, text }: StyledLinkProps) => {
         </Link>
     )
 }
+
+export const FlexCenter = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+export const FlexRight = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
+
+export const FlexCenterColumn = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+export const FlexLeftColumn = styled.div`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+export const Content = styled.div`
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 72.5rem;
+`

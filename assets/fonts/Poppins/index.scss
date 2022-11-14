@@ -1,12 +1,20 @@
 @font-face {
+  // 400
   font-family: "PoppinsRegular";
   src: local("PoppinsRegular"), url(Poppins-Regular.ttf) format("truetype");
 }
 @font-face {
+  // 500
+  font-family: "PoppinsMedium";
+  src: local("PoppinsMedium"), url(Poppins-Medium.ttf) format("truetype");
+}
+@font-face {
+  // 600
   font-family: "PoppinsSemiBold";
   src: local("PoppinsSemiBold"), url(Poppins-SemiBold.ttf) format("truetype");
 }
 @font-face {
+  // 700
   font-family: "PoppinsBold";
   src: local("PoppinsBold"), url(Poppins-Bold.ttf) format("truetype");
 }

@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const Img = styled.img`
+interface ImgProps {
+  alt: string
+}
+export const Img = styled.img<ImgProps>`
+  margin: auto;
   pointer-events: none;
   user-select: none;
 `

@@ -1,12 +1,12 @@
-@font-face {
+@font-face { // 400
   font-family: "PlayfairDisplayRegular";
   src: local("PlayfairDisplayRegular"), url(PlayfairDisplay-Regular.ttf) format("truetype");
 }
-@font-face {
+@font-face { // 700
   font-family: "PlayfairDisplayBold";
-  src: local("PlayfairDisplayRegular"), url(PlayfairDisplay-Bold.ttf) format("truetype");
+  src: local("PlayfairDisplayBold"), url(PlayfairDisplay-Bold.ttf) format("truetype");
 }
-@font-face {
+@font-face { // 800
   font-family: "PlayfairDisplayExtraBold";
   src: local("PlayfairDisplayExtraBold"), url(PlayfairDisplay-ExtraBold.ttf) format("truetype");
 }
