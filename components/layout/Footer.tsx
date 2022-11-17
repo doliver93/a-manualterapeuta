@@ -10,6 +10,7 @@ import instagram from "images/layout/footer/instagram.svg"
 import facebook from "images/layout/footer/facebook.svg"
 import tiktok from "images/layout/footer/tiktok.svg"
 import Link from "next/link"
+import { ExternalLinks } from "enums/ExternalLinks"
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -51,7 +52,7 @@ export const Footer = () => {
               Kapcsolat
                         </SubHeading>
                         <FooterParagraph marginBottom={1.875}>
-              Fordulj hozzám bizalommal.Bármilyen kérdéssel kapcsolatban segítségedre állok.
+              Fordulj hozzám bizalommal.
                             <br />
               Bármilyen kérdéssel kapcsolatban segítségedre állok.
                         </FooterParagraph>
@@ -73,19 +74,19 @@ export const Footer = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <FlexRight>
-                            <Link href="https://facebook.com">
+                            <Link href={ExternalLinks.INSTAGRAM}>
                                 <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={instagram.src} alt="logo1" />
+                                    <FooterIcons src={instagram.src} alt="logo1" width={2.5} height={2.5} />
                                 </a>
                             </Link>
-                            <Link href="https://facebook.com">
+                            <Link href={ExternalLinks.FACEBOOK}>
                                 <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={facebook.src} alt="logo2" />
+                                    <FooterIcons src={facebook.src} alt="logo2" width={2.5} height={2.5} />
                                 </a>
                             </Link>
-                            <Link href="https://facebook.com">
+                            <Link href={ExternalLinks.TIKTOK}>
                                 <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={tiktok.src} alt="logo3" />
+                                    <FooterIcons src={tiktok.src} alt="logo3" width={2.5} height={2.5} />
                                 </a>
                             </Link>
                         </FlexRight>

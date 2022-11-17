@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+// import background from "images/mainpage/test3.png"
 import background from "images/mainpage/a-manualterapeuta-intro2.webp"
 import { Navigation } from "components/layout/Navigation"
 import { Content, FlexLeftColumn } from "assets/styles/shared"
@@ -35,6 +36,7 @@ export const Intro = () => {
                     buttonBackgroundColorHover={AmaColors.darkBeige(1)}
                     buttonTextColor={AmaColors.white(0.8)}
                     buttonTextColorHover={AmaColors.white(1)}
+                    active=""
                 />
                 <IntroContainer>
                     <Heading color={AmaColors.brown(0.8)} fontSize={2.813} margin="1rem 0">

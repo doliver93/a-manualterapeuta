@@ -22,7 +22,7 @@ interface ContainerProps {
   backgroundColor: string
 }
 const Container = styled.div<ContainerProps>`
-  background-color: ${({ backgroundColor }) => backgroundColor || "black"};
+  background-color: ${({ backgroundColor = "black" }) => backgroundColor};
   width: 100%;
 `
 interface TreamnetsContentProps {
@@ -36,14 +36,9 @@ const Border = styled.div<TranslateProp>`
   border: 5px solid ${AmaColors.brown()};
   transform: ${({ gap = { x: 0, y: 0 } }) => `translate(${gap.x}rem, ${gap.y}rem)`};
 `
-interface TreatmentsImagesProps extends TranslateProp {
-  width?: number
-  height?: number
-}
-const TreatmentsImages = styled(Img)<TreatmentsImagesProps>`
-  height: ${({ height }) => (height ? `${height}px` : "auto")};
+
+const TreatmentsImages = styled(Img)<TranslateProp>`
   margin: 0;
-  width: ${({ width }) => `${width}px` || "auto"};
   transform: ${({ gap = { x: 0, y: 0 } }) => `translate(${gap.x}rem, ${gap.y}rem)`};
 `
 const LinkDetails = styled.div`
@@ -74,7 +69,7 @@ export const Treatments = () => {
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
                             <Border gap={{ x: -1.5, y: -1.5 }}>
-                                <TreatmentsImages width={517} src={manualterapia.src} gap={{ x: 1.5, y: 1.5 }} alt="Manuálterápia"/>
+                                <TreatmentsImages width={32.313} height={24.688} src={manualterapia.src} gap={{ x: 1.5, y: 1.5 }} alt="Manuálterápia"/>
                             </Border>
                         </Grid>
                         <Grid item xs={5}>
@@ -113,7 +108,7 @@ export const Treatments = () => {
                         </Grid>
                         <Grid item>
                             <Border gap={{ x: 1.5, y: 1.5 }}>
-                                <TreatmentsImages width={573} src={lagyreszKezelesek.src} gap={{ x: -1.5, y: -1.5 }} alt="Lágyrész kezelések" />
+                                <TreatmentsImages width={35.813} height={19.813} src={lagyreszKezelesek.src} gap={{ x: -1.5, y: -1.5 }} alt="Lágyrész kezelések" />
                             </Border>
                         </Grid>
                     </Grid>
@@ -123,7 +118,7 @@ export const Treatments = () => {
                 <TreatmentsContent padding={{top: 10, bottom: 10}}>
                     <ExternalImage top={-5}>
                         <Border gap={{ x: 1.5, y: -1.5 }}>
-                            <TreatmentsImages width={487} src={gyogytorna.src} gap={{ x: -1.5, y: 1.5 }} alt="Gyógytorna" />
+                            <TreatmentsImages width={30.438} height={35.625} src={gyogytorna.src} gap={{ x: -1.5, y: 1.5 }} alt="Gyógytorna" />
                         </Border>
                     </ExternalImage>
                     <Grid container alignItems="center" justifyContent="space-between">
@@ -163,7 +158,7 @@ export const Treatments = () => {
                         </Grid>
                         <Grid item>
                             <Border gap={{ x: 1.5, y: -1.5 }}>
-                                <TreatmentsImages width={491} src={haromdimenziosScoliosisTerapia.src} gap={{ x: -1.5, y: 1.5 }} alt="Háromdimenziós scoliosis terápia"/>
+                                <TreatmentsImages width={30.688} height={32.375}src={haromdimenziosScoliosisTerapia.src} gap={{ x: -1.5, y: 1.5 }} alt="Háromdimenziós scoliosis terápia"/>
                             </Border>
                         </Grid>
                     </Grid>
@@ -193,7 +188,7 @@ export const Treatments = () => {
                 <TreatmentsContent padding={{ top: 6, bottom: 25 }}>
                     <ExternalImage top={-25}>
                         <Border gap={{ x: 1.5, y: -1.5 }}>
-                            <TreatmentsImages width={487} src={mckenzieTerapia.src} gap={{ x: -1.5, y: 1.5 }} alt="Mckenzie terápia" />
+                            <TreatmentsImages width={30.438} height={35.375} src={mckenzieTerapia.src} gap={{ x: -1.5, y: 1.5 }} alt="Mckenzie terápia" />
                         </Border>
                     </ExternalImage>
                     <Grid container alignItems="center" justifyContent="space-between">

@@ -4,6 +4,7 @@ import { Img } from "assets/styles/styled-components/images"
 import Link from "next/link"
 import { PrimaryButton } from "assets/styles/styled-components/buttons"
 import { StaticImageData } from "next/image"
+import { ExternalLinks } from "enums/ExternalLinks"
 
 const NavigationContainer = styled.div`
   align-items: center;
@@ -19,10 +20,8 @@ const NavigationContainer = styled.div`
 
 const Logo = styled(Img)`
   cursor: pointer;
-  height: auto;
   margin: 0;
   pointer-events: auto;
-  width: 3.5rem;
 `
 
 interface NavLinkTextProps {
@@ -30,20 +29,34 @@ interface NavLinkTextProps {
   colorHover: string
 }
 const NavLinkText = styled.div<NavLinkTextProps>`
-  color: ${({ color }) => color || "black"};
+  color: ${({ color = "black"}) => color};
   cursor: pointer;
   font-family: PoppinsSemiBold;
   font-size: 1rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   margin: 0 1.25rem;
+  border: 3px solid transparent;
+  border-radius: 3px;
   &:hover {
-    color: ${({ colorHover }) => colorHover || "black"};
+    color: ${({ colorHover = "black" }) => colorHover};
+  }
+  &.active {
+    border-bottom-color: ${({ color = "black"}) => color};
+  }
+  &.active:hover{
+    border-bottom-color: ${({ colorHover = "black"}) => colorHover};
   }
 `
 
 const Button = styled(PrimaryButton)`
   margin-left: 1.25rem;
+`
+const LinkA = styled.a`
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 interface NavigationProps {
@@ -54,43 +67,46 @@ interface NavigationProps {
   buttonBackgroundColorHover: string
   buttonTextColor: string
   buttonTextColorHover: string
+  active: string
 }
 
-export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover }: NavigationProps) => {
+export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover, active }: NavigationProps) => {
     return (
         <NavigationContainer>
             <Link href="/">
-                <Logo src={logo.src} alt="A manualterapeuta" />
+                <Logo src={logo.src} alt="A manualterapeuta" width={3.5} height={2.5} />
             </Link>
-            <Link href="/about">
-                <NavLinkText color={textColor} colorHover={textHover}>
-            Kezelések
+            <Link href="/kezelesek/">
+                <NavLinkText color={textColor} colorHover={textHover} className={active === "kezelesek" && "active"}>
+          Kezelések
+                </NavLinkText>
+            </Link>
+            <Link href="/allapotfelmeres/">
+                <NavLinkText color={textColor} colorHover={textHover} className={active === "allapotfelmeres" && "active"}>
+          Állapotfelmérés
                 </NavLinkText>
             </Link>
             <Link href="/about">
                 <NavLinkText color={textColor} colorHover={textHover}>
-            Állapotfelmérés
+          Rólam
                 </NavLinkText>
             </Link>
             <Link href="/about">
                 <NavLinkText color={textColor} colorHover={textHover}>
-            Rólam
+          Árlista
                 </NavLinkText>
             </Link>
             <Link href="/about">
                 <NavLinkText color={textColor} colorHover={textHover}>
-            Árlista
+          Kapcsolat
                 </NavLinkText>
             </Link>
-            <Link href="/about">
-                <NavLinkText color={textColor} colorHover={textHover}>
-            Kapcsolat
-                </NavLinkText>
-            </Link>
-            <Link href="/about">
-                <Button backgroundColor={buttonBackgroundColor} backgroundHover={buttonBackgroundColorHover} color={buttonTextColor} colorHover={buttonTextColorHover}>
-            Időpontfoglalás
-                </Button>
+            <Link href={ExternalLinks.FACEBOOK} target="_blank">
+                <LinkA target="_blank" rel="noopener noreferrer">
+                    <Button backgroundColor={buttonBackgroundColor} backgroundHover={buttonBackgroundColorHover} color={buttonTextColor} colorHover={buttonTextColorHover}>
+          Időpontfoglalás
+                    </Button>
+                </LinkA>
             </Link>
         </NavigationContainer>
     )

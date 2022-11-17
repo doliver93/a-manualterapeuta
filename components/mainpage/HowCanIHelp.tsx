@@ -55,7 +55,7 @@ const MoreIcon = styled(FlexCenter)`
   margin: auto;
   width: 91px;
   &:hover .dot {
-    animation: ${dotFlashing} 1.5s linear infinite;
+    animation: ${dotFlashing} .8s linear infinite;
   }
 `
 const Dots = styled.div`
@@ -75,31 +75,31 @@ export const HowCanIHelp = () => {
             <GridContainer>
                 <CustomGrid container justifyContent="center" alignItems="center" spacing={10}>
                     <CustomGrid item xs={3}>
-                        <Icon src={derektajiFajdalmak.src} />
+                        <Icon src={derektajiFajdalmak.src} alt="deréktáji fájdalmak" width={5.688} height={5.688} />
                         <Text>deréktáji fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={nyakiPanaszok.src} />
+                        <Icon src={nyakiPanaszok.src} alt="nyaki panaszok" width={5.688} height={5.688} />
                         <Text>nyaki panaszok</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={vegtagFajdalmak.src} />
+                        <Icon src={vegtagFajdalmak.src} alt="végtag fájdalmak" width={5.688} height={5.688} />
                         <Text>végtag fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={tartasJavitas.src} />
+                        <Icon src={tartasJavitas.src} alt="tartásjavítás" width={5.688} height={5.688} />
                         <Text>tartásjavítás</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={sportserulesek.src} />
+                        <Icon src={sportserulesek.src} alt="sportsérülések" width={5.688} height={5.688} />
                         <Text>sportsérülések</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={mutetekUtan.src} />
+                        <Icon src={mutetekUtan.src} alt="műtétek után" width={5.688} height={5.688} />
                         <Text>műtétek után</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={megelozes.src} />
+                        <Icon src={megelozes.src} alt="megelőzés" width={5.688} height={5.688} />
                         <Text>megelőzés</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>

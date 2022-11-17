@@ -48,5 +48,5 @@ export const Content = styled.div`
   height: 100%;
   margin: auto;
   position: relative;
-  width: 72.5rem;
+  max-width: 72.5rem;
 `
