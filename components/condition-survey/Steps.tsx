@@ -13,17 +13,18 @@ import five from "images/conditions-survey/5.svg"
 import six from "images/conditions-survey/6.svg"
 import seven from "images/conditions-survey/7.svg"
 import eight from "images/conditions-survey/8.svg"
-import { Img } from "assets/styles/styled-components/images"
+import { CuiImage } from "assets/styles/styled-components/images"
 
 const StepContent = styled(Content)`
   padding: 2rem 0;
 `
 const Box = styled.div`
   background-color: ${AmaColors.grey(0.7)};
-  width: 100%;
   margin: 1rem 0;
+  padding: 1.25rem 0;
+  width: 100%;
 `
-const Number = styled(Img)`
+const Number = styled(CuiImage)`
   margin: 1.5rem auto;
 `
 const BoxHeading = styled(SubHeading)`
@@ -46,7 +47,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={one} alt="Állapotfelmérés - 1" className="local-image" />
+                        <Number src={one} alt="Állapotfelmérés - 1" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>anamnézis felvétel</BoxHeading>
@@ -57,7 +58,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={two.src} alt="Állapotfelmérés - 2" width={2.813} height={3.25} />
+                        <Number src={two} alt="Állapotfelmérés - 2" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>megtekintés, tapintás</BoxHeading>
@@ -68,7 +69,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={three.src} alt="Állapotfelmérés - 3" width={2.688} height={4.125} />
+                        <Number src={three} alt="Állapotfelmérés - 3" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>aktív és passzív mozgás vizsgálat</BoxHeading>
@@ -79,7 +80,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={four.src} alt="Állapotfelmérés - 4" width={3.063} height={4.063} />
+                        <Number src={four} alt="Állapotfelmérés - 4" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>funkcionális teszt</BoxHeading>
@@ -90,7 +91,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={five.src} alt="Állapotfelmérés - 5" width={2.563} height={4.25} />
+                        <Number src={five} alt="Állapotfelmérés - 5" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>fizioterápiás diagnózis</BoxHeading>
@@ -101,7 +102,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={six.src} alt="Állapotfelmérés - 6" width={3.063} height={4.438} />
+                        <Number src={six} alt="Állapotfelmérés - 6" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>kezelés</BoxHeading>
@@ -112,7 +113,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={seven.src} alt="Állapotfelmérés - 7" width={2.688} height={4.063} />
+                        <Number src={seven} alt="Állapotfelmérés - 7" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>otthon végezhető gyakorlatsor</BoxHeading>
@@ -123,7 +124,7 @@ export const Steps = () => {
             <Box>
                 <Grid container alignItems="center">
                     <NumberContainer item xs={1}>
-                        <Number src={eight.src} alt="Állapotfelmérés - 8" width={3.063} height={4.438} />
+                        <Number src={eight} alt="Állapotfelmérés - 8" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>kontroll</BoxHeading>

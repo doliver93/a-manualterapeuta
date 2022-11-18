@@ -1,8 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 
-import { Img } from "assets/styles/styled-components/images"
-import { Content, FlexCenter } from "assets/styles/shared"
+import { Content, CuiLink, FlexCenter } from "assets/styles/shared"
 import { Heading } from "assets/styles/styled-components/typography"
 import { AmaColors } from "assets/styles/colors"
 import Grid from "@mui/material/Grid"
@@ -15,6 +14,7 @@ import sportserulesek from "images/mainpage/sportserulesek.svg"
 import mutetekUtan from "images/mainpage/mutetek-utan.svg"
 import megelozes from "images/mainpage/megelozes.svg"
 import Link from "next/link"
+import { CuiImage } from "assets/styles/styled-components/images"
 
 const FlexContent = styled(Content)`
   align-items: center;
@@ -23,17 +23,15 @@ const FlexContent = styled(Content)`
   justify-content: center;
 `
 const GridContainer = styled.div`
-  margin: 7rem 0;
+  margin-top: 5rem;
 `
 const CustomGrid = styled(Grid)`
   text-align: center;
+  margin-bottom: 5rem;
 `
-const Icon = styled(Img)`
-  height: 91px;
-  width: 91px;
-`
+
 const Text = styled.div`
-  font-family: PoppinsSemiBold;
+  font-family: Poppins600;
   font-size: 1rem;
   margin: 1rem;
   color: ${AmaColors.brown(0.8)};
@@ -47,7 +45,7 @@ const dotFlashing = keyframes`
     75%{box-shadow: 1.5rem 0 #fff,-1.5rem 0 #fff1; background: #fff1 }
     100%{box-shadow: 1.5rem 0 #fff1, -1.5rem 0 #fff1;background: #fff1 }
 `
-const MoreIcon = styled(FlexCenter)`
+const MoreCuiImage = styled(FlexCenter)`
   background-color: ${AmaColors.darkBeige(1)};
   border-radius: 50%;
   cursor: pointer;
@@ -55,7 +53,7 @@ const MoreIcon = styled(FlexCenter)`
   margin: auto;
   width: 91px;
   &:hover .dot {
-    animation: ${dotFlashing} .8s linear infinite;
+    animation: ${dotFlashing} 0.8s linear infinite;
   }
 `
 const Dots = styled.div`
@@ -69,48 +67,48 @@ const Dots = styled.div`
 export const HowCanIHelp = () => {
     return (
         <FlexContent>
-            <Heading fontSize={2.813} textAlign="center" color={AmaColors.brown(0.9)} margin="3rem auto">
+            <Heading fontSize={2.813} textAlign="center" color={AmaColors.brown(0.9)} margin="5rem auto auto auto">
         Amiben segíthetek Neked
             </Heading>
             <GridContainer>
-                <CustomGrid container justifyContent="center" alignItems="center" spacing={10}>
+                <Grid container justifyContent="center" alignItems="center">
                     <CustomGrid item xs={3}>
-                        <Icon src={derektajiFajdalmak.src} alt="deréktáji fájdalmak" width={5.688} height={5.688} />
+                        <CuiImage src={derektajiFajdalmak} alt="deréktáji fájdalmak" />
                         <Text>deréktáji fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={nyakiPanaszok.src} alt="nyaki panaszok" width={5.688} height={5.688} />
+                        <CuiImage src={nyakiPanaszok} alt="nyaki panaszok" />
                         <Text>nyaki panaszok</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={vegtagFajdalmak.src} alt="végtag fájdalmak" width={5.688} height={5.688} />
+                        <CuiImage src={vegtagFajdalmak} alt="végtag fájdalmak" />
                         <Text>végtag fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={tartasJavitas.src} alt="tartásjavítás" width={5.688} height={5.688} />
+                        <CuiImage src={tartasJavitas} alt="tartásjavítás" />
                         <Text>tartásjavítás</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={sportserulesek.src} alt="sportsérülések" width={5.688} height={5.688} />
+                        <CuiImage src={sportserulesek} alt="sportsérülések" />
                         <Text>sportsérülések</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={mutetekUtan.src} alt="műtétek után" width={5.688} height={5.688} />
+                        <CuiImage src={mutetekUtan} alt="műtétek után" />
                         <Text>műtétek után</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Icon src={megelozes.src} alt="megelőzés" width={5.688} height={5.688} />
+                        <CuiImage src={megelozes} alt="megelőzés" />
                         <Text>megelőzés</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <Link href="/about">
-                            <MoreIcon>
+                        <CuiLink href="/about">
+                            <MoreCuiImage>
                                 <Dots className="dot" />
-                            </MoreIcon>
-                        </Link>
+                            </MoreCuiImage>
+                        </CuiLink>
                         <Text>bővebben</Text>
                     </CustomGrid>
-                </CustomGrid>
+                </Grid>
             </GridContainer>
         </FlexContent>
     )

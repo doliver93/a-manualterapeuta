@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Img } from "assets/styles/styled-components/images"
-import Link from "next/link"
 import { PrimaryButton } from "assets/styles/styled-components/buttons"
 import { StaticImageData } from "next/image"
 import { ExternalLinks } from "enums/ExternalLinks"
+import { CuiLink } from "assets/styles/shared"
+import { CuiImage } from "assets/styles/styled-components/images"
 
 const NavigationContainer = styled.div`
   align-items: center;
@@ -18,20 +18,20 @@ const NavigationContainer = styled.div`
   padding: 2rem 0;
 `
 
-const Logo = styled(Img)`
+const Logo = styled(CuiImage)`
   cursor: pointer;
   margin: 0;
   pointer-events: auto;
 `
 
-interface NavLinkTextProps {
+interface CuiLinkTextProps {
   color: string
   colorHover: string
 }
-const NavLinkText = styled.div<NavLinkTextProps>`
+const CuiLinkText = styled.div<CuiLinkTextProps>`
   color: ${({ color = "black"}) => color};
   cursor: pointer;
-  font-family: PoppinsSemiBold;
+  font-family: Poppins600;
   font-size: 1rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -52,13 +52,6 @@ const NavLinkText = styled.div<NavLinkTextProps>`
 const Button = styled(PrimaryButton)`
   margin-left: 1.25rem;
 `
-const LinkA = styled.a`
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-`
-
 interface NavigationProps {
   logo: StaticImageData
   textColor: string
@@ -73,41 +66,39 @@ interface NavigationProps {
 export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover, active }: NavigationProps) => {
     return (
         <NavigationContainer>
-            <Link href="/">
-                <Logo src={logo.src} alt="A manualterapeuta" width={3.5} height={2.5} />
-            </Link>
-            <Link href="/kezelesek/">
-                <NavLinkText color={textColor} colorHover={textHover} className={active === "kezelesek" && "active"}>
+            <CuiLink href="/">
+                <Logo src={logo.src} alt="A manualterapeuta" width={56} height={40} />
+            </CuiLink>
+            <CuiLink href="/kezelesek/">
+                <CuiLinkText color={textColor} colorHover={textHover} className={active === "kezelesek" && "active"}>
           Kezelések
-                </NavLinkText>
-            </Link>
-            <Link href="/allapotfelmeres/">
-                <NavLinkText color={textColor} colorHover={textHover} className={active === "allapotfelmeres" && "active"}>
+                </CuiLinkText>
+            </CuiLink>
+            <CuiLink href="/allapotfelmeres/">
+                <CuiLinkText color={textColor} colorHover={textHover} className={active === "allapotfelmeres" && "active"}>
           Állapotfelmérés
-                </NavLinkText>
-            </Link>
-            <Link href="/about">
-                <NavLinkText color={textColor} colorHover={textHover}>
+                </CuiLinkText>
+            </CuiLink>
+            <CuiLink href="/rolam">
+                <CuiLinkText color={textColor} colorHover={textHover}>
           Rólam
-                </NavLinkText>
-            </Link>
-            <Link href="/about">
-                <NavLinkText color={textColor} colorHover={textHover}>
+                </CuiLinkText>
+            </CuiLink>
+            <CuiLink href="/arlista">
+                <CuiLinkText color={textColor} colorHover={textHover}>
           Árlista
-                </NavLinkText>
-            </Link>
-            <Link href="/about">
-                <NavLinkText color={textColor} colorHover={textHover}>
+                </CuiLinkText>
+            </CuiLink>
+            <CuiLink href="/about">
+                <CuiLinkText color={textColor} colorHover={textHover}>
           Kapcsolat
-                </NavLinkText>
-            </Link>
-            <Link href={ExternalLinks.FACEBOOK} target="_blank">
-                <LinkA target="_blank" rel="noopener noreferrer">
-                    <Button backgroundColor={buttonBackgroundColor} backgroundHover={buttonBackgroundColorHover} color={buttonTextColor} colorHover={buttonTextColorHover}>
+                </CuiLinkText>
+            </CuiLink>
+            <CuiLink href={ExternalLinks.APPOINTMENT} target="_blank">
+                <Button backgroundColor={buttonBackgroundColor} backgroundHover={buttonBackgroundColorHover} color={buttonTextColor} colorHover={buttonTextColorHover}>
           Időpontfoglalás
-                    </Button>
-                </LinkA>
-            </Link>
+                </Button>
+            </CuiLink>
         </NavigationContainer>
     )
 }

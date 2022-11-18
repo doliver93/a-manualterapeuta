@@ -6,7 +6,7 @@ export const HeadComponent = () => {
     return (
         <Head>
             <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
-            <title>manualterapeuta</title>
+            <title>m a n u á l t e r a p e u t a</title>
         </Head>
     )
 }

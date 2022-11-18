@@ -10,19 +10,19 @@ interface TypographyProps {
 export const Heading = styled.div<TypographyProps>`
   color: ${({ color = "black" }) => color};
   display: inline-block;
-  font-family: PlayfairDisplayExtraBold;
+  font-family: PlayfairDisplay800;
   font-size: ${({ fontSize = 1}) => `${fontSize}rem`};
   margin: ${({ margin }) => margin || 0};
   text-align: ${({ textAlign = "left" }) => textAlign};
 `
 
 export const SubHeading = styled(Heading)<TypographyProps>`
-  font-family: PlayfairDisplayBold;
+  font-family: PlayfairDisplay700;
 `
 
 export const Paragraph = styled.div<TypographyProps>`
   color: ${({ color = "black" }) => color};
-  font-family: PoppinsMedium;
+  font-family: Poppins500;
   font-size: ${({ fontSize = 1 }) => `${fontSize}rem`};
   line-height: 2rem;
   margin: ${({ margin = 0 }) => margin};

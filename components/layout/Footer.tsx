@@ -1,7 +1,6 @@
 import { Grid } from "@mui/material"
 import { AmaColors } from "assets/styles/colors"
-import { Content, FlexRight } from "assets/styles/shared"
-import { Img } from "assets/styles/styled-components/images"
+import { Content, CuiLink, FlexRight } from "assets/styles/shared"
 import { Paragraph, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"
@@ -11,6 +10,7 @@ import facebook from "images/layout/footer/facebook.svg"
 import tiktok from "images/layout/footer/tiktok.svg"
 import Link from "next/link"
 import { ExternalLinks } from "enums/ExternalLinks"
+import { CuiImage } from "assets/styles/styled-components/images"
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
 const FooterContent = styled(Content)`
   padding: 2.5rem 0;
 `
-const FooterIcons = styled(Img)`
+const FooterIcons = styled(CuiImage)`
   border-radius: 10px;
   cursor: pointer;
   margin: 0 0 0 1rem;
@@ -74,21 +74,15 @@ export const Footer = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <FlexRight>
-                            <Link href={ExternalLinks.INSTAGRAM}>
-                                <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={instagram.src} alt="logo1" width={2.5} height={2.5} />
-                                </a>
-                            </Link>
-                            <Link href={ExternalLinks.FACEBOOK}>
-                                <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={facebook.src} alt="logo2" width={2.5} height={2.5} />
-                                </a>
-                            </Link>
-                            <Link href={ExternalLinks.TIKTOK}>
-                                <a target="_blank" rel="noopener noreferrer">
-                                    <FooterIcons src={tiktok.src} alt="logo3" width={2.5} height={2.5} />
-                                </a>
-                            </Link>
+                            <CuiLink href={ExternalLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer">
+                                <FooterIcons src={instagram} alt="logo1" margin="0 0 0 1rem"/>
+                            </CuiLink>
+                            <CuiLink href={ExternalLinks.FACEBOOK} target="_blank" rel="noopener noreferrer">
+                                <FooterIcons src={facebook} alt="logo2"  margin="0 0 0 1rem" />
+                            </CuiLink>
+                            <CuiLink href={ExternalLinks.TIKTOK} target="_blank" rel="noopener noreferrer">
+                                <FooterIcons src={tiktok} alt="logo3"  margin="0 0 0 1rem" />
+                            </CuiLink>
                         </FlexRight>
                         <FlexRight>
                             <FrameContainer>
