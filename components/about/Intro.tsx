@@ -1,9 +1,7 @@
 import { AmaColors } from "assets/styles/colors"
 import { Border, Content } from "assets/styles/shared"
-import { Navigation } from "components/layout/Navigation"
 import React from "react"
 
-import logo from "images/layout/logo-brown.svg"
 import styled from "styled-components"
 import { Grid } from "@mui/material"
 import { Heading, Paragraph } from "assets/styles/styled-components/typography"

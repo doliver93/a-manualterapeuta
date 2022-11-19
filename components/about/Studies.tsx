@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material"
 import { AmaColors } from "assets/styles/colors"
-import { Content, FlexCenter, FlexLeft } from "assets/styles/shared"
+import { Content } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"

@@ -59,6 +59,7 @@ export const Content = styled.div`
   max-width: 72.5rem;
 `
 export const CuiLink = styled(Link)`
+  display: inline-block;
   text-decoration: none;
   &:hover {
     text-decoration: none;

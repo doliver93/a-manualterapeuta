@@ -4,11 +4,12 @@ import styled from "styled-components"
 // import background from "images/mainpage/test3.png"
 import background from "images/mainpage/a-manualterapeuta-intro2.webp"
 import { Navigation } from "components/layout/Navigation"
-import { Content, FlexLeftColumn } from "assets/styles/shared"
+import { Content, CuiLink, FlexLeftColumn } from "assets/styles/shared"
 import { Heading, Paragraph, SubHeading } from "assets/styles/styled-components/typography"
 import { AmaColors } from "assets/styles/colors"
 import { PrimaryButton } from "assets/styles/styled-components/buttons"
 import logo from "images/layout/logo-white.svg"
+import { ExternalLinks } from "enums/ExternalLinks"
 
 const Container = styled.div`
   background-image: url(${background.src});
@@ -36,7 +37,6 @@ export const Intro = () => {
                     buttonBackgroundColorHover={AmaColors.darkBeige(1)}
                     buttonTextColor={AmaColors.white(0.8)}
                     buttonTextColorHover={AmaColors.white(1)}
-                    active=""
                 />
                 <IntroContainer>
                     <Heading color={AmaColors.brown(0.8)} fontSize={2.813} margin="1rem 0">
@@ -53,7 +53,9 @@ export const Intro = () => {
                     <Paragraph color={AmaColors.brown(0.7)} fontSize={1.125} margin="0 0 2rem 0">
             Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.
                     </Paragraph>
-                    <PrimaryButton>bejelentkezés állapotfelmérésre</PrimaryButton>
+                    <CuiLink href={ExternalLinks.APPOINTMENT}  target="_blank" rel="noopener noreferrer">
+                        <PrimaryButton>bejelentkezés állapotfelmérésre</PrimaryButton>
+                    </CuiLink>
                 </IntroContainer>
             </Content>
         </Container>

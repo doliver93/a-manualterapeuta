@@ -13,7 +13,6 @@ import tartasJavitas from "images/mainpage/tartasjavitas.svg"
 import sportserulesek from "images/mainpage/sportserulesek.svg"
 import mutetekUtan from "images/mainpage/mutetek-utan.svg"
 import megelozes from "images/mainpage/megelozes.svg"
-import Link from "next/link"
 import { CuiImage } from "assets/styles/styled-components/images"
 
 const FlexContent = styled(Content)`
@@ -45,6 +44,11 @@ const dotFlashing = keyframes`
     75%{box-shadow: 1.5rem 0 #fff,-1.5rem 0 #fff1; background: #fff1 }
     100%{box-shadow: 1.5rem 0 #fff1, -1.5rem 0 #fff1;background: #fff1 }
 `
+const MoreInfo = styled.div`
+    &:hover .dot {
+        animation: ${dotFlashing} 0.8s linear infinite;
+      }
+`
 const MoreCuiImage = styled(FlexCenter)`
   background-color: ${AmaColors.darkBeige(1)};
   border-radius: 50%;
@@ -52,9 +56,7 @@ const MoreCuiImage = styled(FlexCenter)`
   height: 91px;
   margin: auto;
   width: 91px;
-  &:hover .dot {
-    animation: ${dotFlashing} 0.8s linear infinite;
-  }
+  
 `
 const Dots = styled.div`
   aspect-ratio: 1;
@@ -101,12 +103,14 @@ export const HowCanIHelp = () => {
                         <Text>megelőzés</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiLink href="/about">
-                            <MoreCuiImage>
-                                <Dots className="dot" />
-                            </MoreCuiImage>
+                        <CuiLink href="/kezelesek">
+                            <MoreInfo>
+                                <MoreCuiImage>
+                                    <Dots className="dot" />
+                                </MoreCuiImage>
+                                <Text>bővebben</Text>
+                            </MoreInfo>
                         </CuiLink>
-                        <Text>bővebben</Text>
                     </CustomGrid>
                 </Grid>
             </GridContainer>

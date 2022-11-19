@@ -5,6 +5,7 @@ import { StaticImageData } from "next/image"
 import { ExternalLinks } from "enums/ExternalLinks"
 import { CuiLink } from "assets/styles/shared"
 import { CuiImage } from "assets/styles/styled-components/images"
+import { useRouter } from "next/router"
 
 const NavigationContainer = styled.div`
   align-items: center;
@@ -60,41 +61,47 @@ interface NavigationProps {
   buttonBackgroundColorHover: string
   buttonTextColor: string
   buttonTextColorHover: string
-  active: string
 }
 
-export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover, active }: NavigationProps) => {
+export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover }: NavigationProps) => {
+    
+    const router = useRouter()
+    
+    const scrollToFooter = () => {
+        const element = document.getElementById("footer")
+        console.log(element)
+        element && element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+    }
+    
     return (
         <NavigationContainer>
             <CuiLink href="/">
                 <Logo src={logo.src} alt="A manualterapeuta" width={56} height={40} />
             </CuiLink>
             <CuiLink href="/kezelesek/">
-                <CuiLinkText color={textColor} colorHover={textHover} className={active === "kezelesek" && "active"}>
+                <CuiLinkText color={textColor} colorHover={textHover} className={router.pathname === "/kezelesek" && "active"}>
           Kezelések
                 </CuiLinkText>
             </CuiLink>
             <CuiLink href="/allapotfelmeres/">
-                <CuiLinkText color={textColor} colorHover={textHover} className={active === "allapotfelmeres" && "active"}>
+                <CuiLinkText color={textColor} colorHover={textHover} className={router.pathname === "/allapotfelmeres" && "active"}>
           Állapotfelmérés
                 </CuiLinkText>
             </CuiLink>
             <CuiLink href="/rolam">
-                <CuiLinkText color={textColor} colorHover={textHover}>
+                <CuiLinkText color={textColor} colorHover={textHover} className={router.pathname === "/rolam" && "active"}>
           Rólam
                 </CuiLinkText>
             </CuiLink>
             <CuiLink href="/arlista">
-                <CuiLinkText color={textColor} colorHover={textHover}>
+                <CuiLinkText color={textColor} colorHover={textHover} className={router.pathname === "/arlista" && "active"}>
           Árlista
                 </CuiLinkText>
             </CuiLink>
-            <CuiLink href="/about">
-                <CuiLinkText color={textColor} colorHover={textHover}>
+            <CuiLinkText color={textColor} colorHover={textHover} onClick={scrollToFooter}>
           Kapcsolat
-                </CuiLinkText>
-            </CuiLink>
-            <CuiLink href={ExternalLinks.APPOINTMENT} target="_blank">
+            </CuiLinkText>
+            <CuiLink href={ExternalLinks.APPOINTMENT} target="_blank" rel="noopener noreferrer">
                 <Button backgroundColor={buttonBackgroundColor} backgroundHover={buttonBackgroundColorHover} color={buttonTextColor} colorHover={buttonTextColorHover}>
           Időpontfoglalás
                 </Button>

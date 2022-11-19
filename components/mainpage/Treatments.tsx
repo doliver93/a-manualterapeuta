@@ -13,10 +13,6 @@ import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimen
 import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.png"
 import { CuiImage } from "assets/styles/styled-components/images"
 
-interface TranslateProp {
-  pos: { x: number; y: number }
-}
-
 interface ContainerProps {
   backgroundColor: string
 }
@@ -74,7 +70,7 @@ export const Treatments = () => {
                   Kézzel végzett diagnosztikai- és terápiás módszer, amely során az egyes ízületekben észlelt blokkokat oldom a páciens által végzett légzési-, és izommunkával. Ha a blokk oldódik, a
                   kezelt ízület és a körülötte lévő izmok helyzete változik és ezzel csökken a fájdalom.
                                 </Paragraph>
-                                <LinkDetails href="/kezelesek">részletes leírás</LinkDetails>
+                                <LinkDetails href={{pathname: "/kezelesek", query: "manualterapia"}}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                     </Grid>
@@ -92,7 +88,7 @@ export const Treatments = () => {
                   A kötőszövetek- azaz a bőr, a bőr alatti kötőszövet, az izompólya (fascia) és az izmok - szintjén végzett diagnosztikai és terápiás módszer, a lágyrész eltérések helyreállítását
                   célzó mozdulatokkal.
                                 </Paragraph>
-                                <LinkDetails href="/kezelesek">részletes leírás</LinkDetails>
+                                <LinkDetails href={{pathname: "/kezelesek", query: "lagyresz-kezelesek"}}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                         <Grid item>
@@ -121,7 +117,7 @@ export const Treatments = () => {
                   Célzott gyógytorna feladatok a fájdalmak csillapítására, az izmok erősítésére, nyújtására és a kezelések utáni korrekció fenntartására. Magába foglalja az óra keretein belül végzett
                   feladatokat és az otthonra adott gyakorlatokat.
                                 </Paragraph>
-                                <LinkDetails href="/kezelesek">részletes leírás</LinkDetails>
+                                <LinkDetails href={{pathname: "/kezelesek", query: "gyogytorna"}}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                     </Grid>
@@ -138,7 +134,7 @@ export const Treatments = () => {
                                 <Paragraph color={AmaColors.brown(0.8)} fontSize={1.125} textAlign="justify" margin="1.875rem 0">
                                 Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő gyakorlatokkal.
                                 </Paragraph>
-                                <LinkDetails href="/kezelesek">részletes leírás</LinkDetails>
+                                <LinkDetails href={{pathname: "/kezelesek", query: "haromdimenzios-scoliosis-terapia"}}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                         <Grid item>
@@ -161,7 +157,7 @@ export const Treatments = () => {
                                 <Paragraph color={AmaColors.brown(0.8)} fontSize={1.125} textAlign="justify" margin="1.875rem 0">
                                 Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő gyakorlatokkal.
                                 </Paragraph>
-                                <LinkDetails href="/kezelesek">részletes leírás</LinkDetails>
+                                <LinkDetails href={{pathname: "/kezelesek", query: "mckenzie-terapia"}}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                     </Grid>

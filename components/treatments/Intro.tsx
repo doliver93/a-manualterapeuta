@@ -33,7 +33,6 @@ export const Intro = () => {
                     buttonBackgroundColorHover={AmaColors.white(1)}
                     buttonTextColor={AmaColors.brown(0.8)}
                     buttonTextColorHover={AmaColors.brown(1)}
-                    active="kezelesek"
                 />
                 <IntroContainer>
                     <Heading color={AmaColors.white(0.9)} fontSize={2.813} margin="1.375rem 0">

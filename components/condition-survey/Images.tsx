@@ -1,13 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import background from "images/conditions-survey/allapotfelmeres-intro.png"
-import { Navigation } from "components/layout/Navigation"
-import { Content, FlexLeftColumn } from "assets/styles/shared"
-import { Heading, Paragraph, SubHeading } from "assets/styles/styled-components/typography"
+import { Content } from "assets/styles/shared"
 import { AmaColors } from "assets/styles/colors"
-import { PrimaryButton } from "assets/styles/styled-components/buttons"
-import logo from "images/layout/logo-white.svg"
 
 import allapotfelmeres1 from "images/conditions-survey/allapotfelmeres-gyakorlat-1.png"
 import allapotfelmeres2 from "images/conditions-survey/allapotfelmeres-gyakorlat-2.png"

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Grid } from "@mui/material"
 import { AmaColors } from "assets/styles/colors"
 import { Border, Content } from "assets/styles/shared"
@@ -11,6 +11,7 @@ import lagyreszKezelesek from "images/treatments/kezelesek-lagyresz-kezelesek.pn
 import gyogytorna from "images/treatments/kezelesek-gyogytorna.png"
 import haromdimenzios from "images/treatments/kezelesek-haromdimenzios-scoliosis-terapia.png"
 import mckenzie from "images/treatments/kezelesek-mckenzie-terapia.png"
+import { useRouter } from "next/router"
 
 interface ContainerProps {
   backgroundColor?: string
@@ -45,9 +46,21 @@ const GridContainer = styled(Grid)`
 `
 
 export const Details = () => {
+    const router = useRouter()
+    const data = router.query
+    useEffect(()=>{
+        if (router.query && Object.keys(data)[0]){
+            const element = document.getElementById(Object.keys(data)[0])
+            console.log(element)
+            const timer = setTimeout(() => {
+                element && element.scrollIntoView({behavior: "auto", block: "center", inline: "center"})
+            }, 100)
+            return () => clearTimeout(timer)
+        }
+    }, [data])
     return (
         <>
-            <Container paddingBottom={10}>
+            <Container id="manualterapia" paddingBottom={10}>
                 <Content>
                     <GridContainer container>
                         <Grid item xs={6}>
@@ -68,7 +81,7 @@ export const Details = () => {
                     </GridContainer>
                 </Content>
             </Container>
-            <Container backgroundColor={AmaColors.grey(0.2)} paddingTop={1} paddingBottom={1}>
+            <Container id="lagyresz-kezelesek" backgroundColor={AmaColors.grey(0.2)} paddingTop={1} paddingBottom={1}>
                 <Content>
                     <GridContainer container>
                         <Grid item xs={6}>
@@ -85,7 +98,7 @@ export const Details = () => {
                     </GridContainer>
                 </Content>
             </Container>
-            <Container>
+            <Container id="gyogytorna">
                 <Content>
                     <GridContainer container>
                         <Grid item xs={6}>
@@ -105,7 +118,7 @@ export const Details = () => {
                     </GridContainer>
                 </Content>
             </Container>
-            <Container backgroundColor={AmaColors.darkBeige(0.15)}>
+            <Container id="haromdimenzios-scoliosis-terapia" backgroundColor={AmaColors.darkBeige(0.15)}>
                 <Content>
                     <GridContainer container>
                         <Grid item xs={6}>
@@ -127,7 +140,7 @@ export const Details = () => {
                     </GridContainer>
                 </Content>
             </Container>
-            <Container>
+            <Container id="mckenzie-terapia">
                 <Content>
                     <GridContainer container>
                         <Grid item xs={6}>

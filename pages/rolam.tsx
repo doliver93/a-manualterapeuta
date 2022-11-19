@@ -28,7 +28,6 @@ const About = () => {
                         buttonBackgroundColorHover={AmaColors.lightBeige(1)}
                         buttonTextColor={AmaColors.white(0.8)}
                         buttonTextColorHover={AmaColors.white(1)}
-                        active="arlista"
                     />
                 </Content>
                 <Container>
