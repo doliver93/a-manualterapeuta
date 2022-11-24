@@ -30,10 +30,10 @@ export const Intro = () => {
             <Content>
                 <Grid container justifyContent="space-between">
                     <Grid item xs={7}>
-                        <Heading fontSize={4.5} color={CuiColors.brown(0.9)} margin="0 0 4.5rem 0">
+                        <Heading color={CuiColors.brown(0.9)} margin={{md: "0 0 4.5rem 0"}}>
               Rólam
                         </Heading>
-                        <Paragraph fontSize={1.8} color={CuiColors.brown(0.8)} textAlign="justify">
+                        <Paragraph color={CuiColors.brown(0.8)} textAlign="justify">
               A sport mindig is fontos része volt az életemnek, így mindig is tudtam hogy ezzel szeretnék foglalkozni. Korábban szertornáztam, trambulinoztam. Jelenleg rendszeresen futok terepen és
               ariel silk-re járok. A Semmelweis Egyetemen végeztem, mint gyógytornász-fizioterapeuta 2017-ben. Ezalatt gyógymasszőrként praktizáltam és egy NBIII-as foci csapat sportmasszőre is
               voltam. A diplomaszerzésem óta egy állami kórházban dolgozom a magánpraxisom mellett.

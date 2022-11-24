@@ -41,10 +41,10 @@ export const Intro = () => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white(0.9)} fontSize={4.5} margin="1.375rem 0">
+                    <Heading color={CuiColors.white(0.9)}>
             Kezelések
                     </Heading>
-                    <SubHeading color={CuiColors.white()} fontSize={2.5} margin="0 0 2rem 0">
+                    <SubHeading color={CuiColors.white()}>
             Részletes leírás, hogy könnyebben eligazodj
                     </SubHeading>
                 </IntroContainer>

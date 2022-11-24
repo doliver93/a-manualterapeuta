@@ -35,10 +35,10 @@ export const Intro = () => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white(0.9)} fontSize={4.5} margin="2.2rem 0">
+                    <Heading color={CuiColors.white(0.9)}>
                     Állapotfelmérés
                     </Heading>
-                    <SubHeading color={CuiColors.white()} fontSize={2.5} margin="0 0 3.2rem 0">
+                    <SubHeading color={CuiColors.white()}>
                     Maximális figyelem és empátia, amely csak rád irányul…
                     </SubHeading>
                 </IntroContainer>

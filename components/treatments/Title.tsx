@@ -12,17 +12,17 @@ const Container = styled.div`
 `
 
 const Header = styled(Heading)`
-    font-size: 4.5rem;
+  font-size: 4.5rem;
 `
 
 export const Title = () => {
     return (
         <Container>
             <Content>
-                <Header color={CuiColors.brown(0.9)} margin="0 0 1.875rem 0" textAlign="center">
+                <Header color={CuiColors.brown(0.9)} margin={{ md: "0 0 1.875rem 0" }} textAlign="center">
           Ilyen panaszokkal fordulhatsz hozzám
                 </Header>
-                <Paragraph fontSize={2.4} color={CuiColors.brown(0.8)} textAlign="center">
+                <Paragraph fontSize={{ md: 2.4 }} color={CuiColors.brown(0.8)} textAlign="center">
           Fő területem a derék-, nyak- és vállfájdalmak manuálterápiás- lágyrész kezelései, valamint:
                 </Paragraph>
             </Content>

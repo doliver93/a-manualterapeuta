@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import { StaticImageData } from "next/image"
-import { breakPoint, FlexCenter, FlexCenterColumn } from "assets/styles/shared"
-import { CuiImage } from "assets/styles/styled-components/images"
+import { breakPoint, FlexCenterColumn } from "assets/styles/shared"
 import { NavigationElements } from "./NavigationElements"
 import { HeaderElements } from "./HeaderElements"
 import { CuiColors } from "assets/styles/colors"
@@ -30,6 +29,7 @@ const NavigationContainer = styled.div`
     flex-direction: column;
     padding: 0;
   }
+
 `
 
 interface NavigationProps {
@@ -47,9 +47,12 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   z-index: 1000;
-  // transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   @media (max-width: ${breakPoint.md.width}px) {
     padding: 3.2rem;
+  }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    padding: 1rem 2rem;
   }
 `
 const ResponsiveContent = styled(FlexCenterColumn)`
@@ -78,7 +81,6 @@ export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, 
         window.addEventListener("resize", handleResize)
     }, [])
 
-    console.log({open})
     useOutsideClick({
         ref,
         watch: open,
@@ -101,7 +103,7 @@ export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, 
                                 icon={ open ? <CloseIcon fontSize="inherit" style={{pointerEvents: "none"}} /> : <MenuIcon fontSize="inherit" style={{pointerEvents: "none"}} /> }
                             />
                         </Header>
-                        <ResponsiveContent style={{display: open ? "block" : "none"}}>
+                        <ResponsiveContent style={open ? {opacity: "1", zIndex: "1000"}  : {opacity: "0", zIndex: "-1"}}>
                             <NavigationElements 
                                 responsive={responsive}
                                 logo={logo} 

@@ -1,18 +1,21 @@
 import styled from "styled-components"
 import { CuiColors } from "styles/colors"
+import { BreakPoints } from "types/BreakPoints"
+import { breakPoint } from "../shared"
 
 interface PrimaryButtonProps {
   backgroundColor?: string
   backgroundHover?: string
   color?: string
   colorHover?: string
+  fontSize? :BreakPoints
 }
 export const PrimaryButton = styled.div<PrimaryButtonProps>`
   background-color: ${({ backgroundColor = CuiColors.darkBeige(0.8) }) => backgroundColor};
   color: ${({ color = CuiColors.white(0.8) }) => color};
   cursor: pointer;
   font-family: Poppins600;
-  font-size: 1.6rem;
+  font-size: ${({ fontSize = { md: 1.6 } }) => `${fontSize.md}rem`};
   letter-spacing: 0.16rem;
   padding: 1.4rem 1.6rem;
   text-transform: uppercase;
@@ -20,5 +23,10 @@ export const PrimaryButton = styled.div<PrimaryButtonProps>`
   &:hover {
     background-color: ${({ backgroundHover = CuiColors.darkBeige(1) }) => backgroundHover};
     color: ${({ colorHover = CuiColors.white(1) }) => colorHover};
+  }
+  
+  @media(max-width: ${breakPoint.sm.width}px){
+    font-size: ${({ fontSize = { sm: 0.9 } }) => `${fontSize.sm}rem`};
+    padding: 0.5rem 1rem;
   }
 `

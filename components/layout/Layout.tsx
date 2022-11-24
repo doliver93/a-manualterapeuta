@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Footer } from "./Footer"
 import { Fade } from "@mui/material"
+import { breakPoint } from "assets/styles/shared"
 
 const StyledLayout = styled.div`
   min-height: 100vh;
@@ -13,9 +14,12 @@ interface LayoutProps {
 
 
 export const Layout = ({ children }: LayoutProps) => {
+   
+
     useEffect(()=> {
         window.scrollTo(0, 0)
     }, [])
+ 
   
     return (
         <StyledLayout>

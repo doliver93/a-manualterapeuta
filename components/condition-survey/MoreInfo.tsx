@@ -26,7 +26,7 @@ const List = styled.li`
 export const MoreInfo = () => {
     return (
         <MoreInfoContent>
-            <SubHeading fontSize={2.5} color={CuiColors.brown(0.9)}>
+            <SubHeading color={CuiColors.brown(0.9)}>
         Mit érdemes magaddal hoznod az első alkalommal
             </SubHeading>
             <ListCollection>

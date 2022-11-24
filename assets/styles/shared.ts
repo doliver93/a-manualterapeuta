@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
 import { CuiColors } from "./colors"
@@ -9,7 +8,7 @@ interface BreakPointType {
 
 export const breakPoint: BreakPointType = {
     xs: {
-        width: 375,
+        width: 320,
     },
     sm: {
         width: 600,
@@ -17,11 +16,11 @@ export const breakPoint: BreakPointType = {
     },
     md: {
         width: 900,
-        padding: ""
+        padding: "1.6.rem"
     },
     lg: {
         width: 1200,
-        padding: "3.2rem",
+        padding: "3.5rem",
         imgSize: 0.8,
     },
     xl: {
@@ -76,6 +75,11 @@ export const Content = styled.div`
     width: 100%;
     padding-left: ${breakPoint.lg.padding};
     padding-right: ${breakPoint.lg.padding};
+  }
+  @media (max-width: ${breakPoint.md.width}px) {
+    width: 100%;
+    padding-left: ${breakPoint.md.padding};
+    padding-right: ${breakPoint.md.padding};
   }
   @media (max-width: ${breakPoint.sm.width}px) {
     width: 100%;

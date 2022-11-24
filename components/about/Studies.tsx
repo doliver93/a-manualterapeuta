@@ -33,25 +33,24 @@ const StudiesItem = styled.li`
         width: 1.6em;
 `
 
-
 export const Studies = () => {
     return (
         <>
             <TitleContainer>
                 <Content>
-                    <Heading fontSize={4.5} color={CuiColors.brown(0.9)} margin="0 0 0.8rem 0">
+                    <Heading color={CuiColors.brown(0.9)} margin={{ md: "0 0 1.7rem 0" }}>
             Továbbképzéseim
                     </Heading>
                 </Content>
                 <Container>
                     <Content>
-                        <SubHeading fontSize={2.5} color={CuiColors.brown(0.9)} margin="0 0 4.8rem 0">
+                        <SubHeading color={CuiColors.brown(0.9)} margin={{ md: "0 0 4.8rem 0" }}>
               Tanulmányaim segítségével specifikus kezelésekben részesülhetsz
                         </SubHeading>
                         <Grid container spacing={10}>
                             <Grid item xs={6}>
                                 <StudiesContainer>
-                                    <StudiesItem>Semmelweis Egyetem Általános Orvostudományi  Kara által elfogadott Manuálterápia</StudiesItem>
+                                    <StudiesItem>Semmelweis Egyetem Általános Orvostudományi Kara által elfogadott Manuálterápia</StudiesItem>
                                     <StudiesItem>Anatomy Trains (folyamatban)</StudiesItem>
                                     <StudiesItem>McKenzie A kurzus</StudiesItem>
                                     <StudiesItem>Lágyrész technikák, triggerpont kezelés</StudiesItem>

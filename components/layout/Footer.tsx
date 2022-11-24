@@ -20,7 +20,6 @@ interface FooterParagraphProps {
 }
 const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
   color: ${CuiColors.white(0.8)};
-  font-size: 1.8rem;
   line-height: 2.8rem;
   margin-bottom: ${({ marginBottom = 0 }) => `${marginBottom}rem`};
 `
@@ -34,11 +33,11 @@ const FooterIcons = styled(CuiImage)`
   border-radius: 10px;
   cursor: pointer;
   margin: 0 0 0 1.7rem;
-  opacity: 0.4;
+  opacity: 0.3;
   pointer-events: auto;
   // width: 25px;
   &:hover {
-    opacity: 1;
+    opacity: 0.6;
   }
 `
 const FrameContainer = styled.div`
@@ -53,7 +52,7 @@ export const Footer = () => {
             <FooterContent>
                 <Grid container alignItems="flex-end">
                     <Grid item md={6} xs={12}>
-                        <SubHeading fontSize={2.5} color={CuiColors.white()}>
+                        <SubHeading color={CuiColors.white()}>
               Kapcsolat
                         </SubHeading>
                         <FooterParagraph marginBottom={3}>

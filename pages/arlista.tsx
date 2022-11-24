@@ -13,39 +13,36 @@ import arlista from "images/prices/arlista.png"
 import { CuiImage } from "assets/styles/styled-components/images"
 
 const Container = styled.div`
-    width: 100%;
-    background-color: white;
-    padding: 16rem 0;
+  width: 100%;
+  background-color: white;
+  padding: 16rem 0;
 `
 const PricesContainer = styled.div`
-    background-color: ${CuiColors.darkBeige(0.1)};
-    padding-top: 3.2rem;
-    padding-bottom: 8rem;
-    position: relative;
- 
+  background-color: ${CuiColors.darkBeige(0.1)};
+  padding-top: 3.2rem;
+  padding-bottom: 8rem;
+  position: relative;
 `
 const PriceParagraph = styled(Paragraph)`
-    color: ${CuiColors.brown(0.8)};
-    font-size: 1.8rem;
-
+  color: ${CuiColors.brown(0.8)};
 `
 const PriceContent = styled(Grid)`
-    margin-bottom: 4rem;
-    position: relative;
+  margin-bottom: 4rem;
+  position: relative;
 `
 const TimeText = styled.div`
-    font-family: Poppins600;
-    font-size: 1.4rem;
-    color: ${CuiColors.lightBeige()};
-    padding-left: 3rem;
-    position: absolute;
+  font-family: Poppins600;
+  font-size: 1.4rem;
+  color: ${CuiColors.lightBeige()};
+  padding-left: 3rem;
+  position: absolute;
 `
 const PriceImageContainer = styled.div`
-    position: absolute;
-    width: 466px;
-    height: 699px;
-    right: 0;
-    top: 0;
+  position: absolute;
+  width: 466px;
+  height: 699px;
+  right: 0;
+  top: 0;
 `
 const Prices = () => {
     return (
@@ -67,8 +64,8 @@ const Prices = () => {
                         <Content>
                             <Grid container justifyContent="space-between" alignItems="stretch">
                                 <Grid item xs={7} alignItems="stretch">
-                                    <Heading color={CuiColors.brown(0.9)} fontSize={4.5} margin="0 0 4.5rem 0">
-                                Árlista  
+                                    <Heading color={CuiColors.brown(0.9)} margin={{ md: "0 0 4.5rem 0" }}>
+                    Árlista
                                     </Heading>
                                     <PriceContent container>
                                         <Grid item xs={8}>
@@ -125,8 +122,8 @@ const Prices = () => {
                                 </Grid>
                                 <Grid>
                                     <PriceImageContainer>
-                                        <Border pos={{x: -2.4, y: 2.4}}>
-                                            <CuiImage src={arlista.src} width={466} height={699} alt="Árlista" pos={{x: 2.4, y: -2.4}}/>
+                                        <Border pos={{ x: -2.4, y: 2.4 }}>
+                                            <CuiImage src={arlista.src} width={466} height={699} alt="Árlista" pos={{ x: 2.4, y: -2.4 }} />
                                         </Border>
                                     </PriceImageContainer>
                                 </Grid>

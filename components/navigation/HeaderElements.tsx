@@ -7,6 +7,7 @@ const Logo = styled(CuiImage)`
   cursor: pointer;
   margin: 0;
   pointer-events: auto;
+  width: 3rem;
 `
 
 
@@ -16,7 +17,7 @@ interface CuiMenuIconProps {
 }
 const CuiMenuIcon = styled(FlexCenter)<CuiMenuIconProps>`
   color: ${({ color = "black" }) => color};
-  font-size: 5.6rem;
+  font-size: 4rem;
   z-index: 1000;
   
   position: relative;
