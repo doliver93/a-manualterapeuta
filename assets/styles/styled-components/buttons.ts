@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { AmaColors } from "styles/colors"
+import { CuiColors } from "styles/colors"
 
 interface PrimaryButtonProps {
   backgroundColor?: string
@@ -8,17 +8,17 @@ interface PrimaryButtonProps {
   colorHover?: string
 }
 export const PrimaryButton = styled.div<PrimaryButtonProps>`
-  background-color: ${({ backgroundColor = AmaColors.darkBeige(0.8) }) => backgroundColor};
-  color: ${({ color = AmaColors.white(0.8) }) => color};
+  background-color: ${({ backgroundColor = CuiColors.darkBeige(0.8) }) => backgroundColor};
+  color: ${({ color = CuiColors.white(0.8) }) => color};
   cursor: pointer;
   font-family: Poppins600;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  padding: 0.875rem 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.16rem;
+  padding: 1.4rem 1.6rem;
   text-transform: uppercase;
 
   &:hover {
-    background-color: ${({ backgroundHover = AmaColors.darkBeige(1) }) => backgroundHover};
-    color: ${({ colorHover = AmaColors.white(1) }) => colorHover};
+    background-color: ${({ backgroundHover = CuiColors.darkBeige(1) }) => backgroundHover};
+    color: ${({ colorHover = CuiColors.white(1) }) => colorHover};
   }
 `

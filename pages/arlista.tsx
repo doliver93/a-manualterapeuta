@@ -1,6 +1,6 @@
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import { Layout } from "components/layout/Layout"
-import { Navigation } from "components/layout/Navigation"
+import { Navigation } from "components/navigation/Navigation"
 import React from "react"
 
 import logo from "images/layout/logo-brown.svg"
@@ -15,29 +15,29 @@ import { CuiImage } from "assets/styles/styled-components/images"
 const Container = styled.div`
     width: 100%;
     background-color: white;
-    padding: 10rem 0;
+    padding: 16rem 0;
 `
 const PricesContainer = styled.div`
-    background-color: ${AmaColors.darkBeige(0.1)};
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    background-color: ${CuiColors.darkBeige(0.1)};
+    padding-top: 3.2rem;
+    padding-bottom: 8rem;
     position: relative;
  
 `
 const PriceParagraph = styled(Paragraph)`
-    color: ${AmaColors.brown(0.8)};
-    font-size: 1.125rem;
+    color: ${CuiColors.brown(0.8)};
+    font-size: 1.8rem;
 
 `
 const PriceContent = styled(Grid)`
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     position: relative;
 `
 const TimeText = styled.div`
     font-family: Poppins600;
-    font-size: 0.875rem;
-    color: ${AmaColors.lightBeige()};
-    padding-left: 1.875rem;
+    font-size: 1.4rem;
+    color: ${CuiColors.lightBeige()};
+    padding-left: 3rem;
     position: absolute;
 `
 const PriceImageContainer = styled.div`
@@ -54,13 +54,12 @@ const Prices = () => {
                 <Content>
                     <Navigation
                         logo={logo}
-                        textColor={AmaColors.brown(0.8)}
-                        textHover={AmaColors.brown(1)}
-                        buttonBackgroundColor={AmaColors.lightBeige(0.7)}
-                        buttonBackgroundColorHover={AmaColors.lightBeige(1)}
-                        buttonTextColor={AmaColors.white(0.8)}
-                        buttonTextColorHover={AmaColors.white(1)}
-                        active="arlista"
+                        textColor={CuiColors.brown(0.8)}
+                        textHover={CuiColors.brown(1)}
+                        buttonBackgroundColor={CuiColors.lightBeige(0.7)}
+                        buttonBackgroundColorHover={CuiColors.lightBeige(1)}
+                        buttonTextColor={CuiColors.white(0.8)}
+                        buttonTextColorHover={CuiColors.white(1)}
                     />
                 </Content>
                 <Container>
@@ -68,7 +67,7 @@ const Prices = () => {
                         <Content>
                             <Grid container justifyContent="space-between" alignItems="stretch">
                                 <Grid item xs={7} alignItems="stretch">
-                                    <Heading color={AmaColors.brown(0.9)} fontSize={2.875} margin="0rem 0rem 2.813rem 0rem">
+                                    <Heading color={CuiColors.brown(0.9)} fontSize={4.5} margin="0 0 4.5rem 0">
                                 Árlista  
                                     </Heading>
                                     <PriceContent container>
@@ -126,8 +125,8 @@ const Prices = () => {
                                 </Grid>
                                 <Grid>
                                     <PriceImageContainer>
-                                        <Border pos={{x: -1.5, y: 1.5}}>
-                                            <CuiImage src={arlista.src} width={466} height={699} alt="Árlista" pos={{x: 1.5, y: -1.5}}/>
+                                        <Border pos={{x: -2.4, y: 2.4}}>
+                                            <CuiImage src={arlista.src} width={466} height={699} alt="Árlista" pos={{x: 2.4, y: -2.4}}/>
                                         </Border>
                                     </PriceImageContainer>
                                 </Grid>

@@ -1,39 +1,53 @@
 import { Grid } from "@mui/material"
-import { AmaColors } from "assets/styles/colors"
-import { Border, Content } from "assets/styles/shared"
+import { CuiColors } from "assets/styles/colors"
+import { Border, breakPoint, Content } from "assets/styles/shared"
 import { Paragraph, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  background-color: ${AmaColors.grey(0.1)};
-  padding: 2rem;
+  background-color: ${CuiColors.grey(0.1)};
+  padding: 3.2rem 0rem;
 `
 const BoxesContent = styled(Content)`
-padding: 2rem 0rem;
+  padding: 3.2rem 0rem;
   top: -10rem;
-  margin-bottom: -10rem;
+  margin-bottom: -16rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    width: 100%;
+    padding-left: ${breakPoint.sm.padding};
+    padding-right: ${breakPoint.sm.padding};
+  }
 `
 const Box = styled.div`
-  width: 16.688rem;
-  height: 22rem;
+  width: 26.7rem;
+  min-height: 35.2rem;
   box-shadow: -4px 4px 35px rgba(90, 68, 53, 0.1);
-  background-color: ${AmaColors.white()};
+  background-color: ${CuiColors.white()};
   margin: auto;
-  padding: 0 0.938rem;
+  padding: 0 1.5rem;
+  @media (max-width: ${breakPoint.xs.width}px) {
+    width: 90%;
+  }
 `
 const BoxesBorder = styled(Border)`
-  transform: translate(0.5rem, 0.5rem);
-  border-color: ${AmaColors.brown(0.1)};
+  transform: translate(0.8rem, 0.8rem) !important;
+  border-color: ${CuiColors.brown(0.1)} !important;
   & .box {
-    transform: translate(-0.813rem, -0.813rem);
+    transform: translate(-1.3rem, -1.3rem) !important;
   }
 `
 
 const BoxHeading = styled(SubHeading)`
-  font-size: 1.563rem;
-  color: ${AmaColors.brown(0.9)};
-  padding: 1.25rem 0rem;
+  font-size: 2.5rem;
+  color: ${CuiColors.brown(0.9)};
+  padding: 2rem 0rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    font-size: 2.4rem;
+  }
+  @media (max-width: ${breakPoint.xs.width}px) {
+    font-size: 2.4rem;
+  }
 `
 const BoxListCollection = styled.ul`
   list-style: none;
@@ -41,19 +55,22 @@ const BoxListCollection = styled.ul`
   margin: 0;
 `
 const BoxListItem = styled.li`
-display: flex;
+  display: flex;
   &:before {
     content: "•";
-    color: ${AmaColors.brown(0.8)};
+    color: ${CuiColors.brown(0.8)};
     font-weight: bold;
     display: inline-block;
-    width: 1em;
+    width: 1.6em;
   }
 `
 
 const BoxListItemText = styled(Paragraph)`
-font-size: 1.125rem;
-color: ${AmaColors.brown(0.8)};
+  font-size: 1.8rem;
+  color: ${CuiColors.brown(0.8)};
+  @media (max-width: ${breakPoint.sm.width}px) {
+    font-size: 1.6rem;
+  }
 `
 
 export const Boxes = () => {
@@ -61,91 +78,159 @@ export const Boxes = () => {
         <Container>
             <BoxesContent>
                 <Grid container spacing={4}>
-                    <Grid item xs={3}>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Deréktáji fájdalmak</BoxHeading>
                             <BoxListCollection>
-                                <BoxListItem><BoxListItemText>gerincsérv</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>akut derékfájás /”becsípődés”/</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>idült derékfájás /hosszú ideje fennálló/</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>alsó végtagba kisugárzó panaszok</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>instabilitás</BoxListItemText></BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>gerincsérv</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>akut derékfájás /”becsípődés”/</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>idült derékfájás /hosszú ideje fennálló/</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>alsó végtagba kisugárzó panaszok</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>instabilitás</BoxListItemText>
+                                </BoxListItem>
                             </BoxListCollection>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
-                        <BoxesBorder>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
+                        <BoxesBorder display="block">
                             <Box className="box">
                                 <BoxHeading>Nyaki panaszok</BoxHeading>
                                 <BoxListCollection>
-                                    <BoxListItem><BoxListItemText>gerincsérv</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>nyaki fájdalmak</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>fejfájás</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>fülzúgás</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>felső végtagba kisugárzó panaszok</BoxListItemText></BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>gerincsérv</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>nyaki fájdalmak</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>fejfájás</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>fülzúgás</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>felső végtagba kisugárzó panaszok</BoxListItemText>
+                                    </BoxListItem>
                                 </BoxListCollection>
                             </Box>
                         </BoxesBorder>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Tartásjavítás</BoxHeading>
                             <BoxListCollection>
-                                <BoxListItem><BoxListItemText>gerincferdülés</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>Scheuermann betegség</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>mellkasdeformitások</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>általános helytelen tartás</BoxListItemText></BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>gerincferdülés</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>Scheuermann betegség</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>mellkasdeformitások</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>általános helytelen tartás</BoxListItemText>
+                                </BoxListItem>
                             </BoxListCollection>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
-                        <BoxesBorder>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
+                        <BoxesBorder display="block">
                             <Box className="box">
                                 <BoxHeading>Végtag fájdalmak</BoxHeading>
                                 <BoxListCollection>
-                                    <BoxListItem><BoxListItemText>váll</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>könyök</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>kéz</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>csípő</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>térd</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>boka</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>láb</BoxListItemText></BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>váll</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>könyök</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>kéz</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>csípő</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>térd</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>boka</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>láb</BoxListItemText>
+                                    </BoxListItem>
                                 </BoxListCollection>
                             </Box>
                         </BoxesBorder>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Sportsérülések</BoxHeading>
                             <BoxListCollection>
-                                <BoxListItem><BoxListItemText>szalagszakadás</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>rándulás</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>ficam</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>törések</BoxListItemText></BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>szalagszakadás</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>rándulás</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>ficam</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>törések</BoxListItemText>
+                                </BoxListItem>
                             </BoxListCollection>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Műtétek után</BoxHeading>
                             <BoxListCollection>
-                                <BoxListItem><BoxListItemText>törések</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>gerincműtétek</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>hegek</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>végtagi műtétek</BoxListItemText></BoxListItem>
-                                <BoxListItem><BoxListItemText>egyéb műtétek</BoxListItemText></BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>törések</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>gerincműtétek</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>hegek</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>végtagi műtétek</BoxListItemText>
+                                </BoxListItem>
+                                <BoxListItem>
+                                    <BoxListItemText>egyéb műtétek</BoxListItemText>
+                                </BoxListItem>
                             </BoxListCollection>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
-                        <BoxesBorder>
+                    <Grid item lg={3} md={4} sm={6} xs={12}>
+                        <BoxesBorder display="block">
                             <Box className="box">
                                 <BoxHeading>Meglőzés</BoxHeading>
                                 <BoxListCollection>
-                                    <BoxListItem><BoxListItemText>műtéteket megelőzően</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>sérülések elkerülése érdekében</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>általános kondicionálás</BoxListItemText></BoxListItem>
-                                    <BoxListItem><BoxListItemText>általnos kivizsgálás</BoxListItemText></BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>műtéteket megelőzően</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>sérülések elkerülése érdekében</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>általános kondicionálás</BoxListItemText>
+                                    </BoxListItem>
+                                    <BoxListItem>
+                                        <BoxListItemText>általnos kivizsgálás</BoxListItemText>
+                                    </BoxListItem>
                                 </BoxListCollection>
                             </Box>
                         </BoxesBorder>

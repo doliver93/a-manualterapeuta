@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components"
 
 import { Content, CuiLink, FlexCenter } from "assets/styles/shared"
 import { Heading } from "assets/styles/styled-components/typography"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import Grid from "@mui/material/Grid"
 
 import derektajiFajdalmak from "images/mainpage/derektaji-fajdalmak.svg"
@@ -22,27 +22,27 @@ const FlexContent = styled(Content)`
   justify-content: center;
 `
 const GridContainer = styled.div`
-  margin-top: 5rem;
+  margin-top: 8rem;
 `
 const CustomGrid = styled(Grid)`
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 `
 
 const Text = styled.div`
   font-family: Poppins600;
-  font-size: 1rem;
-  margin: 1rem;
-  color: ${AmaColors.brown(0.8)};
+  font-size: 1.6rem;
+  margin: 1.6rem;
+  color: ${CuiColors.brown(0.8)};
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.16rem;
 `
 const dotFlashing = keyframes`
-    0%  {box-shadow: 1.5rem 0 #fff1, -1.5rem 0 #fff1;background: #fff1 }
-    25% {box-shadow: 1.5rem 0 #fff1, -1.5rem 0 #fff;background: #fff1}
-    50% {box-shadow: 1.5rem 0 #fff1,-1.5rem 0 #fff1; background: #fff}
-    75%{box-shadow: 1.5rem 0 #fff,-1.5rem 0 #fff1; background: #fff1 }
-    100%{box-shadow: 1.5rem 0 #fff1, -1.5rem 0 #fff1;background: #fff1 }
+    0%  {box-shadow: 2.6rem 0 #fff1, -2.6rem 0 #fff1;background: #fff1 }
+    25% {box-shadow: 2.6rem 0 #fff1, -2.6rem 0 #fff;background: #fff1}
+    50% {box-shadow: 2.6rem 0 #fff1,-2.6rem 0 #fff1; background: #fff}
+    75%{box-shadow: 2.6rem 0 #fff,-2.6rem 0 #fff1; background: #fff1 }
+    100%{box-shadow: 2.6rem 0 #fff1, -2.6rem 0 #fff1;background: #fff1 }
 `
 const MoreInfo = styled.div`
     &:hover .dot {
@@ -50,56 +50,56 @@ const MoreInfo = styled.div`
       }
 `
 const MoreCuiImage = styled(FlexCenter)`
-  background-color: ${AmaColors.darkBeige(1)};
+  background-color: ${CuiColors.darkBeige(1)};
   border-radius: 50%;
   cursor: pointer;
-  height: 91px;
+  height: 9.1rem;
   margin: auto;
-  width: 91px;
+  width: 9.1rem;
   
 `
 const Dots = styled.div`
   aspect-ratio: 1;
   border-radius: 50%;
-  box-shadow: 1.5rem 0 #fff, -1.5rem 0 #fff;
+  box-shadow: 2.6rem 0 #fff, -2.6rem 0 #fff;
   background: #fff;
-  width: 1rem;
+  width: 1.6rem;
 `
 
 export const HowCanIHelp = () => {
     return (
         <FlexContent>
-            <Heading fontSize={2.813} textAlign="center" color={AmaColors.brown(0.9)} margin="5rem auto auto auto">
+            <Heading fontSize={4.5} textAlign="center" color={CuiColors.brown(0.9)} margin="8rem auto auto auto">
         Amiben segíthetek Neked
             </Heading>
             <GridContainer>
                 <Grid container justifyContent="center" alignItems="center">
                     <CustomGrid item xs={3}>
-                        <CuiImage src={derektajiFajdalmak} alt="deréktáji fájdalmak" />
+                        <CuiImage src={derektajiFajdalmak.src} alt="deréktáji fájdalmak" />
                         <Text>deréktáji fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={nyakiPanaszok} alt="nyaki panaszok" />
+                        <CuiImage src={nyakiPanaszok.src} alt="nyaki panaszok" />
                         <Text>nyaki panaszok</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={vegtagFajdalmak} alt="végtag fájdalmak" />
+                        <CuiImage src={vegtagFajdalmak.src} alt="végtag fájdalmak" />
                         <Text>végtag fájdalmak</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={tartasJavitas} alt="tartásjavítás" />
+                        <CuiImage src={tartasJavitas.src} alt="tartásjavítás" />
                         <Text>tartásjavítás</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={sportserulesek} alt="sportsérülések" />
+                        <CuiImage src={sportserulesek.src} alt="sportsérülések" />
                         <Text>sportsérülések</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={mutetekUtan} alt="műtétek után" />
+                        <CuiImage src={mutetekUtan.src} alt="műtétek után" />
                         <Text>műtétek után</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>
-                        <CuiImage src={megelozes} alt="megelőzés" />
+                        <CuiImage src={megelozes.src} alt="megelőzés" />
                         <Text>megelőzés</Text>
                     </CustomGrid>
                     <CustomGrid item xs={3}>

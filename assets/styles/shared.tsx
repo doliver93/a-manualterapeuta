@@ -1,22 +1,37 @@
 import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
-import { AmaColors } from "./colors"
+import { CuiColors } from "./colors"
 
-const StyledA = styled.a`
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-`
-interface StyledLinkProps {
-  href: string
-  text: string
+interface BreakPointType {
+  [key: string]: {width: number, padding?: string, imgSize?: number}
 }
-export const StyledLink = ({ href, text }: StyledLinkProps) => {
-    return (
-        <Link href={href} target="_blank">
-            <StyledA>{text}</StyledA>
-        </Link>
-    )
+
+export const breakPoint: BreakPointType = {
+    xs: {
+        width: 375,
+    },
+    sm: {
+        width: 600,
+        padding: "1.6rem"
+    },
+    md: {
+        width: 900,
+        padding: ""
+    },
+    lg: {
+        width: 1200,
+        padding: "3.2rem",
+        imgSize: 0.8,
+    },
+    xl: {
+        width: 1536,
+        padding: ""
+    },
+    custom: {
+        width: 1400,
+        padding: ""
+    }
 }
 
 export const FlexCenter = styled.div`
@@ -56,10 +71,26 @@ export const Content = styled.div`
   height: 100%;
   margin: auto;
   position: relative;
-  max-width: 72.5rem;
+  max-width: 116rem;
+  @media (max-width: ${breakPoint.lg.width}px) {
+    width: 100%;
+    padding-left: ${breakPoint.lg.padding};
+    padding-right: ${breakPoint.lg.padding};
+  }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    width: 100%;
+    padding-left: ${breakPoint.sm.padding};
+    padding-right: ${breakPoint.sm.padding};
+  }
 `
-export const CuiLink = styled(Link)`
-  display: inline-block;
+interface CuiLinkProps {
+  justifyContent?: "flex-start" | "flex-end" | "center"
+}
+export const CuiLink = styled(Link)<CuiLinkProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // justify-content: ${({justifyContent = "center"}) => justifyContent};
   text-decoration: none;
   &:hover {
     text-decoration: none;
@@ -68,11 +99,13 @@ export const CuiLink = styled(Link)`
 interface BorderProps {
   pos?: { x: number; y: number }
   borderColor?: string
+  display?: "block" | "inline-block"
 }
 export const Border = styled.div<BorderProps>`
   border: 5px solid transparent;
-  border-color: ${({ borderColor = AmaColors.brown() }) => borderColor};
+  border-color: ${({ borderColor = CuiColors.brown() }) => borderColor};
+  display: ${({ display = "inline-block" }) => display};
+  margin: auto;
   transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x}rem, ${pos.y}rem)`};
   width: fit-content;
-  margin: auto;
 `

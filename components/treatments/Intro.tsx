@@ -2,23 +2,29 @@ import React from "react"
 import styled from "styled-components"
 
 import background from "images/treatments/kezelesek-intro.png"
-import { Navigation } from "components/layout/Navigation"
-import { Content, FlexLeftColumn } from "assets/styles/shared"
+import { Navigation } from "components/navigation/Navigation"
+import { breakPoint, Content, FlexLeftColumn } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import logo from "images/layout/logo-white.svg"
 
 const Container = styled.div`
-background-image: url(${background.src});
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 80vh;
-width: 100%;
+  background-image: url(${background.src});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    height: 100vh;
+  }
 `
 
 const IntroContainer = styled(FlexLeftColumn)`
-height: 50vh;
+  height: 50vh;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    height: 100vh;
+  }
 `
 
 export const Intro = () => {
@@ -27,19 +33,19 @@ export const Intro = () => {
             <Content>
                 <Navigation
                     logo={logo}
-                    textColor={AmaColors.white(0.8)}
-                    textHover={AmaColors.white(1)}
-                    buttonBackgroundColor={AmaColors.white(0.8)}
-                    buttonBackgroundColorHover={AmaColors.white(1)}
-                    buttonTextColor={AmaColors.brown(0.8)}
-                    buttonTextColorHover={AmaColors.brown(1)}
+                    textColor={CuiColors.white(0.8)}
+                    textHover={CuiColors.white(1)}
+                    buttonBackgroundColor={CuiColors.white(0.8)}
+                    buttonBackgroundColorHover={CuiColors.white(1)}
+                    buttonTextColor={CuiColors.brown(0.8)}
+                    buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={AmaColors.white(0.9)} fontSize={2.813} margin="1.375rem 0">
-                    Kezelések
+                    <Heading color={CuiColors.white(0.9)} fontSize={4.5} margin="1.375rem 0">
+            Kezelések
                     </Heading>
-                    <SubHeading color={AmaColors.white()} fontSize={1.563} margin="0 0 2rem 0">
-                    Részletes leírás, hogy könnyebben eligazodj
+                    <SubHeading color={CuiColors.white()} fontSize={2.5} margin="0 0 2rem 0">
+            Részletes leírás, hogy könnyebben eligazodj
                     </SubHeading>
                 </IntroContainer>
             </Content>

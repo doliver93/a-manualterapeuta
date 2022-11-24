@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Grid } from "@mui/material"
-import { AmaColors } from "assets/styles/colors"
-import { Border, Content } from "assets/styles/shared"
+import { CuiColors } from "assets/styles/colors"
+import { Border, breakPoint, Content } from "assets/styles/shared"
 import { Paragraph, SubHeading } from "assets/styles/styled-components/typography"
 import { CuiImage } from "assets/styles/styled-components/images"
 import styled from "styled-components"
@@ -20,50 +20,85 @@ interface ContainerProps {
 }
 const Container = styled.div<ContainerProps>`
   width: 100%;
-  background-color: ${({ backgroundColor = AmaColors.white() }) => backgroundColor};
-  padding-top: ${({ paddingTop = 6.25 }) => `${paddingTop}rem`};
-  padding-bottom: ${({ paddingBottom = 6.25 }) => `${paddingBottom}rem`};
+  background-color: ${({ backgroundColor = CuiColors.white() }) => backgroundColor};
+  padding-top: ${({ paddingTop = 10 }) => `${paddingTop}rem`};
+  padding-bottom: ${({ paddingBottom = 10 }) => `${paddingBottom}rem`};
+  @media (max-width: ${breakPoint.md.width}px) {
+    &#lagyresz-kezelesek {
+      margin-bottom: -24rem;
+    }
+    &#gyogytorna {
+      padding-top: 24rem;
+    }
+    &#mckenzie-terapia .image-grid {
+      margin-top: 9.6rem;
+    }
+  }
 `
 const DetailHeading = styled(SubHeading)`
-  color: ${AmaColors.brown(0.9)};
-  font-size: 1.563rem;
-  margin: 0rem 0rem 1.875rem 0rem;
+  color: ${CuiColors.brown(0.9)};
+  font-size: 2.5rem;
+  margin: 0 0 3rem 0;
 `
 const DetailsParagraph = styled(Paragraph)`
   text-align: justify;
-  color: ${AmaColors.brown(0.8)};
-  fontsize: 1.125rem;
+  color: ${CuiColors.brown(0.8)};
+  fontsize: 1.8rem;
 `
 
 const MovedImage = styled(CuiImage)`
   position: relative;
-  top: -5rem;
+  top: -8rem;
+  @media (max-width: ${breakPoint.md.width}px) {
+    top: 0rem;
+  }
 `
 
 const GridContainer = styled(Grid)`
   justify-content: space-between;
   align-items: center;
 `
+interface ImageGridProps {
+  textAlign?: "center" | "left" | "right" | "justify"
+}
+const ImageGrid = styled(Grid)<ImageGridProps>`
+  text-align: ${({ textAlign = "center" }) => textAlign};
+  @media (max-width: ${breakPoint.md.width}px) {
+    text-align: center;
+    margin-top: 3.2rem;
+  }
+`
+interface DetailsImageProps {
+  responsive?: boolean
+}
+const DetailsImage = styled(CuiImage)<DetailsImageProps>`
+  @media (max-width: ${breakPoint.lg.width}px) {
+    width: ${({ width = 0, responsive = false }) => `${responsive ? width * breakPoint.lg.imgSize : width}px`};
+  }
+  @media (max-width: ${breakPoint.md.width}px) {
+    width: ${({ width = 0, responsive = false }) => `${responsive ? width * breakPoint.lg.imgSize : width}px`};
+  }
+`
 
 export const Details = () => {
     const router = useRouter()
     const data = router.query
-    useEffect(()=>{
-        if (router.query && Object.keys(data)[0]){
+    useEffect(() => {
+        if (router.query && Object.keys(data)[0]) {
             const element = document.getElementById(Object.keys(data)[0])
             console.log(element)
             const timer = setTimeout(() => {
-                element && element.scrollIntoView({behavior: "auto", block: "center", inline: "center"})
+                element && element.scrollIntoView({ behavior: "auto", block: "center", inline: "center" })
             }, 100)
             return () => clearTimeout(timer)
         }
     }, [data])
     return (
         <>
-            <Container id="manualterapia" paddingBottom={10}>
+            <Container id="manualterapia" paddingBottom={16}>
                 <Content>
                     <GridContainer container>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <DetailHeading>Manuálterápia</DetailHeading>
                             <DetailsParagraph>
                 A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületekben, valamelyik mozgás
@@ -73,18 +108,18 @@ export const Details = () => {
                 szolgálnak. Hatására a teljes testedet könnyebbnek érezheted, mivel a megbomlott egyensúlyt állítjuk helyre.
                             </DetailsParagraph>
                         </Grid>
-                        <Grid item>
+                        <ImageGrid item md={6} xs={12} textAlign="right">
                             <Border>
-                                <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" width={498} height={390} pos={{ x: -1.5, y: 1.5 }} />
+                                <DetailsImage src={manualterapia.src} alt="Kezelések - Manuálterápia" responsive width={498} pos={{ x: -2.4, y: 2.4 }} />
                             </Border>
-                        </Grid>
+                        </ImageGrid>
                     </GridContainer>
                 </Content>
             </Container>
-            <Container id="lagyresz-kezelesek" backgroundColor={AmaColors.grey(0.2)} paddingTop={1} paddingBottom={1}>
+            <Container id="lagyresz-kezelesek" backgroundColor={CuiColors.grey(0.2)} paddingTop={1.6} paddingBottom={1.6}>
                 <Content>
                     <GridContainer container>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <DetailHeading>Lágyrész kezelések</DetailHeading>
                             <DetailsParagraph>
                 A kezelések során sosem hagyom ki a lágyrészeket. Ez magát a bőrt és a bőr alatti kötőszöveteket jelenti. Ide tartoznak az izmok és az izompólyák kezelése, azaz a különböző fascia
@@ -92,16 +127,16 @@ export const Details = () => {
                 kezelési módszerrel próbálom visszaállítani az izmok és a kötőszövetek egyensúlyát, a harmonikus mozgás és a fájdalommentes életvitel érdekében.
                             </DetailsParagraph>
                         </Grid>
-                        <Grid item>
-                            <MovedImage src={lagyreszKezelesek.src} alt="Kezelések - Lágyrész kezelések" width={365} height={488} />
-                        </Grid>
+                        <ImageGrid item md={6} xs={12} textAlign="right">
+                            <MovedImage src={lagyreszKezelesek.src} alt="Kezelések - Lágyrész kezelések" width={365} />
+                        </ImageGrid>
                     </GridContainer>
                 </Content>
             </Container>
             <Container id="gyogytorna">
                 <Content>
                     <GridContainer container>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <DetailHeading>Gyógytorna</DetailHeading>
                             <DetailsParagraph>
                 Azt gondolom, hogy gyógytorna nélkül elég hosszadalmasra sikerülne a pácienseim gyógyítása, mivel a megkezelt ízületek és lágyrészek vissza-vissza tudnak „blokkosodni”. De éppen ezért
@@ -110,18 +145,18 @@ export const Details = () => {
                 feladatnak is Neked otthonra, hogy meggyorsítsuk a gyógyulási folyamatot.
                             </DetailsParagraph>
                         </Grid>
-                        <Grid item>
-                            <Border pos={{ x: -1.5, y: 0 }}>
-                                <CuiImage src={gyogytorna.src} alt="Kezelések - Gyógytorna" width={480} height={435} pos={{ x: 1.5, y: 1.5 }} />
+                        <ImageGrid item md={6} xs={12} textAlign="right">
+                            <Border pos={{ x: -2.4, y: 0 }}>
+                                <DetailsImage src={gyogytorna.src} alt="Kezelések - Gyógytorna" width={480} pos={{ x: 2.4, y: 2.4 }} responsive />
                             </Border>
-                        </Grid>
+                        </ImageGrid>
                     </GridContainer>
                 </Content>
             </Container>
-            <Container id="haromdimenzios-scoliosis-terapia" backgroundColor={AmaColors.darkBeige(0.15)}>
+            <Container id="haromdimenzios-scoliosis-terapia" backgroundColor={CuiColors.darkBeige(0.15)}>
                 <Content>
                     <GridContainer container>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <DetailHeading>
                 Háromdimenziós scoliosis terápia
                                 <br />- Schroth terápia
@@ -134,16 +169,16 @@ export const Details = () => {
                 izomdiszbalanszokkal. Természetesen az erősítő és lazító, nyújtó gyógytorna feladatok sem maradhatnak el ezek mellett.
                             </DetailsParagraph>
                         </Grid>
-                        <Grid item>
-                            <CuiImage src={haromdimenzios.src} alt="Kezelések - Háromdimenziós scoliosis terápia - Schroth terápia" width={480} height={435} />
-                        </Grid>
+                        <ImageGrid item md={6} xs={12} textAlign="right">
+                            <DetailsImage src={haromdimenzios.src} alt="Kezelések - Háromdimenziós scoliosis terápia - Schroth terápia" width={480} responsive />
+                        </ImageGrid>
                     </GridContainer>
                 </Content>
             </Container>
             <Container id="mckenzie-terapia">
                 <Content>
                     <GridContainer container>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <DetailHeading>Mckenzie terápia</DetailHeading>
                             <DetailsParagraph>
                 Kifejezetten gerincsérvre (hernia disci), a porckorong kiboltosulásra (protrusio disci), valamint a keresztcsont és a medence ízületének, a sacroiliacalis (SI) ízületre irányuló
@@ -153,11 +188,11 @@ export const Details = () => {
                 újonnan kialakulható sérvesedéseket.
                             </DetailsParagraph>
                         </Grid>
-                        <Grid item>
-                            <Border pos={{ x: 0, y: -1.5 }}>
-                                <CuiImage src={mckenzie.src} alt="Kezelések - Háromdimenziós scoliosis terápia - Schroth terápia" width={344} height={488} pos={{ x: -1.5, y: 1.5 }} />
+                        <ImageGrid item md={6} xs={12} textAlign="right" className="image-grid">
+                            <Border pos={{ x: 0, y: -2.4 }}>
+                                <DetailsImage src={mckenzie.src} alt="Kezelések - Mckenzie terápia" width={344} pos={{ x: -2.4, y: 2.4 }} />
                             </Border>
-                        </Grid>
+                        </ImageGrid>
                     </GridContainer>
                 </Content>
             </Container>

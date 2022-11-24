@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Content } from "assets/styles/shared"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 
 import rolam1 from "images/about/rolam-gyakorlat-1.png"
 import rolam2 from "images/about/rolam-gyakorlat-2.png"
@@ -13,11 +13,11 @@ import { CuiImage } from "assets/styles/styled-components/images"
 
 const ImagesContent = styled(Content)`
   position: relative;
-  top: -35rem;
-  margin-bottom: -30rem;
+  top: -56rem;
+  margin-bottom: -48rem;
 `
 const Container = styled.div`
-  background-color: ${AmaColors.white()};
+  background-color: ${CuiColors.white()};
   width: 100%;
 `
 
@@ -26,15 +26,15 @@ export const Images = () => {
         <Container>
             <ImagesContent>
                 <Grid container justifyContent="space-between">
-                    <Grid item>
-                        <CuiImage src={rolam1.src} alt="Állapotfelmérés gyakorlat 1" width={367} height={571} />
+                    <Grid item xs={4}>
+                        <CuiImage src={rolam1.src} alt="Állapotfelmérés gyakorlat 1" width={367} />
                     </Grid>
-                    <Grid item>
-                        <CuiImage src={rolam2.src} alt="Állapotfelmérés gyakorlat 2" width={364} height={243} margin="0 0 1.75rem 0" />
-                        <CuiImage src={rolam3.src} alt="Állapotfelmérés gyakorlat 3" width={364} height={263.58} />
+                    <Grid item xs={4}>
+                        <CuiImage src={rolam2.src} alt="Állapotfelmérés gyakorlat 2" width={364} margin="0 0 1rem 0" />
+                        <CuiImage src={rolam3.src} alt="Állapotfelmérés gyakorlat 3" width={364} />
                     </Grid>
-                    <Grid item>
-                        <CuiImage src={rolam4.src} alt="Állapotfelmérés gyakorlat 4" width={364} height={571} />
+                    <Grid item xs={4}>
+                        <CuiImage src={rolam4.src} alt="Állapotfelmérés gyakorlat 4" width={364} />
                     </Grid>
                 </Grid>
             </ImagesContent>

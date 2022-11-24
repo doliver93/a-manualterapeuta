@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 import background from "images/conditions-survey/allapotfelmeres-intro.png"
-import { Navigation } from "components/layout/Navigation"
+import { Navigation } from "components/navigation/Navigation"
 import { Content, FlexLeftColumn } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import logo from "images/layout/logo-white.svg"
 
 const Container = styled.div`
@@ -27,18 +27,18 @@ export const Intro = () => {
             <Content>
                 <Navigation
                     logo={logo}
-                    textColor={AmaColors.white(0.8)}
-                    textHover={AmaColors.white(1)}
-                    buttonBackgroundColor={AmaColors.white(0.8)}
-                    buttonBackgroundColorHover={AmaColors.white(1)}
-                    buttonTextColor={AmaColors.brown(0.8)}
-                    buttonTextColorHover={AmaColors.brown(1)}
+                    textColor={CuiColors.white(0.8)}
+                    textHover={CuiColors.white(1)}
+                    buttonBackgroundColor={CuiColors.white(0.8)}
+                    buttonBackgroundColorHover={CuiColors.white(1)}
+                    buttonTextColor={CuiColors.brown(0.8)}
+                    buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={AmaColors.white(0.9)} fontSize={2.813} margin="1.375rem 0">
+                    <Heading color={CuiColors.white(0.9)} fontSize={4.5} margin="2.2rem 0">
                     Állapotfelmérés
                     </Heading>
-                    <SubHeading color={AmaColors.white()} fontSize={1.563} margin="0 0 2rem 0">
+                    <SubHeading color={CuiColors.white()} fontSize={2.5} margin="0 0 3.2rem 0">
                     Maximális figyelem és empátia, amely csak rád irányul…
                     </SubHeading>
                 </IntroContainer>

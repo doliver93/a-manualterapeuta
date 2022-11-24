@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import { Content } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
@@ -7,14 +7,14 @@ import styled from "styled-components"
 
 const TitleContainer = styled.div`
     width: 100%;
-    background-color: ${AmaColors.white()};
-    padding 5rem 0;
+    background-color: ${CuiColors.white()};
+    padding 8rem 0;
 `
 const Container = styled.div`
   width: 100%;
-  background-color: ${AmaColors.grey(0.2)};
-  padding: 1.875rem 0;
-  padding-bottom: 35rem;
+  background-color: ${CuiColors.grey(0.2)};
+  padding: 3rem 0;
+  padding-bottom: 56rem;
 `
 const StudiesContainer = styled.ul`
   list-style: none;
@@ -23,14 +23,14 @@ const StudiesContainer = styled.ul`
 `
 const StudiesItem = styled.li`
     font-family: Poppins500;
-    color: ${AmaColors.brown(0.8)};
+    color: ${CuiColors.brown(0.8)};
     display: table;
     &:before {
         content: "•";
-        color: ${AmaColors.brown(0.8)};
+        color: ${CuiColors.brown(0.8)};
         font-weight: bold;
         display: inline-block;
-        width: 1em;
+        width: 1.6em;
 `
 
 
@@ -39,13 +39,13 @@ export const Studies = () => {
         <>
             <TitleContainer>
                 <Content>
-                    <Heading fontSize={2.813} color={AmaColors.brown(0.9)} margin="0 0 0.5rem 0">
+                    <Heading fontSize={4.5} color={CuiColors.brown(0.9)} margin="0 0 0.8rem 0">
             Továbbképzéseim
                     </Heading>
                 </Content>
                 <Container>
                     <Content>
-                        <SubHeading fontSize={1.563} color={AmaColors.brown(0.9)} margin="0 0 3rem 0">
+                        <SubHeading fontSize={2.5} color={CuiColors.brown(0.9)} margin="0 0 4.8rem 0">
               Tanulmányaim segítségével specifikus kezelésekben részesülhetsz
                         </SubHeading>
                         <Grid container spacing={10}>

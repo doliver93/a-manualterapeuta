@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import styled from "styled-components"
-import { FlexCenter } from "../shared"
+import { breakPoint, FlexCenter } from "../shared"
 
 interface CuiImageProps {
   src: string
@@ -11,13 +11,17 @@ interface CuiImageProps {
   margin?: string
   pos?: { x: number; y: number }
 }
-export const CuiImage = styled(Image)<CuiImageProps>`
+export const CuiImage = styled.img<CuiImageProps>`
+  display: inline-block;
+  height: ${({ height = "auto" }) => `${height}px`};
+  margin: ${({ margin = "auto" }) => margin};
   pointer-events: none;
   user-select: none;
   width: ${({ width = "auto" }) => `${width}px`};
-  height: ${({ height = "auto" }) => `${height}px`};
   transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x}rem, ${pos.y}rem)`};
-  margin: ${({ margin = "auto" }) => margin};
+  @media (max-width: ${breakPoint.lg.width}px) {
+    transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x*0.75}rem, ${pos.y*0.75}rem)`};
+  }
 `
 
 // Img.defaultProps = {

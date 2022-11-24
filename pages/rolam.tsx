@@ -1,8 +1,8 @@
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import { Content } from "assets/styles/shared"
 import { Intro } from "components/about/Intro"
 import { Layout } from "components/layout/Layout"
-import { Navigation } from "components/layout/Navigation"
+import { Navigation } from "components/navigation/Navigation"
 import React from "react"
 import styled from "styled-components"
 
@@ -12,7 +12,7 @@ import { Images } from "components/about/Images"
 
 const Container = styled.div`
     padding: 5rem 0;
-    background-color: ${AmaColors.white()}
+    background-color: ${CuiColors.white()}
 `
 
 const About = () => {
@@ -22,12 +22,12 @@ const About = () => {
                 <Content>
                     <Navigation
                         logo={logo}
-                        textColor={AmaColors.brown(0.8)}
-                        textHover={AmaColors.brown(1)}
-                        buttonBackgroundColor={AmaColors.lightBeige(0.7)}
-                        buttonBackgroundColorHover={AmaColors.lightBeige(1)}
-                        buttonTextColor={AmaColors.white(0.8)}
-                        buttonTextColorHover={AmaColors.white(1)}
+                        textColor={CuiColors.brown(0.8)}
+                        textHover={CuiColors.brown(1)}
+                        buttonBackgroundColor={CuiColors.lightBeige(0.7)}
+                        buttonBackgroundColorHover={CuiColors.lightBeige(1)}
+                        buttonTextColor={CuiColors.white(0.8)}
+                        buttonTextColorHover={CuiColors.white(1)}
                     />
                 </Content>
                 <Container>

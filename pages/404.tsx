@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
 import { FlexCenter, FlexCenterColumn } from "assets/styles/shared"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 import { CuiImage } from "assets/styles/styled-components/images"
 
 import logo from "images/layout/logo-white.svg"
@@ -25,7 +25,7 @@ const Divider = styled.div`
 `
 const StyledLink = styled(Link)`
   font-size: 0.8rem;
-  color: ${AmaColors.lightBeige()};
+  color: ${CuiColors.lightBeige()};
 `
 const FourOhFour = () => {
     return (

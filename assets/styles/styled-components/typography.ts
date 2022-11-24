@@ -23,8 +23,8 @@ export const SubHeading = styled(Heading)<TypographyProps>`
 export const Paragraph = styled.div<TypographyProps>`
   color: ${({ color = "black" }) => color};
   font-family: Poppins500;
-  font-size: ${({ fontSize = 1 }) => `${fontSize}rem`};
-  line-height: 2rem;
+  font-size: ${({ fontSize = 1.6 }) => `${fontSize}rem`};
+  line-height: 3.2rem;
   margin: ${({ margin = 0 }) => margin};
   text-align: ${({ textAlign = "left" }) => textAlign};
 `

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Content } from "assets/styles/shared"
-import { AmaColors } from "assets/styles/colors"
+import { CuiColors } from "assets/styles/colors"
 
 import allapotfelmeres1 from "images/conditions-survey/allapotfelmeres-gyakorlat-1.png"
 import allapotfelmeres2 from "images/conditions-survey/allapotfelmeres-gyakorlat-2.png"
@@ -13,17 +13,17 @@ import { CuiImage } from "assets/styles/styled-components/images"
 
 const ImagesContent = styled(Content)`
   position: relative;
-  top: -12rem;
-  margin-bottom: -9.625rem;
+  top: -19.2rem;
+  margin-bottom: -15.4rem;
 `
 const Container = styled.div`
-  background-color: ${AmaColors.darkBeige(0.15)};
+  background-color: ${CuiColors.darkBeige(0.15)};
   width: 100%;
 `
 const Divider = styled.div`
-  height: 5rem;
+  height: 8rem;
   width: 100%;
-  background-color: ${AmaColors.white()};
+  background-color: ${CuiColors.white()};
 `
 
 export const Images = () => {
@@ -31,15 +31,15 @@ export const Images = () => {
         <Container>
             <ImagesContent>
                 <Grid container justifyContent="space-between">
-                    <Grid item>
-                        <CuiImage src={allapotfelmeres1.src} alt="Állapotfelmérés gyakorlat 1" width={368} height={546} />
+                    <Grid item xs={4}>
+                        <CuiImage src={allapotfelmeres1.src} alt="Állapotfelmérés gyakorlat 1" width={368} />
                     </Grid>
-                    <Grid item>
-                        <CuiImage src={allapotfelmeres2.src} alt="Állapotfelmérés gyakorlat 2" width={368.29} height={281.6} margin="0 0 1.75rem 0" />
-                        <CuiImage src={allapotfelmeres3.src} alt="Állapotfelmérés gyakorlat 3" width={368} height={389} />
+                    <Grid item xs={4}>
+                        <CuiImage src={allapotfelmeres2.src} alt="Állapotfelmérés gyakorlat 2" width={368.29} margin="0 0 1rem 0" />
+                        <CuiImage src={allapotfelmeres3.src} alt="Állapotfelmérés gyakorlat 3" width={368} />
                     </Grid>
-                    <Grid item>
-                        <CuiImage src={allapotfelmeres4.src} alt="Állapotfelmérés gyakorlat 4" width={368} height={552} />
+                    <Grid item xs={4}>
+                        <CuiImage src={allapotfelmeres4.src} alt="Állapotfelmérés gyakorlat 4" width={368} />
                     </Grid>
                 </Grid>
             </ImagesContent>
