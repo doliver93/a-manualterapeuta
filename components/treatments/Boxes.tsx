@@ -63,13 +63,16 @@ const BoxListCollection = styled.ul`
 `
 const BoxListItem = styled.li`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   &:before {
     content: "•";
     color: ${CuiColors.brown(0.8)};
     font-weight: bold;
     display: inline-block;
     margin-right: 1.6rem;
+  }
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    align-items: center;
   }
 `
 
