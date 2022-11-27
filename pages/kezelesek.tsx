@@ -5,15 +5,17 @@ import { Layout } from "components/layout/Layout"
 import { Title } from "components/treatments/Title"
 import { Boxes } from "components/treatments/Boxes"
 import { Details } from "components/treatments/Details"
+import { findViewport } from "helper/findViewport"
 
 export default function Treatments() {
+    const viewport = findViewport()
     return (
         <Layout>
             <>
-                <Intro />
+                <Intro viewport={viewport} />
                 <Title />
                 <Boxes />
-                <Details />
+                <Details viewport={viewport} />
             </>
         </Layout>
     )

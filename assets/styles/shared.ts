@@ -3,20 +3,20 @@ import styled from "styled-components"
 import { CuiColors } from "./colors"
 
 interface BreakPointType {
-  [key: string]: {width: number, padding?: string, imgSize?: number}
+  [key: string]: {width: number, height?: number, padding?: string, imgSize?: number}
 }
 
 export const breakPoint: BreakPointType = {
     xs: {
-        width: 320,
+        width: 375,
     },
     sm: {
         width: 600,
-        padding: "1.6rem"
+        padding: "2.5rem"
     },
     md: {
         width: 900,
-        padding: "1.6.rem"
+        padding: "3.5rem"
     },
     lg: {
         width: 1200,
@@ -26,6 +26,10 @@ export const breakPoint: BreakPointType = {
     xl: {
         width: 1536,
         padding: ""
+    },
+    landscape: {
+        height: 480,
+        width: 900
     },
     custom: {
         width: 1400,
@@ -69,8 +73,8 @@ export const FlexLeftColumn = styled.div`
 export const Content = styled.div`
   height: 100%;
   margin: auto;
-  position: relative;
   max-width: 116rem;
+  position: relative;
   @media (max-width: ${breakPoint.lg.width}px) {
     width: 100%;
     padding-left: ${breakPoint.lg.padding};
@@ -103,13 +107,47 @@ export const CuiLink = styled(Link)<CuiLinkProps>`
 interface BorderProps {
   pos?: { x: number; y: number }
   borderColor?: string
-  display?: "block" | "inline-block"
+  display?: "block" | "inline-block" | "flex"
+  justifyContent?: "flex-start" | "center" | "flex-end"
+  borderWidth?: number
 }
 export const Border = styled.div<BorderProps>`
+  border-style: solid;
+  border-color: transparent;
+  border-width: ${({borderWidth = 5}) => `${borderWidth}px` };
   border: 5px solid transparent;
   border-color: ${({ borderColor = CuiColors.brown() }) => borderColor};
-  display: ${({ display = "inline-block" }) => display};
+  display: ${({ display = "inline-flex" }) => display};
   margin: auto;
   transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x}rem, ${pos.y}rem)`};
   width: fit-content;
+  @media (max-width: ${breakPoint.md.width}px) {
+    border-width: ${({borderWidth = 3}) => `${borderWidth}px`};
+    border-color: ${({ borderColor = CuiColors.brown(0.8) }) => borderColor};
+    justify-content: ${({ justifyContent = "center"}) => justifyContent };
+    margin: 0;
+  }
 `
+interface ContainerProps {
+  backgroundImage: string
+}
+export const Container = styled.div<ContainerProps>`
+  background-image: ${({backgroundImage = "none"}) => `url(${backgroundImage})`};   
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    height: 30vh;
+  }
+`
+
+export const IntroContainer = styled(FlexLeftColumn)`
+  height: 50vh;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    height: 35vh;
+    width: 100%;
+  }
+`
+

@@ -15,6 +15,23 @@ const FooterContainer = styled.div`
   width: 100%;
   background-color: ${CuiColors.lightBeige()};
 `
+const FooterContent = styled(Content)`
+  padding: 4rem 0;
+  @media (max-width: ${breakPoint.lg.width}px) {
+    padding: ${breakPoint.lg.padding};
+  }
+  & #right-content {
+    position: relative;
+    top: -4rem;
+    margin-bottom: -4rem;
+  }
+  @media(max-width: ${breakPoint.md.width}px){
+    padding: ${breakPoint.md.padding};
+  }
+  @media(max-width: ${breakPoint.sm.width}px){
+    padding: ${breakPoint.sm.padding};
+  }
+`
 interface FooterParagraphProps {
   marginBottom?: number
 }
@@ -22,28 +39,38 @@ const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
   color: ${CuiColors.white(0.8)};
   line-height: 2.8rem;
   margin-bottom: ${({ marginBottom = 0 }) => `${marginBottom}rem`};
-`
-const FooterContent = styled(Content)`
-  padding: 4rem 0;
-  @media (max-width: ${breakPoint.lg.width}px) {
-    padding: ${breakPoint.lg.padding};
+  @media(max-width: ${breakPoint.sm.width}px){
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 `
+
 const FooterIcons = styled(CuiImage)`
   border-radius: 10px;
   cursor: pointer;
   margin: 0 0 0 1.7rem;
-  opacity: 0.3;
+  opacity: 0.8;
   pointer-events: auto;
-  // width: 25px;
   &:hover {
-    opacity: 0.6;
+    opacity: 1;
+  }
+  @media(max-width: ${breakPoint.sm.width}px){
+    margin: 0 0 0 .7rem;
   }
 `
 const FrameContainer = styled.div`
   align-items: flex-end;
   display: flex;
   margin-top: 2.6rem;
+  @media(max-width: ${breakPoint.md.width}px){
+    top: 5rem;
+    width: 100%;
+    & #googlemap {
+      width: 100%;
+    }
+  }
+  
+  
 `
 
 export const Footer = () => {
@@ -52,7 +79,7 @@ export const Footer = () => {
             <FooterContent>
                 <Grid container alignItems="flex-end">
                     <Grid item md={6} xs={12}>
-                        <SubHeading color={CuiColors.white()}>
+                        <SubHeading color={CuiColors.white()} margin={{ md: "0 0 3rem 0", sm: "0 0 1.5rem 0"}}>
               Kapcsolat
                         </SubHeading>
                         <FooterParagraph marginBottom={3}>
@@ -76,21 +103,21 @@ export const Footer = () => {
                             <br />
                         </FooterParagraph>
                     </Grid>
-                    <Grid item md={6} xs={12}>
+                    <Grid item md={6} xs={12} id="right-content">
                         <FlexRight>
                             <CuiLink href={ExternalLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={instagram.src} alt="logo1" margin="0 0 0 1.6rem" />
+                                <FooterIcons src={instagram.src} alt="logo1" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                             <CuiLink href={ExternalLinks.FACEBOOK} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={facebook.src} alt="logo2" margin="0 0 0 1.6rem" />
+                                <FooterIcons src={facebook.src} alt="logo2" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                             <CuiLink href={ExternalLinks.TIKTOK} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={tiktok.src} alt="logo3" margin="0 0 0 1.6rem" />
+                                <FooterIcons src={tiktok.src} alt="logo3" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                         </FlexRight>
                         <FlexRight>
                             <FrameContainer>
-                                <iframe
+                                <iframe id="googlemap"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1344.9419128158427!2d19.193334622718787!3d47.608948599580515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d0372bf5776d%3A0x1d8dc2399c038ecf!2sLevendula%20Gy%C3%B3gyk%C3%B6zpont!5e0!3m2!1shu!2shu!4v1668467610390!5m2!1shu!2shu"
                                     width="460"
                                     height="220"

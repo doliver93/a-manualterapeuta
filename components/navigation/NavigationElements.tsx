@@ -44,10 +44,14 @@ const CuiLinkText = styled.div<CuiLinkTextProps>`
   }
   @media (max-width: ${breakPoint.md.width}px) {
     border-bottom-color: transparent !important;
-    padding-bottom: 0.8rem;
+    padding-bottom: 1rem;
     padding-left: 1.6rem;
     text-align: left;
     width: 100%;
+  }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
   }
 `
 
@@ -59,6 +63,9 @@ const NavLink = styled(CuiLink)`
     &:last-of-type {
       border-bottom-color: transparent;
     }
+    @media (max-width: ${breakPoint.sm.width}px) {
+      border-bottom: 3px solid ${CuiColors.darkBeige(0.2)};
+    }
   }
 `
 const NonLink = styled.div`
@@ -67,6 +74,9 @@ const NonLink = styled.div`
     margin: 1.6rem 0;
     width: 100%;
     border-bottom: 5px solid ${CuiColors.darkBeige(0.2)};
+  }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    border-bottom: 3px solid ${CuiColors.darkBeige(0.2)};
   }
 `
 const LogoLink = styled(CuiLink)`
@@ -102,7 +112,7 @@ export const NavigationElements = ({ logo, textColor, textHover, buttonBackgroun
     return (
         <>
             <LogoLink href="/">
-                <Logo src={logo.src} alt="A manualterapeuta" width={56} height={40} />
+                <Logo src={logo.src} alt="A manualterapeuta" imgWidth={{og: 56}} imgHeight={{og: 40}} />
             </LogoLink>
             <NavLink href="/kezelesek/">
                 <CuiLinkText color={textColor} colorHover={textHover} className={router.pathname === "/kezelesek" && "active"}>

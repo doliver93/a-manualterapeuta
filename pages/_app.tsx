@@ -1,5 +1,5 @@
 import { AppProps } from "next/app"
-import React from "react"
+import React, { useEffect } from "react"
 import { HeadComponent } from "components/layout/HeadComponent"
 import "styles/global.css"
 import "/assets/fonts/fonts.scss"

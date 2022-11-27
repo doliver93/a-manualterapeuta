@@ -1,3 +1,3 @@
 export interface ComponentType {
-    responsive: boolean
+    viewport: string
 }

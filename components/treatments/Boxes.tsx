@@ -12,11 +12,15 @@ const Container = styled.div`
 const BoxesContent = styled(Content)`
   padding: 3.2rem 0rem;
   top: -10rem;
-  margin-bottom: -16rem;
+  margin-bottom: -10rem;
+  @media (max-width: ${breakPoint.lg.width}px) {
+    padding: 3.2rem ${breakPoint.lg.padding};
+  }
   @media (max-width: ${breakPoint.sm.width}px) {
     width: 100%;
     padding-left: ${breakPoint.sm.padding};
     padding-right: ${breakPoint.sm.padding};
+    margin-bottom: -12rem;
   }
 `
 const Box = styled.div`
@@ -26,15 +30,23 @@ const Box = styled.div`
   background-color: ${CuiColors.white()};
   margin: auto;
   padding: 0 1.5rem;
-  @media (max-width: ${breakPoint.xs.width}px) {
-    width: 90%;
+  width: 100%;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    min-height: auto;
+    padding: 1.5rem;
+    width: 100%;
   }
 `
 const BoxesBorder = styled(Border)`
-  transform: translate(0.8rem, 0.8rem) !important;
+  border: 5px solid transparent;
   border-color: ${CuiColors.brown(0.1)} !important;
+  transform: translate(0.8rem, 0.8rem) !important;
+  width: 100%;
   & .box {
     transform: translate(-1.3rem, -1.3rem) !important;
+  }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    width: calc(100% + 0.8rem);
   }
 `
 
@@ -43,10 +55,8 @@ const BoxHeading = styled(SubHeading)`
   color: ${CuiColors.brown(0.9)};
   padding: 2rem 0rem;
   @media (max-width: ${breakPoint.sm.width}px) {
-    font-size: 2.4rem;
-  }
-  @media (max-width: ${breakPoint.xs.width}px) {
-    font-size: 2.4rem;
+    font-size: 1.4rem;
+    padding: 0 0 1rem 0;
   }
 `
 const BoxListCollection = styled.ul`
@@ -56,12 +66,13 @@ const BoxListCollection = styled.ul`
 `
 const BoxListItem = styled.li`
   display: flex;
+  align-items: center;
   &:before {
     content: "•";
     color: ${CuiColors.brown(0.8)};
     font-weight: bold;
     display: inline-block;
-    width: 1.6em;
+    margin-right: 1.6rem;
   }
 `
 
@@ -69,7 +80,7 @@ const BoxListItemText = styled(Paragraph)`
   font-size: 1.8rem;
   color: ${CuiColors.brown(0.8)};
   @media (max-width: ${breakPoint.sm.width}px) {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 `
 
@@ -101,7 +112,7 @@ export const Boxes = () => {
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
-                        <BoxesBorder display="block">
+                        <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Nyaki panaszok</BoxHeading>
                                 <BoxListCollection>
@@ -144,7 +155,7 @@ export const Boxes = () => {
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
-                        <BoxesBorder display="block">
+                        <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Végtag fájdalmak</BoxHeading>
                                 <BoxListCollection>
@@ -215,7 +226,7 @@ export const Boxes = () => {
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
-                        <BoxesBorder display="block">
+                        <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Meglőzés</BoxHeading>
                                 <BoxListCollection>

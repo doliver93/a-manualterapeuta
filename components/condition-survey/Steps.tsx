@@ -16,9 +16,11 @@ import eight from "images/conditions-survey/8.svg"
 import { CuiImage } from "assets/styles/styled-components/images"
 
 const StepContent = styled(Content)`
-  padding: 3.2rem 0;
-  @media (max-width: ${breakPoint.lg.width}px) {
-    padding: ${breakPoint.lg.padding};
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 `
 const Box = styled.div`
@@ -26,31 +28,51 @@ const Box = styled.div`
   margin: 1.6rem 0;
   padding: 2rem 0;
   width: 100%;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+  }
 `
 const Number = styled(CuiImage)`
   margin: 2.4rem auto;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    margin: 1rem 0 0 0;
+    width: 75%;
+  }
 `
 const BoxHeading = styled(SubHeading)`
   color: ${CuiColors.brown()};
-  font-size: 2.5rem;
 `
 const BoxParagraph = styled(Paragraph)`
   color: ${CuiColors.brown(0.8)};
-  font-size: 1.8rem;
   padding-left: 4rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    padding-left: 0;
+  }
 `
 const NumberContainer = styled(Grid)`
   text-align: center;
+  align-item: flex-start;
+  justify-content: flex-start;
 `
 const TextContainer = styled(Grid)`
-    padding-left 3.2rem;
+  padding: 0 3.2rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    padding: 0 2rem;
+  }
+`
+const GridContainer = styled(Grid)`
+  align-items: center;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    align-items: flex-start;
+  }
 `
 
 export const Steps = () => {
     return (
         <StepContent>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={one.src} alt="Állapotfelmérés - 1" />
                     </NumberContainer>
@@ -58,10 +80,10 @@ export const Steps = () => {
                         <BoxHeading>anamnézis felvétel</BoxHeading>
                         <BoxParagraph>a jelenlegi és korábbi panaszok, sérülések, betegségek kikérdezése és a korábbi leletek áttekintése</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={two.src} alt="Állapotfelmérés - 2" />
                     </NumberContainer>
@@ -69,10 +91,10 @@ export const Steps = () => {
                         <BoxHeading>megtekintés, tapintás</BoxHeading>
                         <BoxParagraph>teljes test megtekintése, majd az észlelt változások érzékelése tapintással</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={three.src} alt="Állapotfelmérés - 3" />
                     </NumberContainer>
@@ -80,10 +102,10 @@ export const Steps = () => {
                         <BoxHeading>aktív és passzív mozgás vizsgálat</BoxHeading>
                         <BoxParagraph>a vizsgálni kívánt ízületek mozgásterjedelmének vizsgálata aktívan és passzívan</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={four.src} alt="Állapotfelmérés - 4" />
                     </NumberContainer>
@@ -91,10 +113,10 @@ export const Steps = () => {
                         <BoxHeading>funkcionális teszt</BoxHeading>
                         <BoxParagraph>speciális tesztek az ízületek és az izmok állapotánának felmérésére</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={five.src} alt="Állapotfelmérés - 5" />
                     </NumberContainer>
@@ -102,10 +124,10 @@ export const Steps = () => {
                         <BoxHeading>fizioterápiás diagnózis</BoxHeading>
                         <BoxParagraph>a vizsgálatok által meghatározott diagnózis</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={six.src} alt="Állapotfelmérés - 6" />
                     </NumberContainer>
@@ -113,10 +135,10 @@ export const Steps = () => {
                         <BoxHeading>kezelés</BoxHeading>
                         <BoxParagraph>az észlelt eltérések kezelése és visszatesztelése</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={seven.src} alt="Állapotfelmérés - 7" />
                     </NumberContainer>
@@ -124,10 +146,10 @@ export const Steps = () => {
                         <BoxHeading>otthon végezhető gyakorlatsor</BoxHeading>
                         <BoxParagraph>otthon elvégzendő feladatok betanítása a korrekciók fenntartása</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
             <Box>
-                <Grid container alignItems="center">
+                <GridContainer container>
                     <NumberContainer item xs={1}>
                         <Number src={eight.src} alt="Állapotfelmérés - 8" />
                     </NumberContainer>
@@ -135,7 +157,7 @@ export const Steps = () => {
                         <BoxHeading>kontroll</BoxHeading>
                         <BoxParagraph>a korábbi panaszokat okozó blokkok, eltérések újratesztelése és az esetleges új panaszok felmérése a következő alkalmakkor</BoxParagraph>
                     </TextContainer>
-                </Grid>
+                </GridContainer>
             </Box>
         </StepContent>
     )

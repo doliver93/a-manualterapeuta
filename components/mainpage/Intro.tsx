@@ -19,8 +19,11 @@ const Container = styled.div`
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  @media (max-width: ${breakPoint.md.width}px) {
+    background-position: calc(50% - 15rem) 50%;
+  }
   @media (max-width: ${breakPoint.sm.width}px) {
-    background-position: right;
+    background-position: center;
     height: 37vh;
   }
 `
@@ -28,48 +31,67 @@ const Container = styled.div`
 const IntroContainer = styled(FlexLeftColumn)`
   height: 100vh;
   width: 50%;
+  @media (max-width: ${breakPoint.lg.width}px) {
+    width: 70%;
+  }
   @media (max-width: ${breakPoint.sm.width}px) {
-    height: 37vh;
-    width: 75%;
+    height: 40vh;
+  }
+  @media (max-width: ${breakPoint.xs.width}px) {
+    width: 100%;
   }
 `
 
-export const Intro = ({responsive}: ComponentType) => {
+export const Intro = ({ viewport }: ComponentType) => {
     return (
         <Container>
             <Content>
                 <Navigation
                     logo={logo}
-                    textColor={CuiColors.brown(0.8)}
-                    textHover={CuiColors.brown(1)}
+                    textColor={viewport === "laptop" ? CuiColors.brown(0.8) : CuiColors.white(0.8)}
+                    textHover={viewport === "laptop" ? CuiColors.brown(1) : CuiColors.white(1)}
                     buttonBackgroundColor={CuiColors.darkBeige(0.8)}
                     buttonBackgroundColorHover={CuiColors.darkBeige(1)}
                     buttonTextColor={CuiColors.white(0.8)}
                     buttonTextColorHover={CuiColors.white(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.brown(0.8)} margin={{md: "0 0 1.6rem 0", sm: "1.2rem 0"}}>
+                    <Heading color={CuiColors.brown(0.8)} fontSize={{ md: 4.5, sm: 2 }} margin={{ md: "0 0 1.6rem 0", sm: "0 0" }}>
             Papp Alexandra vagyok,
                     </Heading>
-                    <SubHeading color={CuiColors.brown(0.7)} fontSize={{md: 2.5}} margin={{md: "0 0 3rem 0", sm: "1.2rem 0"}}>
-            manuálterapeuta, gyógytornász-fizioterapeuta,
-                        <br />
-            gyógy-és sportmasszőr, és WALKenergie edző
-                    </SubHeading>
-                    {!responsive 
-                        ?< >
-                            <SubHeading color={CuiColors.brown(0.7)} fontSize={{md: 2.5}} margin={{md: "0 0 1rem 0", sm: "1.2rem 0"}}>
-        Térj vissza a teljes élethez
+
+                    {viewport != "mobile" ? (
+                        <>
+                            <SubHeading color={CuiColors.brown(0.7)} fontSize={{ md: 2.5, sm: 1.4 }} margin={{ md: "0 0 3rem 0" }}>
+                manuálterapeuta, gyógytornász-fizioterapeuta,
+                                <br />
+                gyógy-és sportmasszőr, és WALKenergie edző
                             </SubHeading>
-                            <Paragraph color={CuiColors.brown(0.7)} fontSize={{md: 1.8}} margin={{md: "0 0 3rem 0", sm: "1.2rem 0"}}>
-        Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.
+                            <SubHeading color={CuiColors.brown(0.7)} margin={{ md: "0 0 1rem 0" }}>
+                Térj vissza a teljes élethez
+                            </SubHeading>
+                            <Paragraph color={CuiColors.brown(0.7)} margin={{ md: "0 0 3rem 0" }}>
+                Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.
                             </Paragraph>
                         </>
-                        : null
-                    }
-                    
+                    ) : (
+                        <SubHeading color={CuiColors.brown(0.7)} fontSize={{ md: 2.5, sm: 1.4 }} margin={{ sm: "1.2rem 0" }}>
+              manuálterapeuta,
+                            <br />
+              gyógytornász-fizioterapeuta,
+                            <br />
+              gyógy-és sportmasszőr,
+                            <br />
+              és WALKenergie edző
+                        </SubHeading>
+                    )}
+
                     <CuiLink href={ExternalLinks.APPOINTMENT} target="_blank" rel="noopener noreferrer">
-                        <PrimaryButton>bejelentkezés állapotfelmérésre</PrimaryButton>
+                        <PrimaryButton 
+                            backgroundColor={CuiColors.darkBeige(0.7)}
+                            backgroundHover={CuiColors.darkBeige(1)}>
+                          bejelentkezés állapotfelmérésre
+                        </PrimaryButton>
                     </CuiLink>
                 </IntroContainer>
             </Content>

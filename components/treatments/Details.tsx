@@ -12,6 +12,7 @@ import gyogytorna from "images/treatments/kezelesek-gyogytorna.png"
 import haromdimenzios from "images/treatments/kezelesek-haromdimenzios-scoliosis-terapia.png"
 import mckenzie from "images/treatments/kezelesek-mckenzie-terapia.png"
 import { useRouter } from "next/router"
+import { ComponentType } from "types/ComponentType"
 
 interface ContainerProps {
   backgroundColor?: string
@@ -34,11 +35,37 @@ const Container = styled.div<ContainerProps>`
       margin-top: 9.6rem;
     }
   }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    &#manualterapia {
+        padding: 2.3rem 0;
+        padding-bottom: 5rem;
+    }
+    &#haromdimenzios-scoliosis-terapia {
+      padding: 2.3rem 0;
+    }
+    &#lagyresz-kezelesek {
+      margin-bottom: -24rem;
+    }
+    &#gyogytorna {
+      padding-top: 24rem;
+      padding-bottom: 5rem;
+    }
+    &#mckenzie-terapia {
+        padding: 2.3rem 0;
+        padding-bottom: 5rem;
+    }
+    &#mckenzie-terapia .image-grid {
+      margin-top: 2rem;
+    }
+  }
 `
 const DetailHeading = styled(SubHeading)`
   color: ${CuiColors.brown(0.9)};
   font-size: 2.5rem;
   margin: 0 0 3rem 0;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    font-size: 1.4rem;
+  }
 `
 const DetailsParagraph = styled(Paragraph)`
   text-align: justify;
@@ -66,16 +93,22 @@ const ImageGrid = styled(Grid)<ImageGridProps>`
     text-align: center;
     margin-top: 3.2rem;
   }
+  @media (max-width: ${breakPoint.sm.width}px) {
+    margin-top: 2rem;
+  }
 `
-export const Details = () => {
+const DetailsBorder = styled(Border)`
+  border-width: 5px;
+`
+export const Details = ({viewport}: ComponentType) => {
     const router = useRouter()
     const data = router.query
+
     useEffect(() => {
         if (router.query && Object.keys(data)[0]) {
             const element = document.getElementById(Object.keys(data)[0])
-            console.log(element)
             const timer = setTimeout(() => {
-                element && element.scrollIntoView({ behavior: "auto", block: "center", inline: "center" })
+                element && element.scrollIntoView({ behavior: "auto", block: "start", inline: "start" })
             }, 100)
             return () => clearTimeout(timer)
         }
@@ -86,7 +119,7 @@ export const Details = () => {
                 <Content>
                     <GridContainer container>
                         <Grid item md={6} xs={12}>
-                            <DetailHeading>Manuálterápia</DetailHeading>
+                            <DetailHeading>Manuálterápia - {viewport}</DetailHeading>
                             <DetailsParagraph>
                 A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületekben, valamelyik mozgás
                 irányában blokkot érzékelek, azt megkezelem. Ezt légzés és izommegfeszítések segítségével végezzük el. Ezek az ízületi blokkok, komoly fájdalmakat tudnak okozni, amelyek hatására
@@ -96,9 +129,9 @@ export const Details = () => {
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
-                            <Border>
-                                <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" imgWidth={{ md: 498 }} pos={{ x: -2.4, y: 2.4 }} />
-                            </Border>
+                            <DetailsBorder pos={viewport === "mobile" && {x: 1, y: 0}}>
+                                <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" imgWidth={{ og: 498 }} pos={{ x: -2.4, y: 2.4 }} />
+                            </DetailsBorder>
                         </ImageGrid>
                     </GridContainer>
                 </Content>
@@ -115,7 +148,7 @@ export const Details = () => {
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
-                            <MovedImage src={lagyreszKezelesek.src} alt="Kezelések - Lágyrész kezelések" imgWidth={{ md: 365 }} />
+                            <MovedImage src={lagyreszKezelesek.src} alt="Kezelések - Lágyrész kezelések" imgWidth={{ og: 365, sm: 267 }} />
                         </ImageGrid>
                     </GridContainer>
                 </Content>
@@ -133,9 +166,9 @@ export const Details = () => {
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
-                            <Border pos={{ x: -2.4, y: 0 }}>
-                                <CuiImage src={gyogytorna.src} alt="Kezelések - Gyógytorna" imgWidth={{ md: 480 }} pos={{ x: 2.4, y: 2.4 }} />
-                            </Border>
+                            <DetailsBorder pos={viewport != "mobile" && { x: -2.4, y: 0 }}>
+                                <CuiImage src={gyogytorna.src} alt="Kezelések - Gyógytorna" imgWidth={{ og: 480, sm: 301 }} pos={{ x: 2.4, y: 2.4 }} />
+                            </DetailsBorder>
                         </ImageGrid>
                     </GridContainer>
                 </Content>
@@ -157,7 +190,7 @@ export const Details = () => {
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
-                            <CuiImage src={haromdimenzios.src} alt="Kezelések - Háromdimenziós scoliosis terápia - Schroth terápia" imgWidth={{ md: 480 }} />
+                            <CuiImage src={haromdimenzios.src} alt="Kezelések - Háromdimenziós scoliosis terápia - Schroth terápia" imgWidth={{ og: 480, sm: 251 }} />
                         </ImageGrid>
                     </GridContainer>
                 </Content>
@@ -176,9 +209,9 @@ export const Details = () => {
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right" className="image-grid">
-                            <Border pos={{ x: 0, y: -2.4 }}>
-                                <CuiImage src={mckenzie.src} alt="Kezelések - Mckenzie terápia" imgWidth={{ md: 344 }} pos={{ x: -2.4, y: 2.4 }} />
-                            </Border>
+                            <DetailsBorder pos={viewport === "mobile" ? { x: 1, y: 0 } : { x: 0, y: -2.4 }}>
+                                <CuiImage src={mckenzie.src} alt="Kezelések - Mckenzie terápia" imgWidth={{ og: 344, sm: 296 }} pos={{ x: -2.4, y: 2.4 }} />
+                            </DetailsBorder>
                         </ImageGrid>
                     </GridContainer>
                 </Content>

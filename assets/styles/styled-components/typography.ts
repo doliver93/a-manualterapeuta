@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import { BreakPoints } from "types/BreakPoints"
+import { BreakPointsGeneral } from "types/BreakPoints"
 import { breakPoint } from "../shared"
 interface TypographyProps {
   color?: string
-  fontSize?: BreakPoints
-  margin?: BreakPoints
+  fontSize?: BreakPointsGeneral
+  margin?: BreakPointsGeneral
   textAlign?: "center" | "left" | "right" | "justify"
 }
 
@@ -19,9 +19,6 @@ export const Heading = styled.div<TypographyProps>`
     font-size: ${({ fontSize = { sm: 2 } }) => `${fontSize.sm}rem`};
     margin: ${({ margin = { sm: "0" }}) => margin.sm };
   }
-  @media(max-width: ${breakPoint.xs.width}px){
-    font-size: ${({ fontSize = { xs: 1 } }) => `${fontSize.xs}rem`};
-  }
 `
 
 export const SubHeading = styled(Heading)<TypographyProps>`
@@ -29,12 +26,9 @@ export const SubHeading = styled(Heading)<TypographyProps>`
   font-size: ${({ fontSize = { md: 2.5 } }) => `${fontSize.md}rem`};
   margin: ${({ margin = { md: "0" }}) => margin.md };
   @media(max-width: ${breakPoint.sm.width}px){
-    font-size: ${({ fontSize = { sm: 2 } }) => `${fontSize.sm}rem`};
+    font-size: ${({ fontSize = { sm: 1.4 } }) => `${fontSize.sm}rem`};
     margin: ${({ margin = { sm: "0" }}) => margin.sm };
-  }
-  @media(max-width: ${breakPoint.xs.width}px){
-    font-size: ${({ fontSize = { xs: 1 } }) => `${fontSize.xs}rem`};
-  }
+  } 
 `
 
 export const Paragraph = styled.div<TypographyProps>`
@@ -45,11 +39,8 @@ export const Paragraph = styled.div<TypographyProps>`
   margin: ${({ margin = { md: "0" }}) => margin.md };
   text-align: ${({ textAlign = "left" }) => textAlign};
   @media(max-width: ${breakPoint.sm.width}px){
-    font-size: ${({ fontSize = { sm: 2 } }) => `${fontSize.sm}rem`};
+    font-size: ${({ fontSize = { sm: 1.2 } }) => `${fontSize.sm}rem`};
     margin: ${({ margin = { sm: "0" }}) => margin.sm };
-  }
-  @media(max-width: ${breakPoint.xs.width}px){
-    font-size: ${({ fontSize = { xs: 1 } }) => `${fontSize.xs}rem`};
-    margin: ${({ margin = { xs: "0" }}) => margin.xs };
+    line-height: 1.8rem;
   }
 `

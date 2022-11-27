@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { CuiColors } from "styles/colors"
-import { BreakPoints } from "types/BreakPoints"
+import { BreakPointsGeneral } from "types/BreakPoints"
 import { breakPoint } from "../shared"
 
 interface PrimaryButtonProps {
@@ -8,7 +8,7 @@ interface PrimaryButtonProps {
   backgroundHover?: string
   color?: string
   colorHover?: string
-  fontSize? :BreakPoints
+  fontSize? :BreakPointsGeneral
 }
 export const PrimaryButton = styled.div<PrimaryButtonProps>`
   background-color: ${({ backgroundColor = CuiColors.darkBeige(0.8) }) => backgroundColor};
@@ -27,6 +27,6 @@ export const PrimaryButton = styled.div<PrimaryButtonProps>`
   
   @media(max-width: ${breakPoint.sm.width}px){
     font-size: ${({ fontSize = { sm: 0.9 } }) => `${fontSize.sm}rem`};
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
 `

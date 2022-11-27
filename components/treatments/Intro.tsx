@@ -1,35 +1,16 @@
 import React from "react"
-import styled from "styled-components"
 
 import background from "images/treatments/kezelesek-intro.png"
 import { Navigation } from "components/navigation/Navigation"
-import { breakPoint, Content, FlexLeftColumn } from "assets/styles/shared"
+import { Container, Content, IntroContainer } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
 import { CuiColors } from "assets/styles/colors"
 import logo from "images/layout/logo-white.svg"
+import { ComponentType } from "types/ComponentType"
 
-const Container = styled.div`
-  background-image: url(${background.src});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  width: 100%;
-  @media (max-width: ${breakPoint.sm.width}px) {
-    height: 100vh;
-  }
-`
-
-const IntroContainer = styled(FlexLeftColumn)`
-  height: 50vh;
-  @media (max-width: ${breakPoint.sm.width}px) {
-    height: 100vh;
-  }
-`
-
-export const Intro = () => {
+export const Intro = ({viewport}: ComponentType) => {
     return (
-        <Container>
+        <Container backgroundImage={background.src}>
             <Content>
                 <Navigation
                     logo={logo}
@@ -41,11 +22,14 @@ export const Intro = () => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white(0.9)}>
+                    <Heading color={CuiColors.white()} margin={{sm: "0 0 2rem 0"}}>
             Kezelések
                     </Heading>
-                    <SubHeading color={CuiColors.white()}>
-            Részletes leírás, hogy könnyebben eligazodj
+                    <SubHeading color={CuiColors.white()} fontSize={{md: 2.5, sm: 1.4}}>
+                        {viewport === "mobile"
+                            ? <>Részletes leírás, hogy<br />könnyebben eligazodj</>
+                            : <>Részletes leírás, hogy könnyebben eligazodj</>
+                        }
                     </SubHeading>
                 </IntroContainer>
             </Content>

@@ -32,14 +32,14 @@ export const Images = () => {
             <ImagesContent>
                 <Grid container justifyContent="space-between">
                     <Grid item xs={4}>
-                        <CuiImage src={allapotfelmeres1.src} alt="Állapotfelmérés gyakorlat 1" width={368} />
+                        <CuiImage src={allapotfelmeres1.src} alt="Állapotfelmérés gyakorlat 1" imgWidth={{ og: 368 }} imgHeight={{ og: 546 }} />
                     </Grid>
                     <Grid item xs={4}>
-                        <CuiImage src={allapotfelmeres2.src} alt="Állapotfelmérés gyakorlat 2" width={368.29} margin="0 0 1rem 0" />
-                        <CuiImage src={allapotfelmeres3.src} alt="Állapotfelmérés gyakorlat 3" width={368} />
+                        <CuiImage src={allapotfelmeres2.src} alt="Állapotfelmérés gyakorlat 2" imgWidth={{ og: 368.29 }} imgHeight={{ og: 281.6 }} margin="0 0 1rem 0" />
+                        <CuiImage src={allapotfelmeres3.src} alt="Állapotfelmérés gyakorlat 3" imgWidth={{ og: 368 }} imgHeight={{ og: 389 }} />
                     </Grid>
                     <Grid item xs={4}>
-                        <CuiImage src={allapotfelmeres4.src} alt="Állapotfelmérés gyakorlat 4" width={368} />
+                        <CuiImage src={allapotfelmeres4.src} alt="Állapotfelmérés gyakorlat 4" imgWidth={{ og: 368 }} imgHeight={{ og: 552 }} />
                     </Grid>
                 </Grid>
             </ImagesContent>

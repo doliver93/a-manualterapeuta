@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { Footer } from "./Footer"
 import { Fade } from "@mui/material"
-import { breakPoint } from "assets/styles/shared"
 
 const StyledLayout = styled.div`
   min-height: 100vh;
+  position: relative;
   width: 100%;
+  z-index: 1;
 `
 interface LayoutProps {
   children: JSX.Element
@@ -14,13 +15,7 @@ interface LayoutProps {
 
 
 export const Layout = ({ children }: LayoutProps) => {
-   
-
-    useEffect(()=> {
-        window.scrollTo(0, 0)
-    }, [])
  
-  
     return (
         <StyledLayout>
             <Fade in={true} timeout={750}>

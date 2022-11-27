@@ -3,27 +3,16 @@ import styled from "styled-components"
 
 import background from "images/conditions-survey/allapotfelmeres-intro.png"
 import { Navigation } from "components/navigation/Navigation"
-import { Content, FlexLeftColumn } from "assets/styles/shared"
+import { Container, Content, FlexLeftColumn, IntroContainer } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
 import { CuiColors } from "assets/styles/colors"
 import logo from "images/layout/logo-white.svg"
+import { ComponentType } from "types/ComponentType"
 
-const Container = styled.div`
-  background-image: url(${background.src});
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 80vh;
-  width: 100%;
-`
 
-const IntroContainer = styled(FlexLeftColumn)`
-  height: 50vh;
-`
-
-export const Intro = () => {
+export const Intro = ({viewport}: ComponentType) => {
     return (
-        <Container>
+        <Container backgroundImage={background.src}>
             <Content>
                 <Navigation
                     logo={logo}
@@ -35,11 +24,15 @@ export const Intro = () => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white(0.9)}>
+                    <Heading color={CuiColors.white()} margin={{sm: "0 0 2rem 0"}}>
                     Állapotfelmérés
                     </Heading>
-                    <SubHeading color={CuiColors.white()}>
-                    Maximális figyelem és empátia, amely csak rád irányul…
+                    <SubHeading color={CuiColors.white()} fontSize={{md: 2.5, sm: 1.4}}>
+                        {viewport === "mobile"
+                            ? <>Maximális figyelem és empátia,<br />amely csak rád irányul…</>
+                            : <>Maximális figyelem és empátia, amely csak rád irányul…</>
+                        }
+                    
                     </SubHeading>
                 </IntroContainer>
             </Content>
