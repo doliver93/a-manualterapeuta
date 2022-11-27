@@ -130,7 +130,6 @@ export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, 
                         </Header>
                         <ResponsiveContent style={open ? { zIndex: "1000" } : { zIndex: "-1" }} ref={content}>
                             <NavigationElements
-                                responsive={responsive}
                                 logo={logo}
                                 textColor={CuiColors.brown(0.8)}
                                 textHover={CuiColors.brown(1)}
@@ -144,7 +143,6 @@ export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, 
                     </>
                 ) : (
                     <NavigationElements
-                        responsive={responsive}
                         logo={logo}
                         textColor={textColor}
                         textHover={textHover}

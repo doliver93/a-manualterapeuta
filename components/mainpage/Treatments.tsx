@@ -12,7 +12,6 @@ import gyogytorna from "images/mainpage/kezelesek-gyogytorna.webp"
 import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimenzios-scoliosis-terapia.webp"
 import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
-import { ComponentType } from "types/ComponentType"
 
 const mdRate = 0.7
 const lgRate = 0.9
@@ -71,10 +70,8 @@ const TreatmentGridContainer = styled(Grid)`
     align-items: center;
     justify-content: space-between;
 `
-const ResponsiveSubHeading = styled(TreatmentsSubHeading)`
-      margin-bottom: 0.9rem;
-`
 const Text = styled.div``
+
 export const Treatments = () => {
     return (
         <FlexCenterColumn>

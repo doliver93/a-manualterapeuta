@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { breakPoint, Content } from "assets/styles/shared"
+import { Content } from "assets/styles/shared"
 import { CuiColors } from "assets/styles/colors"
 
 import rolam1 from "images/about/rolam-gyakorlat-1.webp"

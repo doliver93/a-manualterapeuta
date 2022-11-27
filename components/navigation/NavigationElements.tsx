@@ -101,10 +101,9 @@ interface NavigationProps {
   buttonBackgroundColorHover: string
   buttonTextColor: string
   buttonTextColorHover: string
-  responsive: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
 }
-export const NavigationElements = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover, responsive, setOpen }: NavigationProps) => {
+export const NavigationElements = ({ logo, textColor, textHover, buttonBackgroundColor, buttonBackgroundColorHover, buttonTextColor, buttonTextColorHover, setOpen }: NavigationProps) => {
     const router = useRouter()
 
     const scrollToFooter = () => {

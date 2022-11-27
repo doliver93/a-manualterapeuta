@@ -1,5 +1,4 @@
 import { CuiColors } from "assets/styles/colors"
-import { Content } from "assets/styles/shared"
 import { Intro } from "components/about/Intro"
 import { Layout } from "components/layout/Layout"
 import { Navigation } from "components/navigation/Navigation"
@@ -33,7 +32,7 @@ const About = () => {
                 />
                 <Container>
                     <Intro viewport={viewport} />
-                    <Studies viewport={viewport} />
+                    <Studies />
                     {viewport === "laptop" ? <Images /> : <ImagesResponsive />}
                 </Container>
             </>

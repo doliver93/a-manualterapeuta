@@ -4,7 +4,6 @@ import { breakPoint, Content } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"
-import { ComponentType } from "types/ComponentType"
 
 const TitleContainer = styled.div`
     width: 100%;
@@ -56,7 +55,7 @@ const StudiesItem = styled.li`
     }
 `
 
-export const Studies = ({ viewport }: ComponentType) => {
+export const Studies = () => {
     return (
         <>
             <TitleContainer>

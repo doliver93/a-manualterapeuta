@@ -12,7 +12,6 @@ import gyogytorna from "images/mainpage/kezelesek-gyogytorna.webp"
 import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimenzios-scoliosis-terapia.webp"
 import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
-import { ComponentType } from "types/ComponentType"
 
 interface ContainerProps {
   backgroundColor: string
@@ -80,13 +79,6 @@ const TreatmentsParagraph = styled(Paragraph)`
     margin-top: 1.5rem;
     
   }
-`
-interface ExternalImageProps {
-  top: number
-}
-const ExternalImage = styled.div<ExternalImageProps>`
-  position: absolute;
-  top: ${({ top = 0 }) => `${top}rem`};
 `
 const TreatmentGridContainer = styled(Grid)`
   align-items: left;

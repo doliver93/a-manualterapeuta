@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Content, FlexCenter } from "assets/styles/shared"
+import { Content } from "assets/styles/shared"
 import { CuiColors } from "assets/styles/colors"
 
 import allapotfelmeres1 from "images/conditions-survey/allapotfelmeres-gyakorlat-1.webp"

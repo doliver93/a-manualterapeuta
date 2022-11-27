@@ -2,7 +2,7 @@ import React from "react"
 import { CuiColors } from "assets/styles/colors"
 import { breakPoint, Content, FlexCenter } from "assets/styles/shared"
 import styled from "styled-components"
-import { Heading, Paragraph } from "assets/styles/styled-components/typography"
+import { Heading } from "assets/styles/styled-components/typography"
 
 const Container = styled(FlexCenter)`
   background-color: ${CuiColors.white()};
