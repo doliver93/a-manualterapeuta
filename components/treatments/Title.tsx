@@ -19,6 +19,9 @@ const TitleParagraph = styled.div`
   color: ${CuiColors.brown(0.8)};
   text-align: justify;
   font-size: 2.4rem;
+  @media(max-width: ${breakPoint.md.width}px) {
+    font-size: 2rem;
+  }
   @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.5rem;
   }

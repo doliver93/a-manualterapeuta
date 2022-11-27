@@ -12,6 +12,7 @@ import gyogytorna from "images/mainpage/kezelesek-gyogytorna.webp"
 import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimenzios-scoliosis-terapia.webp"
 import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
+import { ComponentType } from "types/ComponentType"
 
 interface ContainerProps {
   backgroundColor: string
@@ -53,6 +54,7 @@ const TreatmentsContent = styled(Content)<TreamnetsContentProps>`
 const LinkDetails = styled(CuiLink)`
   color: ${CuiColors.brown(0.25)};
   cursor: pointer;
+  display: inline-block;
   font-family: SourceSansPro700;
   text-decoration: none;
   justify-content: flex-start;
@@ -88,11 +90,11 @@ const ResponsiveSubHeading = styled(TreatmentsSubHeading)`
   margin-bottom: 0.9rem;
 `
 const Text = styled.div``
-export const TreatmentsResponsive = () => {
+export const TreatmentsResponsive = ({viewport}: ComponentType) => {
     return (
         <FlexCenterColumn>
             <Content style={{textAlign: "center"}}>
-                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ og: "auto auto 8rem auto", sm: "auto auto 1.5rem auto" }}>
+                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "auto auto 4rem auto", sm: "auto auto 1.5rem auto" }}>
         Ilyen kezelésekkel találkozhattok nálam
                 </Heading>
             </Content>
@@ -193,7 +195,7 @@ export const TreatmentsResponsive = () => {
                 </TreatmentsContent>
             </Container>
             <Container backgroundColor={CuiColors.white()}>
-                <TreatmentsContent padding={{ top: 14, bottom: 6 }}>
+                <TreatmentsContent padding={viewport === "landscape" ? { top: 14, bottom: 6 } : { top: 10, bottom: 6 }}>
                     <Grid item md={5} sm={12}>
                         <Text>
                             <TreatmentsParagraph>

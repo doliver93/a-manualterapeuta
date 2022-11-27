@@ -43,7 +43,7 @@ const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
     line-height: 1.8rem;
     margin-bottom: 1.5rem;
   }
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 0.9rem;
   }
 `

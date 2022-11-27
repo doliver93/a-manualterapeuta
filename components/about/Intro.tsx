@@ -15,7 +15,11 @@ const Container = styled.div`
   padding-top: 5.4rem;
   padding-bottom: 9.6rem;
   position: relative;
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px){
+    margin-bottom: 0rem;
+    padding: 3rem 0;
+  }
+  @media(max-width: ${breakPoint.sm.width}px) {
     padding: 0;
     margin-bottom: 20rem;
   }
@@ -43,18 +47,19 @@ const PortraitContainer = styled.div`
 `
 const PortraitBorder = styled(Border)`
 
-@media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
-  width: 300px;
-}
 @media(max-width: ${breakPoint.sm.width}px) {
     width: 100%;
   }
 `
 const PortraitImage = styled(CuiImage)`
+@media(max-width: ${breakPoint.md.width}px) {
+  transform: translate(-1.6rem, 1.6rem);
+}
 @media(max-width: ${breakPoint.sm.width}px) {
     padding: 0 2rem;
     width: 100%;
     height: 100%;
+    transform: translate(0rem, 2.5rem);
   }
 `
 
@@ -75,8 +80,8 @@ export const Intro = ({ viewport }: ComponentType) => {
                     </Grid>
                     <Grid item md={5} sm={6} xs={12}>
                         <PortraitContainer>
-                            <PortraitBorder pos={viewport === "tablet" && { x: 0, y: 0 }}>
-                                <PortraitImage src={portrait.src} imgWidth={{ og: 365.75, md: 300 }} imgHeight={{ og: 472 }} pos={viewport === "mobile" ? { x: 0, y: 2.5 } : { x: -1.6, y: 1.6 }} alt="Papp Alexandra" />
+                            <PortraitBorder>
+                                <PortraitImage src={portrait.src} imgWidth={{ og: 365.75, md: 300, sm: 225 }} imgHeight={{ og: 472 }} pos={viewport === "mobile" ? { x: 0, y: 2.5 } : { x: -1.6, y: 1.6 }} alt="Papp Alexandra" />
                             </PortraitBorder>
                         </PortraitContainer>
                     </Grid>

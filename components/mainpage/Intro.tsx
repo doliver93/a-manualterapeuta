@@ -58,33 +58,33 @@ export const Intro = ({ viewport }: ComponentType) => {
                     buttonTextColorHover={CuiColors.white(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.brown(0.8)} fontSize={{ md: 4.5, sm: 2 }} margin={{ md: "0 0 1.6rem 0", sm: "0 0" }}>
+                    <Heading color={CuiColors.brown(0.8)} fontSize={{og: 4.5, md: 4.5, sm: 2 }} margin={{ md: "0 0 1.6rem 0", sm: "0 0" }}>
             Papp Alexandra vagyok,
                     </Heading>
 
-                    {viewport != "mobile" ? (
+                    {viewport != "mobile" && viewport != "landscape" ? (
                         <>
-                            <SubHeading color={CuiColors.brown(0.7)} fontSize={{ md: 2.5, sm: 1.4 }} margin={{ md: "0 0 3rem 0" }}>
+                            <SubHeading color={CuiColors.brown(0.7)} fontSize={{og: 2.5, md: 2.5, sm: 1.4 }} margin={{ md: "0 0 3rem 0" }}>
                 manuálterapeuta, gyógytornász-fizioterapeuta,
                                 <br />
-                gyógy-és sportmasszőr, és WALKenergie edző
+                gyógy-és sportmasszőr, WALKenergie edző
                             </SubHeading>
-                            <SubHeading color={CuiColors.brown(0.7)} margin={{ md: "0 0 1rem 0" }}>
+                            <SubHeading color={CuiColors.brown(0.7)} fontSize={{og: 2.5, md: 2.5}} margin={{ md: "0 0 1rem 0" }}>
                 Térj vissza a teljes élethez
                             </SubHeading>
-                            <Paragraph color={CuiColors.brown(0.7)} margin={{ md: "0 0 3rem 0" }}>
+                            <Paragraph color={CuiColors.brown(0.7)} fontSize={{og: 1.8, md: 1.8}} margin={{ md: "0 0 3rem 0" }}>
                 Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.
                             </Paragraph>
                         </>
                     ) : (
-                        <SubHeading color={CuiColors.brown(0.7)} fontSize={{ md: 2.5, sm: 1.4 }} margin={{ sm: "1.2rem 0" }}>
+                        <SubHeading color={CuiColors.brown(0.7)} fontSize={{sm: 1.4 }} margin={{ sm: "0rem 0 1rem 0" }}>
               manuálterapeuta,
                             <br />
               gyógytornász-fizioterapeuta,
                             <br />
               gyógy-és sportmasszőr,
                             <br />
-              és WALKenergie edző
+              WALKenergie edző
                         </SubHeading>
                     )}
 

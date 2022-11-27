@@ -14,7 +14,7 @@ export default function Mainpage() {
             <>
                 <Intro viewport={viewport} />
                 <HowCanIHelp viewport={viewport} />
-                {viewport === "laptop" ? <Treatments /> : <TreatmentsResponsive />}
+                {viewport === "laptop" ? <Treatments /> : <TreatmentsResponsive viewport={viewport} />}
             </>
         </Layout>
     )

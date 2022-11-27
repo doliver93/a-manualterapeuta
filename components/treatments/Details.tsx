@@ -35,7 +35,7 @@ const Container = styled.div<ContainerProps>`
       margin-top: 9.6rem;
     }
   }
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     &#manualterapia {
         padding: 2.3rem 0;
         padding-bottom: 5rem;
@@ -93,8 +93,8 @@ interface ImageGridProps {
 const ImageGrid = styled(Grid)<ImageGridProps>`
   text-align: ${({ textAlign = "center" }) => textAlign};
   @media (max-width: ${breakPoint.md.width}px) {
-    text-align: center;
-    margin-top: 3.2rem;
+    text-align: center !important;
+    margin-top: 3.2rem !important;
   }
   @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     text-align: left;
@@ -125,7 +125,7 @@ export const Details = ({viewport}: ComponentType) => {
                 <Content>
                     <GridContainer container>
                         <Grid item md={6} xs={12}>
-                            <DetailHeading>Manuálterápia - {viewport}</DetailHeading>
+                            <DetailHeading>Manuálterápia</DetailHeading>
                             <DetailsParagraph>
                 A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületekben, valamelyik mozgás
                 irányában blokkot érzékelek, azt megkezelem. Ezt légzés és izommegfeszítések segítségével végezzük el. Ezek az ízületi blokkok, komoly fájdalmakat tudnak okozni, amelyek hatására

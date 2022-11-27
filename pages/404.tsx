@@ -31,7 +31,7 @@ const FourOhFour = () => {
     return (
         <Container>
             <FlexCenterColumn>
-                <CuiImage src={logo} imgWidth={{og: 50}} alt="A manualterapeuta" />
+                <CuiImage src={logo.src} imgWidth={{og: 50}} alt="A manualterapeuta" />
                 <FlexCenter style={{ margin: "1rem 0" }}>
                     <h1>404</h1>
                     <Divider />

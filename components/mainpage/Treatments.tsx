@@ -36,6 +36,7 @@ const TreatmentsContent = styled(Content)<TreamnetsContentProps>`
 const LinkDetails = styled(CuiLink)`
   color: ${CuiColors.brown(0.25)};
   cursor: pointer;
+  display: inline-block;
   font-family: SourceSansPro700;
   text-decoration: none;
   justify-content: flex-start;

@@ -25,9 +25,9 @@ const FlexContent = styled(Content)`
 const GridContainer = styled.div``
 const CustomGrid = styled(Grid)`
   text-align: center;
-  margin-bottom: 8rem;
-  @media (max-width: ${breakPoint.sm.width}px) {
-    margin-bottom: 2rem;
+  margin-bottom: 8rem !important;
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    margin-bottom: 2rem !important;
   }
 `
 

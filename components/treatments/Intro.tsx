@@ -22,10 +22,10 @@ export const Intro = ({viewport}: ComponentType) => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white()} margin={{sm: "0 0 2rem 0"}}>
+                    <Heading color={CuiColors.white()} fontSize={{og: 4.5, md: 4.5, sm: 2}} margin={{md: "3rem 0", sm: "0 0 1.5rem 0"}}>
             Kezelések
                     </Heading>
-                    <SubHeading color={CuiColors.white()} fontSize={{md: 2.5, sm: 1.4}}>
+                    <SubHeading color={CuiColors.white()} fontSize={{og: 2.5, md: 2.5, sm: 1.4}}>
                         {viewport === "mobile"
                             ? <>Részletes leírás, hogy<br />könnyebben eligazodj</>
                             : <>Részletes leírás, hogy könnyebben eligazodj</>

@@ -88,7 +88,7 @@ const Prices = () => {
                                     <Heading color={CuiColors.brown(0.9)} margin={{ md: "0 0 3rem 0" }}>
                     Árlista
                                     </Heading>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Állapotfelmérés</PriceParagraph>
                                             <TimeText>50 perc</TimeText>
@@ -97,7 +97,7 @@ const Prices = () => {
                                             <PriceParagraph>15 000 Ft</PriceParagraph>
                                         </Grid>
                                     </PriceContent>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Manuálterápia kontroll vizsgálat</PriceParagraph>
                                             <TimeText>50 perc</TimeText>
@@ -106,7 +106,7 @@ const Prices = () => {
                                             <PriceParagraph>12 000 Ft</PriceParagraph>
                                         </Grid>
                                     </PriceContent>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Kombinált kezelés (gyógytorna és lágyrész)</PriceParagraph>
                                             <TimeText>50 perc</TimeText>
@@ -115,7 +115,7 @@ const Prices = () => {
                                             <PriceParagraph>12 000 Ft</PriceParagraph>
                                         </Grid>
                                     </PriceContent>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Gyógytorna</PriceParagraph>
                                             <TimeText>50 perc</TimeText>
@@ -124,7 +124,7 @@ const Prices = () => {
                                             <PriceParagraph>10 000 Ft</PriceParagraph>
                                         </Grid>
                                     </PriceContent>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Kinesiotape felhelyezés</PriceParagraph>
                                         </Grid>
@@ -132,7 +132,7 @@ const Prices = () => {
                                             <PriceParagraph>4 000 Ft-tól</PriceParagraph>
                                         </Grid>
                                     </PriceContent>
-                                    <PriceContent container justifyContent={viewport === "mobile" && "space-between"}>
+                                    <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>
                                         <Grid item xs={8}>
                                             <PriceParagraph>Szelektív ingeráram kezelés</PriceParagraph>
                                         </Grid>

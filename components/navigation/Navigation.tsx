@@ -46,7 +46,7 @@ const Header = styled.div`
     padding: 2rem ${breakPoint.md.padding};
   }
   @media (max-width: ${breakPoint.sm.width}px) {
-    padding: 2rem ${breakPoint.sm.padding};
+    padding: 1rem ${breakPoint.sm.padding};
   }
 `
 const ResponsiveContent = styled(FlexCenterColumn)`

@@ -23,7 +23,7 @@ export const CuiImage = styled.img<CuiImageProps>`
     width: ${({ imgWidth }) => (imgWidth && imgWidth.lg ? `${imgWidth.lg}px` : imgWidth && imgWidth.og ? `${+imgWidth.og * breakPoint.lg.imgSize}px` : "auto")};
   }
   @media (max-width: ${breakPoint.md.width}px) {
-    height: ${({ imgHeight }) => (imgHeight && imgHeight.md ? `${imgHeight.md}px` : imgHeight && imgHeight.og ? `${imgHeight.og}px` : "auto")};
+    height: ${({ imgHeight }) => (imgHeight && imgHeight.md ? `${imgHeight.md}px` : "auto")};
     width: ${({ imgWidth }) => (imgWidth && imgWidth.md ? `${imgWidth.md}px` : imgWidth && imgWidth.og ? `${imgWidth.og}px` : "auto")};
     transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x * 0.5}rem, ${pos.y * 0.5}rem)`};
   }
