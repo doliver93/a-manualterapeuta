@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { Grid } from "@mui/material"
 import { Heading, Paragraph } from "assets/styles/styled-components/typography"
 
-import portrait from "images/about/Papp Alexandra.png"
+import portrait from "images/about/Papp Alexandra.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
 import { ComponentType } from "types/ComponentType"
 

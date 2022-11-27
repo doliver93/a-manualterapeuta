@@ -6,11 +6,11 @@ import { Paragraph, SubHeading } from "assets/styles/styled-components/typograph
 import { CuiImage } from "assets/styles/styled-components/images"
 import styled from "styled-components"
 
-import manualterapia from "images/treatments/kezelesek-manualterapia.png"
-import lagyreszKezelesek from "images/treatments/kezelesek-lagyresz-kezelesek.png"
-import gyogytorna from "images/treatments/kezelesek-gyogytorna.png"
-import haromdimenzios from "images/treatments/kezelesek-haromdimenzios-scoliosis-terapia.png"
-import mckenzie from "images/treatments/kezelesek-mckenzie-terapia.png"
+import manualterapia from "images/treatments/kezelesek-manualterapia.webp"
+import lagyreszKezelesek from "images/treatments/kezelesek-lagyresz-kezelesek.webp"
+import gyogytorna from "images/treatments/kezelesek-gyogytorna.webp"
+import haromdimenzios from "images/treatments/kezelesek-haromdimenzios-scoliosis-terapia.webp"
+import mckenzie from "images/treatments/kezelesek-mckenzie-terapia.webp"
 import { useRouter } from "next/router"
 import { ComponentType } from "types/ComponentType"
 

@@ -6,11 +6,11 @@ import { Heading, Paragraph, SubHeading } from "assets/styles/styled-components/
 import { CuiColors } from "assets/styles/colors"
 import Grid from "@mui/material/Grid"
 
-import manualterapia from "images/mainpage/kezelesek-manualterapia.png"
-import lagyreszKezelesek from "images/mainpage/kezelesek-lagyresz-kezelesek.png"
-import gyogytorna from "images/mainpage/kezelesek-gyogytorna.png"
-import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimenzios-scoliosis-terapia.png"
-import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.png"
+import manualterapia from "images/mainpage/kezelesek-manualterapia.webp"
+import lagyreszKezelesek from "images/mainpage/kezelesek-lagyresz-kezelesek.webp"
+import gyogytorna from "images/mainpage/kezelesek-gyogytorna.webp"
+import haromdimenziosScoliosisTerapia from "images/mainpage/kezelesek-haromdimenzios-scoliosis-terapia.webp"
+import mckenzieTerapia from "images/mainpage/kezelesek-mckenzie-terapia.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
 import { ComponentType } from "types/ComponentType"
 

@@ -9,7 +9,7 @@ import styled from "styled-components"
 import { Heading, Paragraph } from "assets/styles/styled-components/typography"
 import { Grid } from "@mui/material"
 
-import arlista from "images/prices/arlista.png"
+import arlista from "images/prices/arlista.webp"
 import { CuiImage } from "assets/styles/styled-components/images"
 import { findViewport } from "helper/findViewport"
 

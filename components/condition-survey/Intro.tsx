@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import background from "images/conditions-survey/allapotfelmeres-intro.png"
+import background from "images/conditions-survey/allapotfelmeres-intro.webp"
 import { Navigation } from "components/navigation/Navigation"
 import { Container, Content, FlexLeftColumn, IntroContainer } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"

@@ -1,6 +1,6 @@
 import React from "react"
 
-import background from "images/treatments/kezelesek-intro.png"
+import background from "images/treatments/kezelesek-intro.webp"
 import { Navigation } from "components/navigation/Navigation"
 import { Container, Content, IntroContainer } from "assets/styles/shared"
 import { Heading, SubHeading } from "assets/styles/styled-components/typography"

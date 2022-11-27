@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-// import background from "images/mainpage/test3.png"
-import background from "images/mainpage/a-manualterapeuta-intro2.webp"
+import background from "images/mainpage/a-manualterapeuta-intro.webp"
 import { Navigation } from "components/navigation/Navigation"
 import { breakPoint, Content, CuiLink, FlexLeftColumn } from "assets/styles/shared"
 import { Heading, Paragraph, SubHeading } from "assets/styles/styled-components/typography"
