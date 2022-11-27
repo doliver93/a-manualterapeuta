@@ -27,7 +27,7 @@ export const CuiImage = styled.img<CuiImageProps>`
     width: ${({ imgWidth }) => (imgWidth && imgWidth.md ? `${imgWidth.md}px` : imgWidth && imgWidth.og ? `${imgWidth.og}px` : "auto")};
     transform: ${({ pos = { x: 0, y: 0 } }) => `translate(${pos.x * 0.5}rem, ${pos.y * 0.5}rem)`};
   }
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     height: ${({ imgHeight }) => (imgHeight && imgHeight.sm ? `${imgHeight.sm}px` : "auto")};
     width: ${({ imgWidth }) => (imgWidth && imgWidth.sm ? `${imgWidth.sm}px` : "auto")};
   }

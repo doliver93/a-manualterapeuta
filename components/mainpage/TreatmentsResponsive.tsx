@@ -72,9 +72,13 @@ const TreatmentsParagraph = styled(Paragraph)`
   color: ${CuiColors.brown(0.8)};
   text-align: justify;
   margin: 3rem 0;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    font-size: 0.9rem;
+  }
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     margin: 0.7rem 0;
     margin-top: 1.5rem;
+    
   }
 `
 interface ExternalImageProps {
@@ -96,7 +100,7 @@ export const TreatmentsResponsive = () => {
     return (
         <FlexCenterColumn>
             <Content style={{textAlign: "center"}}>
-                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "auto auto 8rem auto", sm: "auto auto 1.5rem auto" }}>
+                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ og: "auto auto 8rem auto", sm: "auto auto 1.5rem auto" }}>
         Ilyen kezelésekkel találkozhattok nálam
                 </Heading>
             </Content>
@@ -106,7 +110,7 @@ export const TreatmentsResponsive = () => {
                     <TreatmentGridContainer container>
                         <Grid item md={7} sm={12}>
                             <Border>
-                                <CuiImage imgWidth={{ md: 513, sm: 307 }} src={manualterapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Manuálterápia" />
+                                <CuiImage imgWidth={{ og: 513, sm: 307 }} src={manualterapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Manuálterápia" />
                             </Border>
                         </Grid>
                         <Grid item md={5} sm={12}>
@@ -136,7 +140,7 @@ export const TreatmentsResponsive = () => {
                         </Grid>
                         <Grid item md={7} sm={12}>
                             <Border pos={{ x: 1, y: 1 }}>
-                                <CuiImage imgWidth={{ md: 564, sm: 309 }} src={lagyreszKezelesek.src} pos={{ x: -2.4, y: -2.4 }} alt="Lágyrész kezelések" />
+                                <CuiImage imgWidth={{ og: 564, sm: 309 }} src={lagyreszKezelesek.src} pos={{ x: -2.4, y: -2.4 }} alt="Lágyrész kezelések" />
                             </Border>
                         </Grid>
                     </TreatmentGridContainer>
@@ -148,7 +152,7 @@ export const TreatmentsResponsive = () => {
                     <TreatmentGridContainer container>
                         <Grid item md={7} sm={12}>
                             <Border pos={{ x: 1, y: 0 }}>
-                                <CuiImage imgWidth={{ md: 487, sm: 301 }} src={gyogytorna.src} pos={{ x: -2.4, y: 2.4 }} alt="Gyógytorna" />
+                                <CuiImage imgWidth={{ og: 487, sm: 301 }} src={gyogytorna.src} pos={{ x: -2.4, y: 2.4 }} alt="Gyógytorna" />
                             </Border>
                         </Grid>
                         <Grid item md={5} sm={12}>
@@ -178,7 +182,7 @@ export const TreatmentsResponsive = () => {
                         </Grid>
                         <Grid item md={7} sm={12}>
                             <Border pos={{ x: 1, y: 0 }}>
-                                <CuiImage imgWidth={{ md: 488, sm: 307 }} src={haromdimenziosScoliosisTerapia.src} pos={{ x: -2.4, y: 2.4 }} alt="Háromdimenziós scoliosis terápia" />
+                                <CuiImage imgWidth={{ og: 488, sm: 307 }} src={haromdimenziosScoliosisTerapia.src} pos={{ x: -2.4, y: 2.4 }} alt="Háromdimenziós scoliosis terápia" />
                             </Border>
                         </Grid>
                     </TreatmentGridContainer>
@@ -190,7 +194,7 @@ export const TreatmentsResponsive = () => {
                     <TreatmentGridContainer container>
                         <Grid item md={7} sm={12}>
                             <Border justifyContent="center">
-                                <CuiImage imgWidth={{ md: 417, sm: 299 }} src={mckenzieTerapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Mckenzie terápia" />
+                                <CuiImage imgWidth={{ og: 417, sm: 299 }} src={mckenzieTerapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Mckenzie terápia" />
                             </Border>
                         </Grid>
                     </TreatmentGridContainer>

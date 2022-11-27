@@ -48,8 +48,11 @@ const StudiesItem = styled.li`
         width: 1em;
         margin-left: 0rem;
     }
-    @media (max-width: ${breakPoint.sm.width}px) {
+    @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
         font-size: 1.2rem;
+    }
+    @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+        font-size: 0.9rem;
     }
 `
 

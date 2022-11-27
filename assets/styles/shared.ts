@@ -145,6 +145,9 @@ export const Container = styled.div<ContainerProps>`
 
 export const IntroContainer = styled(FlexLeftColumn)`
   height: 50vh;
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    height: 80vh;
+  }
   @media (max-width: ${breakPoint.sm.width}px) {
     height: 35vh;
     width: 100%;

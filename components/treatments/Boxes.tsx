@@ -16,7 +16,7 @@ const BoxesContent = styled(Content)`
   @media (max-width: ${breakPoint.lg.width}px) {
     padding: 3.2rem ${breakPoint.lg.padding};
   }
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     width: 100%;
     padding-left: ${breakPoint.sm.padding};
     padding-right: ${breakPoint.sm.padding};
@@ -54,7 +54,7 @@ const BoxHeading = styled(SubHeading)`
   font-size: 2.5rem;
   color: ${CuiColors.brown(0.9)};
   padding: 2rem 0rem;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.4rem;
     padding: 0 0 1rem 0;
   }
@@ -79,7 +79,7 @@ const BoxListItem = styled.li`
 const BoxListItemText = styled(Paragraph)`
   font-size: 1.8rem;
   color: ${CuiColors.brown(0.8)};
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.2rem;
   }
 `

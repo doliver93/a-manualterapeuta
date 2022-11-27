@@ -32,7 +32,6 @@ export const Intro = ({viewport}: ComponentType) => {
                             ? <>Maximális figyelem és empátia,<br />amely csak rád irányul…</>
                             : <>Maximális figyelem és empátia, amely csak rád irányul…</>
                         }
-                    
                     </SubHeading>
                 </IntroContainer>
             </Content>

@@ -39,9 +39,12 @@ const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
   color: ${CuiColors.white(0.8)};
   line-height: 2.8rem;
   margin-bottom: ${({ marginBottom = 0 }) => `${marginBottom}rem`};
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     line-height: 1.8rem;
     margin-bottom: 1.5rem;
+  }
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    font-size: 0.9rem;
   }
 `
 

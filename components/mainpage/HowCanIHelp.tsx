@@ -38,8 +38,8 @@ const Text = styled.div`
   color: ${CuiColors.brown(0.8)};
   text-transform: uppercase;
   letter-spacing: 0.16rem;
-  @media (max-width: ${breakPoint.sm.width}px) {
-    font-size: 9px;
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    font-size: 0.9rem;
   }
 `
 const dotFlashing = keyframes`
@@ -75,7 +75,7 @@ const MoreCuiImage = styled(FlexCenter)`
   height: 9.1rem;
   margin: auto;
   width: 9.1rem;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     height: 4.5rem;
     width: 4.5rem;
   }
@@ -86,7 +86,7 @@ const Dots = styled.div`
   box-shadow: 2.6rem 0 #fff, -2.6rem 0 #fff;
   background: #fff;
   width: 1.6rem;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     box-shadow: 1.3rem 0 #fff, -1.3rem 0 #fff;
     background-position: center;
     width: 1rem;

@@ -49,6 +49,9 @@ const BoxParagraph = styled(Paragraph)`
   @media (max-width: ${breakPoint.sm.width}px) {
     padding-left: 0;
   }
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    font-size: 0.9rem;
+  }
 `
 const NumberContainer = styled(Grid)`
   text-align: center;
@@ -74,7 +77,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={one.src} alt="Állapotfelmérés - 1" />
+                        <Number src={one.src} imgWidth={{og: 31 }}alt="Állapotfelmérés - 1" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>anamnézis felvétel</BoxHeading>
@@ -85,7 +88,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={two.src} alt="Állapotfelmérés - 2" />
+                        <Number src={two.src} imgWidth={{og: 46 }} alt="Állapotfelmérés - 2" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>megtekintés, tapintás</BoxHeading>
@@ -96,7 +99,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={three.src} alt="Állapotfelmérés - 3" />
+                        <Number src={three.src} imgWidth={{og: 43 }}alt="Állapotfelmérés - 3" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>aktív és passzív mozgás vizsgálat</BoxHeading>
@@ -107,7 +110,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={four.src} alt="Állapotfelmérés - 4" />
+                        <Number src={four.src} imgWidth={{og: 50 }} alt="Állapotfelmérés - 4" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>funkcionális teszt</BoxHeading>
@@ -118,7 +121,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={five.src} alt="Állapotfelmérés - 5" />
+                        <Number src={five.src} imgWidth={{og: 41 }} alt="Állapotfelmérés - 5" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>fizioterápiás diagnózis</BoxHeading>
@@ -129,7 +132,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={six.src} alt="Állapotfelmérés - 6" />
+                        <Number src={six.src} imgWidth={{og: 50 }} alt="Állapotfelmérés - 6" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>kezelés</BoxHeading>
@@ -140,7 +143,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={seven.src} alt="Állapotfelmérés - 7" />
+                        <Number src={seven.src} imgWidth={{og: 45 }} alt="Állapotfelmérés - 7" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>otthon végezhető gyakorlatsor</BoxHeading>
@@ -151,7 +154,7 @@ export const Steps = () => {
             <Box>
                 <GridContainer container>
                     <NumberContainer item xs={1}>
-                        <Number src={eight.src} alt="Állapotfelmérés - 8" />
+                        <Number src={eight.src} imgWidth={{og: 50 }} alt="Állapotfelmérés - 8" />
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>kontroll</BoxHeading>

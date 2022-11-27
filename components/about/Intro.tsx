@@ -15,7 +15,7 @@ const Container = styled.div`
   padding-top: 5.4rem;
   padding-bottom: 9.6rem;
   position: relative;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     padding: 0;
     margin-bottom: 20rem;
   }
@@ -36,18 +36,22 @@ const PortraitContainer = styled.div`
     width: auto;
     text-align: right;
   }
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     width: 100%;
     margin-bottom: -15rem;
   }
 `
 const PortraitBorder = styled(Border)`
-  @media (max-width: ${breakPoint.sm.width}px) {
+
+@media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  width: 300px;
+}
+@media(max-width: ${breakPoint.sm.width}px) {
     width: 100%;
   }
 `
 const PortraitImage = styled(CuiImage)`
-  @media (max-width: ${breakPoint.sm.width}px) {
+@media(max-width: ${breakPoint.sm.width}px) {
     padding: 0 2rem;
     width: 100%;
     height: 100%;

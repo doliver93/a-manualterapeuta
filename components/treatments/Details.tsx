@@ -70,6 +70,9 @@ const DetailHeading = styled(SubHeading)`
 const DetailsParagraph = styled(Paragraph)`
   text-align: justify;
   color: ${CuiColors.brown(0.8)};
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    font-size: 0.9rem;
+  }
 `
 
 const MovedImage = styled(CuiImage)`
@@ -92,6 +95,9 @@ const ImageGrid = styled(Grid)<ImageGridProps>`
   @media (max-width: ${breakPoint.md.width}px) {
     text-align: center;
     margin-top: 3.2rem;
+  }
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    text-align: left;
   }
   @media (max-width: ${breakPoint.sm.width}px) {
     margin-top: 2rem;
@@ -130,7 +136,7 @@ export const Details = ({viewport}: ComponentType) => {
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
                             <DetailsBorder pos={viewport === "mobile" && {x: 1, y: 0}}>
-                                <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" imgWidth={{ og: 498 }} pos={{ x: -2.4, y: 2.4 }} />
+                                <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" imgWidth={{ og: 498, sm: 303 }} pos={{ x: -2.4, y: 2.4 }} />
                             </DetailsBorder>
                         </ImageGrid>
                     </GridContainer>

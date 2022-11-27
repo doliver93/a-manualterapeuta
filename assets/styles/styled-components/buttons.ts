@@ -25,7 +25,7 @@ export const PrimaryButton = styled.div<PrimaryButtonProps>`
     color: ${({ colorHover = CuiColors.white(1) }) => colorHover};
   }
   
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: ${({ fontSize = { sm: 0.9 } }) => `${fontSize.sm}rem`};
     padding: 1rem;
   }

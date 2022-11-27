@@ -9,7 +9,7 @@ const Container = styled(FlexCenter)`
   padding: 3.375rem 0 11.5rem 0;
   text-align: center;
   width: 100%;
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.5rem;
     padding: 2rem 0 5.5rem 0;
   }
@@ -19,7 +19,7 @@ const TitleParagraph = styled.div`
   color: ${CuiColors.brown(0.8)};
   text-align: justify;
   font-size: 2.4rem;
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.5rem;
   }
 `
