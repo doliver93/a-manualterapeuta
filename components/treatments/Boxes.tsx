@@ -45,8 +45,8 @@ const BoxesBorder = styled(Border)`
   & .box {
     transform: translate(-1.3rem, -1.3rem) !important;
   }
-  @media (max-width: ${breakPoint.sm.width}px) {
-    width: calc(100% + 0.8rem);
+  @media (max-width: ${breakPoint.md.width}px) {
+    width: calc(100% + 1rem);
   }
 `
 

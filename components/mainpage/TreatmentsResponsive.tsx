@@ -195,7 +195,7 @@ export const TreatmentsResponsive = ({viewport}: ComponentType) => {
                 </TreatmentsContent>
             </Container>
             <Container backgroundColor={CuiColors.white()}>
-                <TreatmentsContent padding={viewport === "landscape" ? { top: 14, bottom: 6 } : { top: 10, bottom: 6 }}>
+                <TreatmentsContent padding={viewport === "mobile" ? { top: 10, bottom: 6 } : { top: 14, bottom: 6 }}>
                     <Grid item md={5} sm={12}>
                         <Text>
                             <TreatmentsParagraph>
