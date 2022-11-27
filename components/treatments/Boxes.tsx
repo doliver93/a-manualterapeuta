@@ -41,12 +41,9 @@ const BoxesBorder = styled(Border)`
   border: 5px solid transparent;
   border-color: ${CuiColors.brown(0.1)} !important;
   transform: translate(0.8rem, 0.8rem) !important;
-  width: 100%;
+  width: calc(100% + 1rem);
   & .box {
     transform: translate(-1.3rem, -1.3rem) !important;
-  }
-  @media (max-width: ${breakPoint.md.width}px) {
-    width: calc(100% + 1rem);
   }
 `
 
