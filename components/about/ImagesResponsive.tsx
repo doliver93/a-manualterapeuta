@@ -42,10 +42,10 @@ export const ImagesResponsive = () => {
                     </Grid>
                     <Grid container flexDirection="column">
                         <Grid item>
-                            <CuiImage src={rolam2.src} alt="Állapotfelmérés gyakorlat 2" imgWidth={{ og: 364, md: 310, sm: 155 }} imgHeight={{ og: 243 }} margin={"0 1rem 0 0"} />
+                            <CuiImage src={rolam2.src} alt="Állapotfelmérés gyakorlat 2" imgWidth={{ og: 364, md: 310, sm: 155 }} imgHeight={{ og: 243 }} margin={"0 0 0 1rem"} />
                         </Grid>
                         <Grid item>
-                            <CuiImage src={rolam4.src} alt="Állapotfelmérés gyakorlat 4" imgWidth={{ og: 364, md: 310, sm: 155 }} imgHeight={{ og: 571 }} margin={"0 1rem 0 0"} />
+                            <CuiImage src={rolam4.src} alt="Állapotfelmérés gyakorlat 4" imgWidth={{ og: 364, md: 310, sm: 155 }} imgHeight={{ og: 571 }} margin={"0 0 0 1rem"} />
                         </Grid>
                     </Grid>
                 </GridContainer>
