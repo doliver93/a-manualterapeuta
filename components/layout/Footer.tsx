@@ -73,7 +73,16 @@ const FrameContainer = styled.div`
     }
   }
   
-  
+`
+const FooterHeading = styled(SubHeading)`
+  font-size: 2.5rem;
+  @media(max-width: ${breakPoint.md.width}px){
+    font-size: 2rem;
+  }
+  @media(max-width: ${breakPoint.sm.width}px){
+    font-size: 1.4rem;
+  }
+
 `
 
 export const Footer = () => {
@@ -82,9 +91,9 @@ export const Footer = () => {
             <FooterContent>
                 <Grid container alignItems="flex-end">
                     <Grid item md={6} xs={12}>
-                        <SubHeading color={CuiColors.white()} margin={{ md: "0 0 3rem 0", sm: "0 0 1.5rem 0"}}>
+                        <FooterHeading color={CuiColors.white()} fontSize={{og: 2.5, md: 2, sm: 1.4}} margin={{ md: "0 0 3rem 0", sm: "0 0 1.5rem 0"}}>
               Kapcsolat
-                        </SubHeading>
+                        </FooterHeading>
                         <FooterParagraph marginBottom={3}>
               Fordulj hozzám bizalommal.
                             <br />
