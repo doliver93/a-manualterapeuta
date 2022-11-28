@@ -49,7 +49,7 @@ const FooterParagraph = styled(Paragraph)<FooterParagraphProps>`
 `
 
 const FooterIcons = styled(CuiImage)`
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   margin: 0 0 0 1.7rem;
   opacity: 0.8;
