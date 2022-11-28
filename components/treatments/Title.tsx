@@ -24,6 +24,7 @@ const TitleParagraph = styled.div`
   }
   @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 `
 export const Title = () => {

@@ -38,6 +38,9 @@ const PriceParagraph = styled(Paragraph)`
 const PriceContent = styled(Grid)`
   margin-bottom: 4rem;
   position: relative;
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+    margin-bottom: 3rem;
+  }
 `
 const TimeText = styled.div`
   font-family: Poppins600;
@@ -45,8 +48,9 @@ const TimeText = styled.div`
   color: ${CuiColors.lightBeige()};
   padding-left: 3rem;
   position: absolute;
-  @media (max-width: ${breakPoint.sm.width}px) {
+  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.1rem;
+    padding-left: 2rem;
   }
 `
 const PriceImageContainer = styled.div`

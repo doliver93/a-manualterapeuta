@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material"
 import { CuiColors } from "assets/styles/colors"
 import { breakPoint, Content } from "assets/styles/shared"
-import { Heading, SubHeading } from "assets/styles/styled-components/typography"
+import { CuiListCollection, CuiListItem, CuiListItemText, Heading, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"
 
@@ -27,33 +27,6 @@ const Container = styled.div`
   }
   
 `
-const StudiesContainer = styled.ul`
-  list-style: none;
-  margin: 0 0 4.8rem 0;
-  padding: 0;
-  @media (max-width: ${breakPoint.md.width}px) {
-    margin: 0;
-  }
-`
-const StudiesItem = styled.li`
-    font-family: Poppins500;
-    color: ${CuiColors.brown(0.8)};
-    font-size: 1.8rem;
-    &:before {
-        content: "•";
-        color: ${CuiColors.brown(0.8)};
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        margin-left: 0rem;
-    }
-    @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
-        font-size: 1.2rem;
-    }
-    @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
-        font-size: 0.9rem;
-    }
-`
 
 export const Studies = () => {
     return (
@@ -72,23 +45,23 @@ export const Studies = () => {
                     </SubHeading>
                     <Grid container justifyContent="space-between">
                         <Grid item md={5} xs={12}>
-                            <StudiesContainer>
-                                <StudiesItem>Semmelweis Egyetem Általános Orvostudományi Kara által elfogadott Manuálterápia</StudiesItem>
-                                <StudiesItem>Anatomy Trains (folyamatban)</StudiesItem>
-                                <StudiesItem>McKenzie A kurzus</StudiesItem>
-                                <StudiesItem>Lágyrész technikák, triggerpont kezelés</StudiesItem>
-                                <StudiesItem>Ágyéki Szegmentalis stabilizációs tréning</StudiesItem>
-                            </StudiesContainer>
+                            <CuiListCollection>
+                                <CuiListItem><CuiListItemText>Semmelweis Egyetem Általános Orvostudományi Kara által elfogadott Manuálterápia</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Anatomy Trains (folyamatban)</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>McKenzie A kurzus</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Lágyrész technikák, triggerpont kezelés</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Ágyéki Szegmentalis stabilizációs tréning</CuiListItemText></CuiListItem>
+                            </CuiListCollection>
                         </Grid>
                         <Grid item md={5} xs={12} justifyContent="flex-end">
-                            <StudiesContainer>
-                                <StudiesItem>Kinematic Taping</StudiesItem>
-                                <StudiesItem>Csecsemő és kisgyermek taping</StudiesItem>
-                                <StudiesItem>Sporttaping</StudiesItem>
-                                <StudiesItem>SMR henger</StudiesItem>
-                                <StudiesItem>3D scoliosis/ Schroth terápia</StudiesItem>
-                                <StudiesItem>Neurodinamika</StudiesItem> 
-                            </StudiesContainer>
+                            <CuiListCollection>
+                                <CuiListItem><CuiListItemText>Kinematic Taping</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Csecsemő és kisgyermek taping</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Sporttaping</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>SMR henger</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>3D scoliosis/ Schroth terápia</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Neurodinamika</CuiListItemText></CuiListItem> 
+                            </CuiListCollection>
                         </Grid>
                     </Grid>
                 </Content>

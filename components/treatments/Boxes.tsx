@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material"
 import { CuiColors } from "assets/styles/colors"
 import { Border, breakPoint, Content } from "assets/styles/shared"
-import { Paragraph, SubHeading } from "assets/styles/styled-components/typography"
+import { CuiListCollection, CuiListItem, CuiListItemText, SubHeading } from "assets/styles/styled-components/typography"
 import React from "react"
 import styled from "styled-components"
 
@@ -31,6 +31,9 @@ const Box = styled.div`
   margin: auto;
   padding: 0 1.5rem;
   width: 100%;
+  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px){
+    min-height: 20rem;
+  }
   @media (max-width: ${breakPoint.sm.width}px) {
     min-height: auto;
     padding: 1.5rem;
@@ -56,33 +59,6 @@ const BoxHeading = styled(SubHeading)`
     padding: 0 0 1rem 0;
   }
 `
-const BoxListCollection = styled.ul`
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-`
-const BoxListItem = styled.li`
-  display: flex;
-  align-items: flex-start;
-  &:before {
-    content: "•";
-    color: ${CuiColors.brown(0.8)};
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 1.6rem;
-  }
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
-    align-items: center;
-  }
-`
-
-const BoxListItemText = styled(Paragraph)`
-  font-size: 1.8rem;
-  color: ${CuiColors.brown(0.8)};
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
-    font-size: 1.2rem;
-  }
-`
 
 export const Boxes = () => {
     return (
@@ -92,157 +68,157 @@ export const Boxes = () => {
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Deréktáji fájdalmak</BoxHeading>
-                            <BoxListCollection>
-                                <BoxListItem>
-                                    <BoxListItemText>gerincsérv</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>akut derékfájás /”becsípődés”/</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>idült derékfájás /hosszú ideje fennálló/</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>alsó végtagba kisugárzó panaszok</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>instabilitás</BoxListItemText>
-                                </BoxListItem>
-                            </BoxListCollection>
+                            <CuiListCollection>
+                                <CuiListItem>
+                                    <CuiListItemText>gerincsérv</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>akut derékfájás /”becsípődés”/</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>idült derékfájás /hosszú ideje fennálló/</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>alsó végtagba kisugárzó panaszok</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>instabilitás</CuiListItemText>
+                                </CuiListItem>
+                            </CuiListCollection>
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Nyaki panaszok</BoxHeading>
-                                <BoxListCollection>
-                                    <BoxListItem>
-                                        <BoxListItemText>gerincsérv</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>nyaki fájdalmak</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>fejfájás</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>fülzúgás</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>felső végtagba kisugárzó panaszok</BoxListItemText>
-                                    </BoxListItem>
-                                </BoxListCollection>
+                                <CuiListCollection>
+                                    <CuiListItem>
+                                        <CuiListItemText>gerincsérv</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>nyaki fájdalmak</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>fejfájás</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>fülzúgás</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>felső végtagba kisugárzó panaszok</CuiListItemText>
+                                    </CuiListItem>
+                                </CuiListCollection>
                             </Box>
                         </BoxesBorder>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Tartásjavítás</BoxHeading>
-                            <BoxListCollection>
-                                <BoxListItem>
-                                    <BoxListItemText>gerincferdülés</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>Scheuermann betegség</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>mellkasdeformitások</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>általános helytelen tartás</BoxListItemText>
-                                </BoxListItem>
-                            </BoxListCollection>
+                            <CuiListCollection>
+                                <CuiListItem>
+                                    <CuiListItemText>gerincferdülés</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>Scheuermann betegség</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>mellkasdeformitások</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>általános helytelen tartás</CuiListItemText>
+                                </CuiListItem>
+                            </CuiListCollection>
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Végtag fájdalmak</BoxHeading>
-                                <BoxListCollection>
-                                    <BoxListItem>
-                                        <BoxListItemText>váll</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>könyök</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>kéz</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>csípő</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>térd</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>boka</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>láb</BoxListItemText>
-                                    </BoxListItem>
-                                </BoxListCollection>
+                                <CuiListCollection>
+                                    <CuiListItem>
+                                        <CuiListItemText>váll</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>könyök</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>kéz</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>csípő</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>térd</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>boka</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>láb</CuiListItemText>
+                                    </CuiListItem>
+                                </CuiListCollection>
                             </Box>
                         </BoxesBorder>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Sportsérülések</BoxHeading>
-                            <BoxListCollection>
-                                <BoxListItem>
-                                    <BoxListItemText>szalagszakadás</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>rándulás</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>ficam</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>törések</BoxListItemText>
-                                </BoxListItem>
-                            </BoxListCollection>
+                            <CuiListCollection>
+                                <CuiListItem>
+                                    <CuiListItemText>szalagszakadás</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>rándulás</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>ficam</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>törések</CuiListItemText>
+                                </CuiListItem>
+                            </CuiListCollection>
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <Box className="box">
                             <BoxHeading>Műtétek után</BoxHeading>
-                            <BoxListCollection>
-                                <BoxListItem>
-                                    <BoxListItemText>törések</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>gerincműtétek</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>hegek</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>végtagi műtétek</BoxListItemText>
-                                </BoxListItem>
-                                <BoxListItem>
-                                    <BoxListItemText>egyéb műtétek</BoxListItemText>
-                                </BoxListItem>
-                            </BoxListCollection>
+                            <CuiListCollection>
+                                <CuiListItem>
+                                    <CuiListItemText>törések</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>gerincműtétek</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>hegek</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>végtagi műtétek</CuiListItemText>
+                                </CuiListItem>
+                                <CuiListItem>
+                                    <CuiListItemText>egyéb műtétek</CuiListItemText>
+                                </CuiListItem>
+                            </CuiListCollection>
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <BoxesBorder>
                             <Box className="box">
                                 <BoxHeading>Meglőzés</BoxHeading>
-                                <BoxListCollection>
-                                    <BoxListItem>
-                                        <BoxListItemText>műtéteket megelőzően</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>sérülések elkerülése érdekében</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>általános kondicionálás</BoxListItemText>
-                                    </BoxListItem>
-                                    <BoxListItem>
-                                        <BoxListItemText>általnos kivizsgálás</BoxListItemText>
-                                    </BoxListItem>
-                                </BoxListCollection>
+                                <CuiListCollection>
+                                    <CuiListItem>
+                                        <CuiListItemText>műtéteket megelőzően</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>sérülések elkerülése érdekében</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>általános kondicionálás</CuiListItemText>
+                                    </CuiListItem>
+                                    <CuiListItem>
+                                        <CuiListItemText>általnos kivizsgálás</CuiListItemText>
+                                    </CuiListItem>
+                                </CuiListCollection>
                             </Box>
                         </BoxesBorder>
                     </Grid>

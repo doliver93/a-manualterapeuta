@@ -1,6 +1,7 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { CuiColors } from "./colors"
+import { Paragraph } from "./styled-components/typography"
 
 interface BreakPointType {
   [key: string]: {width: number, height?: number, padding?: string, imgSize?: number}

@@ -26,7 +26,7 @@ const Container = styled.div`
   }
   @media (max-width: ${breakPoint.sm.width}px) {
     background-position: center;
-    height: 37vh;
+    height: 40vh;
   }
 `
 
@@ -37,7 +37,7 @@ const IntroContainer = styled(FlexLeftColumn)`
     width: 70%;
   }
   @media (max-width: ${breakPoint.sm.width}px) {
-    height: 40vh;
+    height: calc(100% + 2.7rem);
   }
   @media (max-width: ${breakPoint.xs.width}px) {
     width: 100%;
@@ -58,7 +58,7 @@ export const Intro = ({ viewport }: ComponentType) => {
                     buttonTextColorHover={CuiColors.white(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.brown(0.8)} fontSize={{og: 4.5, md: 4.5, sm: 2 }} margin={{ md: "0 0 1.6rem 0", sm: "0 0" }}>
+                    <Heading color={CuiColors.brown(0.8)} fontSize={{og: 4.5, md: 4.5, sm: 2 }} margin={{ md: "0 0 1.6rem 0", sm: "0rem 0" }}>
             Papp Alexandra vagyok,
                     </Heading>
 
