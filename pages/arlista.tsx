@@ -15,22 +15,22 @@ import { findViewport } from "helper/findViewport"
 
 const Container = styled.div`
   width: 100%;
-  background-color: white;
+  background-color: ${CuiColors.white()};
   padding-bottom: 16rem;
+  background-color: ${CuiColors.white()};
   @media (max-width: ${breakPoint.md.width}px) {
-    padding: 0;
+    padding-top: 10rem;
   }
   @media (max-width: ${breakPoint.sm.width}px) {
+    padding-top: 6rem;
     padding-bottom: 35rem;
   }
-  
 `
 const PricesContainer = styled.div`
   background-color: ${CuiColors.darkBeige(0.1)};
-  padding-top: 5rem;
+  padding-top: 0rem;
   padding-bottom: 8rem;
   position: relative;
-  
 `
 const PriceParagraph = styled(Paragraph)`
   color: ${CuiColors.brown(0.8)};
@@ -38,7 +38,7 @@ const PriceParagraph = styled(Paragraph)`
 const PriceContent = styled(Grid)`
   margin-bottom: 4rem;
   position: relative;
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     margin-bottom: 3rem;
   }
 `
@@ -48,7 +48,7 @@ const TimeText = styled.div`
   color: ${CuiColors.lightBeige()};
   padding-left: 3rem;
   position: absolute;
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.1rem;
     padding-left: 2rem;
   }
@@ -58,7 +58,7 @@ const PriceImageContainer = styled.div`
   width: 466px;
   height: 699px;
   right: 0;
-  top: 0;
+  top: 5rem;
   @media (max-width: ${breakPoint.lg.width}px) {
     position: relative;
     width: auto;
@@ -89,7 +89,7 @@ const Prices = () => {
                         <Content>
                             <Grid container justifyContent="space-between" alignItems="center">
                                 <Grid item sm={7} xs={12} alignItems="stretch">
-                                    <Heading color={CuiColors.brown(0.9)} margin={{ md: "0 0 3rem 0" }}>
+                                    <Heading color={CuiColors.brown(0.9)} margin={{ md: "5.4rem 0 4.5rem 0", sm: "2rem 0" }}>
                     Árlista
                                     </Heading>
                                     <PriceContent container justifyContent={viewport != "laptop" && "space-between"}>

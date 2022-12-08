@@ -1,7 +1,6 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { CuiColors } from "./colors"
-import { Paragraph } from "./styled-components/typography"
 
 interface BreakPointType {
   [key: string]: {width: number, height?: number, padding?: string, imgSize?: number}
@@ -137,7 +136,7 @@ export const Container = styled.div<ContainerProps>`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   @media (max-width: ${breakPoint.sm.width}px) {
     height: 30vh;

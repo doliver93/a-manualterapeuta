@@ -10,9 +10,16 @@ import { Studies } from "components/about/Studies"
 import { Images } from "components/about/Images"
 import { findViewport } from "helper/findViewport"
 import { ImagesResponsive } from "components/about/ImagesResponsive"
+import { breakPoint } from "assets/styles/shared"
 
 const Container = styled.div`
-    background-color: ${CuiColors.white()}
+    background-color: ${CuiColors.white()};
+    @media (max-width: ${breakPoint.md.width}px) {
+        padding-top: 10rem;
+    }
+    @media (max-width: ${breakPoint.sm.width}px) {
+        padding-top: 6rem;
+    }
 `
 
 const About = () => {

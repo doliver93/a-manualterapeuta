@@ -22,7 +22,7 @@ export const Intro = ({viewport}: ComponentType) => {
                     buttonTextColorHover={CuiColors.brown(1)}
                 />
                 <IntroContainer>
-                    <Heading color={CuiColors.white()} fontSize={{og: 4.5, md: 4.5, sm: 2}} margin={{md: "3rem 0", sm: "0 0 1.5rem 0"}}>
+                    <Heading color={CuiColors.white()} fontSize={{og: 4.5, md: 4.5, sm: 2}} margin={{md: "0 0 3rem 0", sm: "0 0 1.5rem 0"}}>
                     Állapotfelmérés
                     </Heading>
                     <SubHeading color={CuiColors.white()} fontSize={{og: 2.5, md: 2.5, sm: 1.4}}>

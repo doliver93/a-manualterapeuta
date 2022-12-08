@@ -21,6 +21,7 @@ const NavigationContainer = styled.div<NavigationContainerProps>`
   justify-content: space-between;
   left: 0;
   position: ${({ relative }) => (relative ? "relative" : "absolute")};
+  //   position: absolute;
   top: 0;
   margin: auto;
   width: 100%;
@@ -32,10 +33,12 @@ const NavigationContainer = styled.div<NavigationContainerProps>`
   @media (max-width: ${breakPoint.md.width}px) {
     flex-direction: column;
     padding: 0;
+    position: absolute;
   }
 `
 
 const Header = styled.div`
+  background-color: white;
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -6,12 +6,12 @@ import { Heading } from "assets/styles/styled-components/typography"
 
 const Container = styled(FlexCenter)`
   background-color: ${CuiColors.white()};
-  padding: 3.375rem 0 11.5rem 0;
+  padding: 3.375rem 0 20rem 0;
   text-align: center;
   width: 100%;
   @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 1.5rem;
-    padding: 2rem 0 5.5rem 0;
+    padding: 2rem 0 15rem 0;
   }
 `
 const TitleParagraph = styled.div`

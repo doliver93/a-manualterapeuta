@@ -11,8 +11,8 @@ const Container = styled.div`
 `
 const BoxesContent = styled(Content)`
   padding: 3.2rem 0rem;
-  top: -10rem;
-  margin-bottom: -10rem;
+  top: -20rem;
+  margin-bottom: -20rem;
   @media (max-width: ${breakPoint.lg.width}px) {
     padding: 3.2rem ${breakPoint.lg.padding};
   }
@@ -20,7 +20,7 @@ const BoxesContent = styled(Content)`
     width: 100%;
     padding-left: ${breakPoint.sm.padding};
     padding-right: ${breakPoint.sm.padding};
-    margin-bottom: -12rem;
+    margin-bottom: -24rem;
   }
 `
 const Box = styled.div`

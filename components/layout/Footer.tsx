@@ -118,13 +118,13 @@ export const Footer = () => {
                     <Grid item md={6} xs={12} id="right-content">
                         <FlexRight>
                             <CuiLink href={ExternalLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={instagram.src} alt="logo1" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
+                                <FooterIcons src={instagram.src} alt="logo1" imgWidth={{og: 40, sm: 25}} imgHeight={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                             <CuiLink href={ExternalLinks.FACEBOOK} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={facebook.src} alt="logo2" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
+                                <FooterIcons src={facebook.src} alt="logo2" imgWidth={{og: 40, sm: 25}} imgHeight={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                             <CuiLink href={ExternalLinks.TIKTOK} target="_blank" rel="noopener noreferrer">
-                                <FooterIcons src={tiktok.src} alt="logo3" imgWidth={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
+                                <FooterIcons src={tiktok.src} alt="logo3" imgWidth={{og: 40, sm: 25}} imgHeight={{og: 40, sm: 25}} margin="0 0 0 1.6rem" />
                             </CuiLink>
                         </FlexRight>
                         <FlexRight>

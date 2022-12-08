@@ -65,6 +65,7 @@ const DetailHeading = styled(SubHeading)`
   margin: 0 0 3rem 0;
   @media (max-width: ${breakPoint.sm.width}px) {
     font-size: 1.4rem;
+    margin: 0 0 1rem 0;
   }
 `
 const DetailsParagraph = styled(Paragraph)`
