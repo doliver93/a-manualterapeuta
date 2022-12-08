@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
-import { FlexCenter, FlexCenterColumn } from "assets/styles/shared"
+import { breakPoint, FlexCenter, FlexCenterColumn } from "assets/styles/shared"
 import { CuiColors } from "assets/styles/colors"
 import { CuiImage } from "assets/styles/styled-components/images"
 
@@ -12,26 +12,29 @@ const Container = styled(FlexCenter)`
   height: 100vh;
   font-family: Poppins500;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   background-color: black;
   color: white;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.16rem;
+  @media (max-width: ${breakPoint.sm.width}px) {
+    font-size: 0.7rem;
+  }
 `
 const Divider = styled.div`
   background-color: white;
   width: 4px;
   height: 25px;
-  margin: 0 1rem;
+  margin: 0 1.6rem;
 `
 const StyledLink = styled(Link)`
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: ${CuiColors.lightBeige()};
 `
 const FourOhFour = () => {
     return (
         <Container>
             <FlexCenterColumn>
-                <CuiImage src={logo.src} imgWidth={{og: 50}} alt="A manualterapeuta" />
+                <CuiImage src={logo.src} imgWidth={{og: 50, sm: 35}} alt="A manualterapeuta" />
                 <FlexCenter style={{ margin: "1rem 0" }}>
                     <h1>404</h1>
                     <Divider />
