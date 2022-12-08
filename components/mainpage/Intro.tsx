@@ -19,7 +19,7 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   @media (max-width: ${breakPoint.md.width}px) {
-    background-position: calc(50% - 10rem) 50%;
+    background-position: calc(50% - 15rem) 50%;
   }
   @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     background-position: center;
