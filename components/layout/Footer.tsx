@@ -84,7 +84,13 @@ const FooterHeading = styled(SubHeading)`
   }
 
 `
-
+const FooterLink = styled(CuiLink)`
+  color: ${CuiColors.white(0.8)};
+  display: inline-block;
+  &:hover{
+    color: ${CuiColors.white()};
+  }
+`
 export const Footer = () => {
     return (
         <FooterContainer id="footer">
@@ -100,11 +106,11 @@ export const Footer = () => {
               Bármilyen kérdéssel kapcsolatban segítségedre állok.
                         </FooterParagraph>
                         <FooterParagraph marginBottom={3}>
-              Email: info@a-manualterapeuta.hu
+              Email: <FooterLink href="mailto:info@a-manualterapeuta.hu">info@a-manualterapeuta.hu</FooterLink>
                             <br />
-              Telefon: +36307888280
+              Telefon: <FooterLink href="tel:+36307888280">+36 30 788 8280</FooterLink>
                             <br />
-              Cím: 2151 Fót, Kossuth Lajos utca 25. Levendula Gyógyközpont
+              Cím: 2151 Fót, Kossuth Lajos utca 25.<br />Levendula Gyógyközpont
                         </FooterParagraph>
                         <FooterParagraph>
               Hétfő: 15:00-19:00

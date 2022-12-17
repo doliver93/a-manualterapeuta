@@ -147,7 +147,7 @@ export const Steps = () => {
                     </NumberContainer>
                     <TextContainer item xs={11}>
                         <BoxHeading>otthon végezhető gyakorlatsor</BoxHeading>
-                        <BoxParagraph>otthon elvégzendő feladatok betanítása a korrekciók fenntartása</BoxParagraph>
+                        <BoxParagraph>otthon elvégzendő feladatok betanítása a korrekciók fenntartására</BoxParagraph>
                     </TextContainer>
                 </GridContainer>
             </Box>

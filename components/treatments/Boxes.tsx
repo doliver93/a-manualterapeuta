@@ -125,7 +125,7 @@ export const Boxes = () => {
                                     <CuiListItemText>mellkasdeformitások</CuiListItemText>
                                 </CuiListItem>
                                 <CuiListItem>
-                                    <CuiListItemText>általános helytelen tartás</CuiListItemText>
+                                    <CuiListItemText>általános helytelen testtartás</CuiListItemText>
                                 </CuiListItem>
                             </CuiListCollection>
                         </Box>
@@ -204,19 +204,19 @@ export const Boxes = () => {
                     <Grid item lg={3} md={4} sm={6} xs={12}>
                         <BoxesBorder>
                             <Box className="box">
-                                <BoxHeading>Meglőzés</BoxHeading>
+                                <BoxHeading>Megelőzés</BoxHeading>
                                 <CuiListCollection>
                                     <CuiListItem>
-                                        <CuiListItemText>műtéteket megelőzően</CuiListItemText>
+                                        <CuiListItemText>műtétekre való felkészítés</CuiListItemText>
                                     </CuiListItem>
                                     <CuiListItem>
-                                        <CuiListItemText>sérülések elkerülése érdekében</CuiListItemText>
+                                        <CuiListItemText>célzott terápia a sérülések megelőzésére</CuiListItemText>
                                     </CuiListItem>
                                     <CuiListItem>
                                         <CuiListItemText>általános kondicionálás</CuiListItemText>
                                     </CuiListItem>
                                     <CuiListItem>
-                                        <CuiListItemText>általnos kivizsgálás</CuiListItemText>
+                                        <CuiListItemText>általános kivizsgálás</CuiListItemText>
                                     </CuiListItem>
                                 </CuiListCollection>
                             </Box>

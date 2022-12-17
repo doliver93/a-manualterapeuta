@@ -103,7 +103,7 @@ export const HowCanIHelp = ({ viewport }: ComponentType) => {
             {viewport === "mobile" ? (
                 <FlexLeftColumn>
                     <SubHeading fontSize={{ sm: 1.4 }} color={CuiColors.brown(0.7)} textAlign="left" margin={{sm: "2rem 0"}}>Térj vissza a teljes élethez</SubHeading>
-                    <ResponsiveParagraph fontSize={{ sm: 1.2 }} color={CuiColors.brown(0.7)} textAlign="justify">Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.</ResponsiveParagraph>
+                    <ResponsiveParagraph fontSize={{ sm: 1.2 }} color={CuiColors.brown(0.7)} textAlign="justify">Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát, amelyek akadályozhatnak a mindennapi tevékenységeidben.</ResponsiveParagraph>
                 </FlexLeftColumn>
             ) : null}
             <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "6rem auto", sm: "3rem auto" }}>

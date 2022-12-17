@@ -44,7 +44,7 @@ const LinkDetails = styled(CuiLink)`
     color: ${CuiColors.brown(0.5)};
     text-decoration: none;
   }
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media (max-width: ${breakPoint.sm.width}px) {
     font-size: 1.4rem;
   }
 `
@@ -55,7 +55,7 @@ const TreatmentsParagraph = styled(Paragraph)`
   color: ${CuiColors.brown(0.8)};
   text-align: justify;
   margin: 3rem 0;
-  @media(max-width: ${breakPoint.sm.width}px){
+  @media (max-width: ${breakPoint.sm.width}px) {
     margin: 0.7rem 0;
     margin-top: 1.5rem;
   }
@@ -68,17 +68,17 @@ const ExternalImage = styled.div<ExternalImageProps>`
   top: ${({ top = 0 }) => `${top}rem`};
 `
 const TreatmentGridContainer = styled(Grid)`
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 `
 const Text = styled.div``
 
 export const Treatments = () => {
     return (
         <FlexCenterColumn>
-            <Content style={{textAlign: "center"}}>
-                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "auto auto 8rem auto", sm: "auto auto 1.5rem auto"}}>
-        Ilyen kezelésekkel találkozhattok nálam
+            <Content style={{ textAlign: "center" }}>
+                <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "auto auto 8rem auto", sm: "auto auto 1.5rem auto" }}>
+          Ilyen kezelésekkel találkozhattok nálam
                 </Heading>
             </Content>
             <Container backgroundColor={CuiColors.grey(0.2)}>
@@ -86,7 +86,7 @@ export const Treatments = () => {
                     <TreatmentGridContainer container>
                         <Grid item md={7} sm={12}>
                             <Border pos={{ x: -2.4, y: -2.4 }}>
-                                <CuiImage imgWidth={{og: 513 }} src={manualterapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Manuálterápia" />
+                                <CuiImage imgWidth={{ og: 513 }} src={manualterapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Manuálterápia" />
                             </Border>
                         </Grid>
                         <Grid item md={5} sm={12}>
@@ -117,7 +117,7 @@ export const Treatments = () => {
                         </Grid>
                         <Grid item md={7} sm={12} textAlign="right">
                             <Border pos={{ x: 2.4, y: 2.4 }}>
-                                <CuiImage imgWidth={{ og: 564, lg: 564*lgRate, md: 564*mdRate}} src={lagyreszKezelesek.src} pos={{ x: -2.4, y: -2.4 }} alt="Lágyrész kezelések" />
+                                <CuiImage imgWidth={{ og: 564, lg: 564 * lgRate, md: 564 * mdRate }} src={lagyreszKezelesek.src} pos={{ x: -2.4, y: -2.4 }} alt="Lágyrész kezelések" />
                             </Border>
                         </Grid>
                     </TreatmentGridContainer>
@@ -127,7 +127,7 @@ export const Treatments = () => {
                 <TreatmentsContent padding={{ top: 16, bottom: 16 }}>
                     <ExternalImage top={-5}>
                         <Border pos={{ x: 2.4, y: -2.4 }}>
-                            <CuiImage imgWidth={{og: 487, md: 487*mdRate}} src={gyogytorna.src} pos={{ x: -2.4, y: 2.4 }} alt="Gyógytorna" />
+                            <CuiImage imgWidth={{ og: 487, md: 487 * mdRate }} src={gyogytorna.src} pos={{ x: -2.4, y: 2.4 }} alt="Gyógytorna" />
                         </Border>
                     </ExternalImage>
                     <TreatmentGridContainer container>
@@ -136,7 +136,7 @@ export const Treatments = () => {
                             <Text>
                                 <TreatmentsSubHeading>Gyógytorna</TreatmentsSubHeading>
                                 <TreatmentsParagraph>
-                  Célzott gyógytorna feladatok a fájdalmak csillapítására, az izmok erősítésére, nyújtására és a kezelések utáni korrekció fenntartására. Magába foglalja az óra keretein belül végzett
+                  Célzott gyógytorna feladatok a fájdalmak csillapítására, az izmok erősítésére, nyújtására és a kezelések utáni korrekciók fenntartására. Magába foglalja az óra keretein belül végzett
                   feladatokat és az otthonra adott gyakorlatokat.
                                 </TreatmentsParagraph>
                                 <LinkDetails href={{ pathname: "/kezelesek", query: "gyogytorna" }}>részletes leírás</LinkDetails>
@@ -154,15 +154,15 @@ export const Treatments = () => {
                   Háromdimenziós scoliosis terápia <br />- Schroth terápia
                                 </TreatmentsSubHeading>
                                 <TreatmentsParagraph>
-                  Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő
-                  gyakorlatokkal.
+                  Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása speciális testhelyzetekben végzett erősítő gyakorlatokkal és légzési
+                  technikákkal.
                                 </TreatmentsParagraph>
                                 <LinkDetails href={{ pathname: "/kezelesek", query: "haromdimenzios-scoliosis-terapia" }}>részletes leírás</LinkDetails>
                             </Text>
                         </Grid>
                         <Grid item md={7} sm={12} textAlign="right">
                             <Border pos={{ x: 2.4, y: -2.4 }}>
-                                <CuiImage imgWidth={{og: 488, md: 488*mdRate}} src={haromdimenziosScoliosisTerapia.src} pos={{ x: -2.4, y: 2.4 }} alt="Háromdimenziós scoliosis terápia" />
+                                <CuiImage imgWidth={{ og: 488, md: 488 * mdRate }} src={haromdimenziosScoliosisTerapia.src} pos={{ x: -2.4, y: 2.4 }} alt="Háromdimenziós scoliosis terápia" />
                             </Border>
                         </Grid>
                     </TreatmentGridContainer>
@@ -176,8 +176,8 @@ export const Treatments = () => {
                             <Text>
                                 <TreatmentsSubHeading>Mckenzie terápia</TreatmentsSubHeading>
                                 <TreatmentsParagraph>
-                  Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő
-                  gyakorlatokkal.
+                  Kifejezetten gerincsérvre (hernia disci), a porckorong kiboltosulásra (protrusio disci), valamint a keresztcsont és a medence ízületének, a sacroiliacalis (SI) ízületre irányuló
+                  terápia.
                                 </TreatmentsParagraph>
                                 <LinkDetails href={{ pathname: "/kezelesek", query: "mckenzie-terapia" }}>részletes leírás</LinkDetails>
                             </Text>
@@ -189,7 +189,7 @@ export const Treatments = () => {
                 <TreatmentsContent padding={{ top: 14, bottom: 14 }}>
                     <ExternalImage top={-48}>
                         <Border pos={{ x: 2.4, y: -2.4 }}>
-                            <CuiImage imgWidth={{og: 417, md: 417*mdRate}} src={mckenzieTerapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Mckenzie terápia" />
+                            <CuiImage imgWidth={{ og: 417, md: 417 * mdRate }} src={mckenzieTerapia.src} pos={{ x: 2.4, y: 2.4 }} alt="Mckenzie terápia" />
                         </Border>
                     </ExternalImage>
                     <TreatmentGridContainer container>

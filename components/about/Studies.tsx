@@ -43,12 +43,12 @@ export const Studies = () => {
                     <SubHeading color={CuiColors.brown(0.9)} margin={{ md: "3rem 0 4.8rem 0", sm: "3rem 0" }}>
               Tanulmányaim segítségével specifikus kezelésekben részesülhetsz
                     </SubHeading>
-                    <Grid container justifyContent="space-between">
+                    <Grid container justifyContent="space-between" style={{marginBottom: "1rem"}}>
                         <Grid item md={5} xs={12}>
                             <CuiListCollection>
                                 <CuiListItem><CuiListItemText>Semmelweis Egyetem Általános Orvostudományi Kara által elfogadott Manuálterápia</CuiListItemText></CuiListItem>
-                                <CuiListItem><CuiListItemText>Anatomy Trains (folyamatban)</CuiListItemText></CuiListItem>
-                                <CuiListItem><CuiListItemText>McKenzie A kurzus</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>Anatomy Trains Haladó medence, ágyéki gerinc és csípő kurzus</CuiListItemText></CuiListItem>
+                                <CuiListItem><CuiListItemText>McKenzie &quot;A&quot; kurzus</CuiListItemText></CuiListItem>
                                 <CuiListItem><CuiListItemText>Lágyrész technikák, triggerpont kezelés</CuiListItemText></CuiListItem>
                                 <CuiListItem><CuiListItemText>Ágyéki Szegmentalis stabilizációs tréning</CuiListItemText></CuiListItem>
                             </CuiListCollection>

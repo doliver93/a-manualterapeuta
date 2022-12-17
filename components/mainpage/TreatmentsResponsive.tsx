@@ -37,13 +37,13 @@ const TreatmentsContent = styled(Content)<TreamnetsContentProps>`
   padding-bottom: ${({ padding = { bottom: 6.4 } }) => `${padding.bottom}rem`};
   @media (max-width: ${breakPoint.sm.width}px) {
     &#manualterapia {
-        padding: 2rem ${breakPoint.sm.padding};
+      padding: 2rem ${breakPoint.sm.padding};
     }
     &#lagyresz-kezelesek {
-        padding-top: 2rem;
+      padding-top: 2rem;
     }
-    &#haromdimenzios-scoliosis-terapia{
-        padding-top: 2rem;
+    &#haromdimenzios-scoliosis-terapia {
+      padding-top: 2rem;
     }
     &#mckenzie {
       top: 10rem;
@@ -73,13 +73,12 @@ const TreatmentsParagraph = styled(Paragraph)`
   color: ${CuiColors.brown(0.8)};
   text-align: justify;
   margin: 3rem 0;
-  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 0.9rem;
   }
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     margin: 0.7rem 0;
     margin-top: 1.5rem;
-    
   }
 `
 const TreatmentGridContainer = styled(Grid)`
@@ -90,12 +89,12 @@ const ResponsiveSubHeading = styled(TreatmentsSubHeading)`
   margin-bottom: 0.9rem;
 `
 const Text = styled.div``
-export const TreatmentsResponsive = ({viewport}: ComponentType) => {
+export const TreatmentsResponsive = ({ viewport }: ComponentType) => {
     return (
         <FlexCenterColumn>
-            <Content style={{textAlign: "center"}}>
+            <Content style={{ textAlign: "center" }}>
                 <Heading textAlign="center" color={CuiColors.brown(0.9)} margin={{ md: "auto auto 4rem auto", sm: "auto auto 1.5rem auto" }}>
-        Ilyen kezelésekkel találkozhattok nálam
+          Ilyen kezelésekkel találkozhattok nálam
                 </Heading>
             </Content>
             <Container backgroundColor={CuiColors.grey(0.2)}>
@@ -152,7 +151,7 @@ export const TreatmentsResponsive = ({viewport}: ComponentType) => {
                         <Grid item md={5} sm={12}>
                             <Text>
                                 <TreatmentsParagraph>
-                  Célzott gyógytorna feladatok a fájdalmak csillapítására, az izmok erősítésére, nyújtására és a kezelések utáni korrekció fenntartására. Magába foglalja az óra keretein belül végzett
+                  Célzott gyógytorna feladatok a fájdalmak csillapítására, az izmok erősítésére, nyújtására és a kezelések utáni korrekciók fenntartására. Magába foglalja az óra keretein belül végzett
                   feladatokat és az otthonra adott gyakorlatokat.
                                 </TreatmentsParagraph>
                                 <LinkDetails href={{ pathname: "/kezelesek", query: "gyogytorna" }}>részletes leírás</LinkDetails>
@@ -168,8 +167,8 @@ export const TreatmentsResponsive = ({viewport}: ComponentType) => {
                         <Grid item md={5} sm={12}>
                             <Text>
                                 <TreatmentsParagraph>
-                  Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő
-                  gyakorlatokkal.
+                  Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása speciális testhelyzetekben végzett erősítő gyakorlatokkal és légzési
+                  technikákkal.
                                 </TreatmentsParagraph>
                                 <LinkDetails href={{ pathname: "/kezelesek", query: "haromdimenzios-scoliosis-terapia" }}>részletes leírás</LinkDetails>
                             </Text>
@@ -199,8 +198,8 @@ export const TreatmentsResponsive = ({viewport}: ComponentType) => {
                     <Grid item md={5} sm={12}>
                         <Text>
                             <TreatmentsParagraph>
-                Kifejezetten a gerincferdülés kezelésére irányuló terápia, amelynek célja a gerinc háromdimenziós korrigálása légzési technikákkal és speciális testhelyzetekben végzett erősítő
-                gyakorlatokkal.
+                Kifejezetten gerincsérvre (hernia disci), a porckorong kiboltosulásra (protrusio disci), valamint a keresztcsont és a medence ízületének, a sacroiliacalis (SI) ízületre irányuló
+                terápia.
                             </TreatmentsParagraph>
                             <LinkDetails href={{ pathname: "/kezelesek", query: "mckenzie-terapia" }}>részletes leírás</LinkDetails>
                         </Text>

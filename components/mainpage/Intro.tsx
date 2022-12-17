@@ -73,7 +73,7 @@ export const Intro = ({ viewport }: ComponentType) => {
                 Térj vissza a teljes élethez
                             </SubHeading>
                             <Paragraph color={CuiColors.brown(0.7)} fontSize={{og: 1.8, md: 1.8}} margin={{ md: "0 0 3rem 0" }}>
-                Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát.
+                Segítségemmel megőrizheted mozgásszerveid egészségét. Manuálterápiás és lágyrész kezeléses módszereimmel feltárom a fájdalmaid okát, amelyek akadályozhatnak a mindennapi tevékenységeidben.
                             </Paragraph>
                         </>
                     ) : (

@@ -35,10 +35,10 @@ const Container = styled.div<ContainerProps>`
       margin-top: 9.6rem;
     }
   }
-  @media(max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.sm.width}px), (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     &#manualterapia {
-        padding: 2.3rem 0;
-        padding-bottom: 5rem;
+      padding: 2.3rem 0;
+      padding-bottom: 5rem;
     }
     &#haromdimenzios-scoliosis-terapia {
       padding: 2.3rem 0;
@@ -51,8 +51,8 @@ const Container = styled.div<ContainerProps>`
       padding-bottom: 5rem;
     }
     &#mckenzie-terapia {
-        padding: 2.3rem 0;
-        padding-bottom: 5rem;
+      padding: 2.3rem 0;
+      padding-bottom: 5rem;
     }
     &#mckenzie-terapia .image-grid {
       margin-top: 2rem;
@@ -71,7 +71,7 @@ const DetailHeading = styled(SubHeading)`
 const DetailsParagraph = styled(Paragraph)`
   text-align: justify;
   color: ${CuiColors.brown(0.8)};
-  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     font-size: 0.9rem;
   }
 `
@@ -97,7 +97,7 @@ const ImageGrid = styled(Grid)<ImageGridProps>`
     text-align: center !important;
     margin-top: 3.2rem !important;
   }
-  @media(max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
+  @media (max-width: ${breakPoint.landscape.width}px) and (max-height: ${breakPoint.landscape.height}px) {
     text-align: left;
   }
   @media (max-width: ${breakPoint.sm.width}px) {
@@ -107,7 +107,7 @@ const ImageGrid = styled(Grid)<ImageGridProps>`
 const DetailsBorder = styled(Border)`
   border-width: 5px;
 `
-export const Details = ({viewport}: ComponentType) => {
+export const Details = ({ viewport }: ComponentType) => {
     const router = useRouter()
     const data = router.query
 
@@ -128,15 +128,15 @@ export const Details = ({viewport}: ComponentType) => {
                         <Grid item md={6} xs={12}>
                             <DetailHeading>Manuálterápia</DetailHeading>
                             <DetailsParagraph>
-                A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületekben, valamelyik mozgás
-                irányában blokkot érzékelek, azt megkezelem. Ezt légzés és izommegfeszítések segítségével végezzük el. Ezek az ízületi blokkok, komoly fájdalmakat tudnak okozni, amelyek hatására
-                tapasztalhatod például azt a bizonyos „becsípődés” érzést. Nem mellesleg végtagokba kisugárzó fájdalmat, zsibbadást, „hangyamászásérzést” is tapasztalhatsz. A migrénes fejfájások és a
-                fülzúgások hátterében is sokszor ezek a blokkok állhatnak. A manuálterápiával a fájdalmaid okait tudjuk felfedezni és kezelni, míg más kezelések sokszor csak a tünetek enyhítésére
-                szolgálnak. Hatására a teljes testedet könnyebbnek érezheted, mivel a megbomlott egyensúlyt állítjuk helyre.
+                A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületben, valamelyik mozgás
+                irányában blokkot érzékelek, azt megkezelem. Ezt légzési technikákkal és izommegfeszítések segítségével végezzük el. Ezek az ízületi blokkok, komoly fájdalmakat tudnak okozni, amelyek
+                hatására tapasztalhatod például azt a bizonyos „becsípődés” érzést. Nem mellesleg végtagokba kisugárzó fájdalmat, zsibbadást, „hangyamászásérzést” is tapasztalhatsz. A migrénes
+                fejfájások és a fülzúgások hátterében is sokszor ezek a blokkok állhatnak. A manuálterápiával a fájdalmaid okait tudjuk felfedezni és kezelni, míg más kezelések sokszor csak a tünetek
+                enyhítésére szolgálnak. Hatására a teljes testedet könnyebbnek érezheted, mivel a megbomlott egyensúlyt állítjuk helyre.
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
-                            <DetailsBorder pos={viewport === "mobile" && {x: 1, y: 0}}>
+                            <DetailsBorder pos={viewport === "mobile" && { x: 1, y: 0 }}>
                                 <CuiImage src={manualterapia.src} alt="Kezelések - Manuálterápia" imgWidth={{ og: 498, sm: 303 }} pos={{ x: -2.4, y: 2.4 }} />
                             </DetailsBorder>
                         </ImageGrid>
@@ -149,9 +149,11 @@ export const Details = ({viewport}: ComponentType) => {
                         <Grid item md={6} xs={12}>
                             <DetailHeading>Lágyrész kezelések</DetailHeading>
                             <DetailsParagraph>
-                A kezelések során sosem hagyom ki a lágyrészeket. Ez magát a bőrt és a bőr alatti kötőszöveteket jelenti. Ide tartoznak az izmok és az izompólyák kezelése, azaz a különböző fascia
-                kezelések, valamint a hegkezelések. A lágyrészekben érzékelem a különböző feszüléseket, az inaktív területeket, amelyek a test csavarodásait és diszharmóniáját okozhatja. Ezzel a
-                kezelési módszerrel próbálom visszaállítani az izmok és a kötőszövetek egyensúlyát, a harmonikus mozgás és a fájdalommentes életvitel érdekében.
+                Kezeléseim legnagyobb részét a lágyrészek kezelése tölti ki, mivel ezek a szövetek rengeteg feszültséget hordoznak magukban, mely kihat a testtartásra, a járásra és a mindennapi
+                tevékenységekre. Ezek a feszültségek korábbi „traumák” hatására alakulhatnak ki, amelyek nem csak fizikai, hanem lelki eredetűek is lehetnek. Kezelésük hatására, így nem csak testi,
+                hanem akár lelki oldódás is bekövetkezhet. De mit is takar a lágyrész? A bőr, a bőr alatti kötőszövet, az izom és az izompólya – azaz a fascia. A kezelés során érzékelem a különböző
+                feszüléseket, az inaktív területeket, a test csavarodásait, amelyek a test diszharmóniáját okozhatják. A hegek kezelése is ide tartozik. Az izmok és a kötőszövetek egyensúlyát próbálom
+                helyreállítani, a harmonikus mozgás és a fájdalommentes életvitel érdekében.
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
@@ -166,10 +168,10 @@ export const Details = ({viewport}: ComponentType) => {
                         <Grid item md={6} xs={12}>
                             <DetailHeading>Gyógytorna</DetailHeading>
                             <DetailsParagraph>
-                Azt gondolom, hogy gyógytorna nélkül elég hosszadalmasra sikerülne a pácienseim gyógyítása, mivel a megkezelt ízületek és lágyrészek vissza-vissza tudnak „blokkosodni”. De éppen ezért
-                a gyógytorna sem elég kezelés nélkül, mert a felbomlott egyensúlyú izmokra erősíthetünk rá, avagy nyújthatjuk meg. Úgy építem fel a feladatokat, hogy azok szelektíven a célzott
-                izomcsoportra vagy az elérni kívánt funkcióra irányuljon. Ezek lehetnek mozgásterjedelem növelő, stabilizáló, erősítő, nyújtó, stb. feladatok. Ezeket a feladatokat fogom feladni házi
-                feladatnak is Neked otthonra, hogy meggyorsítsuk a gyógyulási folyamatot.
+                Gyógytorna nélkül elég hosszadalmasra sikerülne a pácienseim gyógyítása, mivel a megkezelt ízületek vissza tudnak „blokkosodni” és a lágyrészek harmóniája is bármikor könnyen
+                megbomlik. De éppen ezért a gyógytorna sem elég kezelés nélkül, mert csak a korrigált helyzetben erősíthetünk rá az izmokra. Úgy építem fel a feladatokat, hogy azok szelektíven a
+                célzott izomcsoportra vagy az elérni kívánt funkcióra irányuljanak. Ezek lehetnek mozgásterjedelemet növelő, stabilizáló, erősítő, nyújtó feladatokA kezelés végén otthon elvégezhető
+                gyakorlatokból álló gyakorlatsort állítok Neked össze, majd tanítok meg, a gyógyulási folyamat meggyorsítására.
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
@@ -189,11 +191,11 @@ export const Details = ({viewport}: ComponentType) => {
                                 <br />- Schroth terápia
                             </DetailHeading>
                             <DetailsParagraph>
-                A scoliosis a gerincferdülés latin megfelelője, amely a gerinc oldalirányú elgörbülését jelenti. A gerincferdülés nem csak ebből az oldalirányú elhajlásból áll, hanem a saját tengelye
-                körüli elcsavarodásából is. A nyílirányú görbületeket is érinti ez a jelenség, például a gerinc valamelyik része túlságosan ellaposodik vagy púposodik. Ezért háromdimenziós ez a
-                kezelés és ezt különböző, „kitekert” testhelyzetekben, légzőgyakorlatokkal tudjuk korrigálni. Gerincferdülés kezeléséhez ezeket a feladatokat adaptálom személyre szabottan, mivel
-                minden gerincferdülés más és más. Kiegészítve manuálterápiával és lágyrész kezelésekkel, mert a „helytelen” testtartás miatt ezek a páciensek tele vannak blokkokkal és
-                izomdiszbalanszokkal. Természetesen az erősítő és lazító, nyújtó gyógytorna feladatok sem maradhatnak el ezek mellett.
+                A scoliosis, a gerincferdülés latin megfelelője, amely a gerinc oldalirányú elgörbülése mellett a saját tengelye körüli elcsavarodását is jelenti. A nyílirányú görbületeket is
+                érintettek, például a gerinc valamelyik része oldalról nézve túlságosan ellaposodik (pl. kiegyenesedett lordosis) vagy púposodik (pl. fokozott kyphosis). A Schroth terápia különböző
+                speciális testhelyzetekben végzett légző- és erősítő gyakorlatokból álló kezelés, amely háromdimenzióban hat a gerincre. A gerincferdülés kezelése során a Schroth terápián kívül
+                manuálterápiás és lágyrész kezeléses technikákat, különböző általános erősítő, nyújtó gyakorlatokat adok személyre szabottan a pácienseimnek. Ezek által javul a testtartás, valamint
+                csökkenhet vagy megállítható a gerincferdülés mértéke.
                             </DetailsParagraph>
                         </Grid>
                         <ImageGrid item md={6} xs={12} textAlign="right">
