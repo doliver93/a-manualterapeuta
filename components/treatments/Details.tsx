@@ -130,7 +130,7 @@ export const Details = ({ viewport }: ComponentType) => {
                             <DetailsParagraph>
                 A vizsgálatokat és a kezeléseket is a két kezem alapozza. Csigolyáról-csigolyára, ízületről-ízületre, minden kicsi mozdulatot érzékelek. Ha a vizsgált ízületben, valamelyik mozgás
                 irányában blokkot érzékelek, azt megkezelem. Ezt légzési technikákkal és izommegfeszítések segítségével végezzük el. Ezek az ízületi blokkok, komoly fájdalmakat tudnak okozni, amelyek
-                hatására tapasztalhatod például azt a bizonyos „becsípődés” érzést. Nem mellesleg végtagokba kisugárzó fájdalmat, zsibbadást, „hangyamászásérzést” is tapasztalhatsz. A migrénes
+                hatására tapasztalhatod, például azt a bizonyos „becsípődés” érzést. Nem mellesleg végtagokba kisugárzó fájdalmat, zsibbadást, „hangyamászásérzést” is tapasztalhatsz. A migrénes
                 fejfájások és a fülzúgások hátterében is sokszor ezek a blokkok állhatnak. A manuálterápiával a fájdalmaid okait tudjuk felfedezni és kezelni, míg más kezelések sokszor csak a tünetek
                 enyhítésére szolgálnak. Hatására a teljes testedet könnyebbnek érezheted, mivel a megbomlott egyensúlyt állítjuk helyre.
                             </DetailsParagraph>
@@ -170,7 +170,7 @@ export const Details = ({ viewport }: ComponentType) => {
                             <DetailsParagraph>
                 Gyógytorna nélkül elég hosszadalmasra sikerülne a pácienseim gyógyítása, mivel a megkezelt ízületek vissza tudnak „blokkosodni” és a lágyrészek harmóniája is bármikor könnyen
                 megbomlik. De éppen ezért a gyógytorna sem elég kezelés nélkül, mert csak a korrigált helyzetben erősíthetünk rá az izmokra. Úgy építem fel a feladatokat, hogy azok szelektíven a
-                célzott izomcsoportra vagy az elérni kívánt funkcióra irányuljanak. Ezek lehetnek mozgásterjedelemet növelő, stabilizáló, erősítő, nyújtó feladatokA kezelés végén otthon elvégezhető
+                célzott izomcsoportra vagy az elérni kívánt funkcióra irányuljanak. Ezek lehetnek mozgásterjedelemet növelő, stabilizáló, erősítő, nyújtó feladatok. A kezelés végén otthon elvégezhető
                 gyakorlatokból álló gyakorlatsort állítok Neked össze, majd tanítok meg, a gyógyulási folyamat meggyorsítására.
                             </DetailsParagraph>
                         </Grid>
