@@ -83,9 +83,9 @@ export const Navigation = ({ logo, textColor, textHover, buttonBackgroundColor, 
     const content = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        const { outerWidth: width } = window
+        const { innerWidth: width } = window
         const handleResize = () => {
-            const { outerWidth: width } = window
+            const { innerWidth: width } = window
             setResponsive(width <= breakPoint.md.width)
         }
         setResponsive(width <= breakPoint.md.width)

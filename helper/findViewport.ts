@@ -22,9 +22,9 @@ export const findViewport = () => {
 
     const [viewport, setViewport ] = useState<string>("xl")
     useEffect(()=>{
-        const { outerWidth: width, outerHeight: height } = window
+        const { innerWidth: width, innerHeight: height } = window
         const handleResize = () => {
-            const { outerWidth: width, outerHeight: height } = window
+            const { innerWidth: width, innerHeight: height } = window
             setViewport(getViewport(width, height))
         }
         setViewport(getViewport(width, height))
